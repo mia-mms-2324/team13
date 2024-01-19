@@ -1,0 +1,48 @@
+@import url("master.scss");
+$color-white: #fff;
+$color-black: #000;
+$color-pink: #ff98ed;
+
+.side-window {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 55vh;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+
+  &.left-window {
+    left: 0;
+    transform: translateY(-50%) translateX(-100%);
+    &.show {
+      transform: translateY(-50%) translateX(0%);
+    }
+  }
+
+  &.right-window {
+    right: 0;
+    transform: translateY(-50%) translateX(100%);
+    &.show {
+      transform: translateY(-50%) translateX(0%);
+    }
+  }
+}
+
+.window-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  &.left-button {
+    left: 0;
+  }
+  &.right-button {
+    right: 0;
+  }
+}

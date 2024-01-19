@@ -1,0 +1,26 @@
+{
+  "name": "team13",
+  "version": "0.3.0",
+  "description": "CMD project 2.2 groep 13",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss-watch": "sass --watch scss:css",
+    "scss-build": "sass scss:css --style compressed",
+    "minify": "npx minify root/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mia-mms-2324/team13.git"
+  },
+  "author": "Driek van der Meulen",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/mia-mms-2324/team13/issues"
+  },
+  "homepage": "https://github.com/mia-mms-2324/team13#readme",
+  "dependencies": {
+    "minify": "^11.0.1",
+    "scss": "^0.2.4"
+  }
+}
