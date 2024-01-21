@@ -21,6 +21,7 @@
   "homepage": "https://github.com/mia-mms-2324/team13#readme",
   "dependencies": {
     "minify": "^11.0.1",
+    "sass": "^1.70.0",
     "scss": "^0.2.4"
   }
 }

@@ -1,0 +1,8 @@
+body {
+  background-image: url("../assets/images/ISS.png");
+  overflow: hidden;
+  object-fit: contain;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=iss.css.map */

@@ -7,13 +7,21 @@ function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
   return currentDialogue.audio;
 }
+
 function updateDialogue() {
   let currentDialogue = dialogues[currentDialogueIndex];
   let speakerName = currentDialogue.Gender === "male" ? "Bruce" : "Nova";
   let dialogueTitleElement = document.querySelector(".dialogueTitle");
+  let bruceElement = document.querySelector(".bruce");
+  let novaElement = document.querySelector(".nova");
 
-  if (currentDialogue.Gender === null) {
-    dialogueTitleElement.textContent = "";
+  // Reset style properties for elements
+  dialogueTitleElement.style.display = "block";
+  bruceElement.style.display = "none";
+  novaElement.style.display = "none";
+
+  if (currentDialogue.Gender == null) {
+    dialogueTitleElement.style.display = "none";
   } else {
     dialogueTitleElement.textContent = speakerName + ":";
   }
@@ -22,16 +30,20 @@ function updateDialogue() {
     "dialogueTitle",
     currentDialogue.Gender !== null
   );
+
   document.querySelector(".dialogueText").textContent =
     currentDialogue.dialogue;
   triggerAnimation();
 
   console.log(
-    "ID: "
-      .concat(currentDialogue.ID, ", Gender: ")
-      .concat(currentDialogue.Gender, ", SpriteID: ")
-      .concat(currentDialogue.SpriteID)
+    "ID: " +
+      currentDialogue.ID +
+      ", Gender: " +
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
   );
+
   let audioStatus = checkAudioStatus();
   if (audioStatus === true) {
     console.log("Audio is set to true.");
@@ -45,6 +57,99 @@ function updateDialogue() {
   } else {
     console.log("Audio is set to null.");
     // Mock code for when audio is null
+  }
+
+  // Add debugging statements to check values
+  console.log(
+    "Gender: " +
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
+  );
+
+  switch (currentDialogue.Gender) {
+    case "male":
+      // Set .bruce visible and .nova hidden
+      document.querySelector(".bruce").style.display = "block";
+      document.querySelector(".nova").style.display = "none";
+
+      switch (currentDialogue.SpriteID) {
+        case "1":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce1.png')";
+          break;
+        case "2":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce2.png')";
+          break;
+        case "3":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce3.png')";
+          break;
+        case "4":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce4.png')";
+          break;
+        case "5":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce5.png')";
+          break;
+        case "6":
+          // Set background image for .bruce based on SpriteID
+          document.querySelector(".bruce").style.backgroundImage =
+            "url('./assets/images/bruce6.png')";
+          break;
+        default:
+          break;
+      }
+      break;
+    case "female":
+      // Set .nova visible and .bruce hidden
+      document.querySelector(".nova").style.display = "block";
+      document.querySelector(".bruce").style.display = "none";
+
+      switch (currentDialogue.SpriteID) {
+        case "1":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova1.png')";
+          break;
+        case "2":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova2.png')";
+          break;
+        case "3":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova3.png')";
+          break;
+        case "4":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova4.png')";
+          break;
+        case "5":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova5.png')";
+          break;
+        case "6":
+          // Set background image for .nova based on SpriteID
+          document.querySelector(".nova").style.backgroundImage =
+            "url('./assets/images/nova6.png')";
+          break;
+        default:
+          break;
+      }
+      break;
+    default:
+      break;
   }
 }
 
