@@ -1,4 +1,17 @@
-Current version alpha 0.3 Dialogue Script version: beta 0.2
+Current version alpha 0.31 Dialogue Script version: beta 0.3
+
+Changelog 0.31 21-01-2024 4PM Driek van der Meulen
+-Added charachter image functionality
+-Updated json (0.3) to include random sprite ID's
+-Removed unnecicery files
+
+Upcoming features
+
+- Changes to font and styling to match new prototype -> Joey
+- Changes to expandable window to match new prototype -> Joey
+- Changes to dialog window to match new prototype -> Joey
+- Changes to dialogue function to exclude speaker when an audio window is present -> Driek
+- Changes to SCSS, javascript files to make the file more understandable and readable -> Driek
 
 Changelog 0.3 19-01-2024 1pm (from this version onward all developers are in the amsterdam timezone)
 
@@ -8,13 +21,6 @@ Changelog 0.3 19-01-2024 1pm (from this version onward all developers are in the
 
 - Current known bugs:
 - When there is no speaker the previous speaker is still shown
-
-Upcoming features
-
-- Changes to font and styling to match new prototype
-- Changes to expandable window to match new prototype
-- Changes to dialog window to match new prototype
-- Functionality to show speakers as an image
 
 Changelog 0.241 (10-01-2024) 12am GMT
 
