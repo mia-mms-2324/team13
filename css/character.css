@@ -1,0 +1,24 @@
+.bruce,
+.nova {
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  bottom: 17vw;
+  /* Set a maximum size for the background image */
+  max-width: 1000px;
+  max-height: 1000px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bruce {
+  left: 35vw;
+  background-image: url("../assets/images/bruceTemp.png");
+}
+
+.nova {
+  right: 35vw;
+  background-image: url("../assets/images/novaTemo.png");
+}
+
+/*# sourceMappingURL=character.css.map */

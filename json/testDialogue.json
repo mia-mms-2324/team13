@@ -3,7 +3,7 @@
     "dia1": {
       "ID": 1,
       "Gender": "female",
-      "SpriteID": null,
+      "SpriteID": 1,
       "dialogue": "Female dialgue id1",
       "audio": false,
       "placeholder1": null,
@@ -15,7 +15,7 @@
     "dia2": {
       "ID": 2,
       "Gender": "male",
-      "SpriteID": null,
+      "SpriteID": 3,
       "dialogue": "male dialgue id2",
       "audio": false,
       "placeholder1": null,
@@ -27,7 +27,7 @@
     "dia3": {
       "ID": 3,
       "Gender": null,
-      "SpriteID": null,
+      "SpriteID": 6,
       "dialogue": "Empty dialogue id3",
       "audio": false,
       "placeholder1": null,
@@ -39,7 +39,7 @@
     "dia4": {
       "ID": 4,
       "Gender": null,
-      "SpriteID": null,
+      "SpriteID": 1,
       "dialogue": "First audio entry id4",
       "audio": true,
       "placeholder1": null,
