@@ -1,9 +1,12 @@
-Current version alpha 0.31 Dialogue Script version: beta 0.3
+Current version alpha 0.31 Dialogue Script version: beta 0.3 prod version: 0.3
 
 Changelog 0.31 21-01-2024 4PM Driek van der Meulen
 -Added charachter image functionality
 -Updated json (0.3) to include random sprite ID's
--Removed unnecicery files
+-Removed excludable files
+
+- Current known bugs:
+- When there is no speaker the previous speaker is still shown
 
 Upcoming features
 
