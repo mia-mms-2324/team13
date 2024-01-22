@@ -151,6 +151,7 @@ function updateDialogue() {
     default:
       break;
   }
+  loadPreviousDialogue();
 }
 
 function loadNextDialogue() {
@@ -169,10 +170,17 @@ function triggerAnimation() {
   dialogueText.offsetHeight; // Trigger reflow
   dialogueText.style.animation = ""; // Reapply the animation
 }
+
 function loadPreviousDialogue() {
-  if (currentDialogueIndex > 0) {
-    currentDialogueIndex--;
-    updateDialogue();
+  let previous = currentDialogueIndex - 1;
+
+  if (previous >= 0 && previous < dialogues.length) {
+    document.querySelector(".previousdialogue").textContent =
+      dialogues[previous].dialogue;
+  } else {
+    // Handle the case where there's no valid previous dialogue
+    document.querySelector(".previousdialogue").textContent =
+      "No previous dialogue available";
   }
 }
 

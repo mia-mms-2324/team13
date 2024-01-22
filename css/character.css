@@ -1,24 +1,29 @@
 .bruce,
 .nova {
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
-  bottom: 17vw;
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  top: 12vw;
   /* Set a maximum size for the background image */
   max-width: 1000px;
   max-height: 1000px;
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: 1;
 }
 
 .bruce {
-  left: 35vw;
+  position: relative;
+  left: 40vw;
   background-image: url("../assets/images/bruceTemp.png");
+  align-self: bottom;
 }
 
 .nova {
-  right: 35vw;
+  position: relative;
+  left: 30vw;
   background-image: url("../assets/images/novaTemo.png");
+  align-self: bottom;
 }
 
 /*# sourceMappingURL=character.css.map */
