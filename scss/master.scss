@@ -1,7 +1,23 @@
-$color-white: #E6E6E6;
-$color-black: #1E1E1E;
-$color-pink: #EC5CC1;
-$color-groen: #185460;
-$color-groen: #127DA7;
+$color-white: #fff;
+$color-black: #000;
+$color-pink: #ff98ed;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap')
+@font-face {
+  font-family: "agency";
+  src: url("../assets/fonts/agencyfb_reg.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "agency-bold";
+  src: url("../assets/fonts/agencyfb_bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "consolas";
+  src: url("../assets/fonts/Consolas-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "consolas-bold";
+  src: url("../assets/fonts/ConsolasBold.ttf") format("ttf");
+}
