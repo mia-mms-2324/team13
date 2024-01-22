@@ -22,6 +22,7 @@
   "dependencies": {
     "minify": "^11.0.1",
     "sass": "^1.70.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "typed.js": "^2.1.0"
   }
 }
