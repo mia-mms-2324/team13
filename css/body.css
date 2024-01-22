@@ -16,80 +16,23 @@
 }
 body {
   background: #000;
+  background-image: url("../assets/images/mainBG1.png");
   overflow-y: hidden;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.mainWindow {
-  flex-grow: 1;
-  background: pink;
-  overflow-y: auto; /* Add scrollbars if content overflows */
-  background-image: url("../assets/images/mainBG1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.sideWindow {
-  width: 12.5vw;
-  height: 100vh;
-  background: black;
-  overflow-y: auto; /* Add scrollbars if content overflows */
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  flex: 1; /* This makes the remaining items take an equal portion of the height */
-  width: 100%; /* This makes each item take 100% of the width relative to .sideWindow */
-}
-
-.item1 {
-  background-image: url("../assets/images/frame-aarde.png");
-  max-height: 12.5vw;
-}
-.item1 img {
-  margin: 0 auto;
-  margin-top: 10%;
-}
-
-/* Additional styling for individual items (optional) */
-.item2 {
-  background-image: url("../assets/images/mission-log.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.item3 {
-  background-image: url("../assets/images/ship-status.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .dialogue {
   font-family: "consolas";
-  position: relative;
-  max-width: 50%;
+  position: absolute;
+  bottom: 10vh;
+  width: 50%;
   height: 20vh;
-  top: 70vh;
-  background-image: url("../assets/images/dialoguebox.png");
+  border: 4px solid #ff98ed;
+  background-color: rgba(0, 0, 0, 0.5);
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  border-radius: 0rem 0rem 0.625rem 0.625rem;
-  z-index: 11;
 }
 
 .dialogue .dialogueTitle {
@@ -97,23 +40,24 @@ body {
   font-size: 2rem;
   padding: 0;
   position: relative;
-  top: 70%;
-  left: 10%;
+  bottom: 20%;
+  background-color: #ff98ed;
+  left: -0.5%;
   width: 15%;
 }
 
 .dialogue .dialogueText {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 10px;
   padding: 0;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: inherit;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  max-width: 60%;
-  height: 80%;
-  left: -10%;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  width: 80%;
+  height: 60%;
 }
 
 @keyframes typing {
