@@ -45,6 +45,20 @@ function updateDialogue() {
       currentDialogue.SpriteID
   );
 
+  // Add animation to .bruce and .nova
+  document.querySelector(".bruce").style.transform = "translateY(20vw)"; // Move down
+  document.querySelector(".bruce").style.opacity = "0";
+  document.querySelector(".nova").style.transform = "translateY(20vw)"; // Move down
+  document.querySelector(".nova").style.opacity = "0";
+
+  setTimeout(() => {
+    // After a short delay, reset the transform to move them up
+    document.querySelector(".bruce").style.transform = "translateY(-10vh)";
+    document.querySelector(".bruce").style.opacity = "1";
+    document.querySelector(".nova").style.transform = "translateY(-10vh)";
+    document.querySelector(".nova").style.opacity = "1";
+  }, 300); // 0.3s to match the transition duration
+
   let audioStatus = checkAudioStatus();
   if (audioStatus === true) {
     console.log("Audio is set to true.");
@@ -152,6 +166,7 @@ function updateDialogue() {
     default:
       break;
   }
+
   loadPreviousDialogue();
 }
 

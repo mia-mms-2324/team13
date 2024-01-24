@@ -2,22 +2,24 @@
 
 .bruce,
 .nova {
-  width: 20vw;
-  height: 20vw;
-  position: relative;
-  top: 12vw;
+  width: 30vw;
+  height: 30vw;
+
+  top: 10vw;
   max-width: 1000px;
   max-height: 1000px;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
-  transition: opacity 0.3s ease-in-out;
   opacity: 1;
-  transform: translateX(0);
+
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); /* Start at their original position */
+  position: relative; /* Change to absolute positioning */
 }
 
 .bruce {
-  left: 40vw;
+  left: 30vw;
   background-image: url("../assets/images/bruceTemp.png");
   align-self: bottom;
 }
@@ -26,4 +28,13 @@
   left: 30vw;
   background-image: url("../assets/images/novaTemp.png");
   align-self: bottom;
+}
+
+.fix {
+  position: absolute;
+  bottom: 0;
+  object-position: center;
+  width: 87.5vw;
+  object-fit: cover;
+  z-index: 5;
 }

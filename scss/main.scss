@@ -20,7 +20,7 @@ body {
 .mainWindow {
   flex-grow: 1;
   background: $color-pink;
-  overflow-y: auto;
+  overflow-y: hidden;
   background-image: url("../assets/images/mainBG1.png");
   background-size: cover;
   background-repeat: no-repeat;
