@@ -1,0 +1,134 @@
+@import url("master.scss");
+body {
+  background-color: #0B0C0C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#fade-in-out {
+  position: absolute;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #E6E6E6;
+  opacity: 0;
+  animation: fade 2400ms ease-in-out 0ms forwards, show 2400ms ease-in-out 2400ms forwards, fadeOut 1200ms ease-in-out 4800ms forwards;
+}
+
+#fade-in-out2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #E6E6E6;
+  opacity: 0;
+  animation: constantOpacity 800ms ease-in-out 4800ms forwards, fade 2400ms ease-in-out 5600ms forwards, show 2400ms ease-in-out 7900ms forwards, fadeOut 1200ms ease-in-out 10500ms forwards;
+}
+
+#fade-in-out span {
+  font-weight: 800;
+}
+
+#fade-in-out2 span {
+  font-weight: 800;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#doorgaanButton {
+  position: absolute;
+  bottom: 65px;
+  /* Initially positioned 65px above the viewport's bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  /* Ensure the button is above the video */
+}
+
+#doorgaanButton:disabled {
+  pointer-events: none;
+}
+
+#doorgaanFrame {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+#doorgaanButton p {
+  position: relative;
+  bottom: -2px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #E6E6E6;
+  opacity: 0.5;
+  transition: bottom 0.3s ease;
+}
+
+#doorgaanFrame:hover p {
+  bottom: 3px;
+}
+
+#bowImg {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#doorgaanFrame:hover #bowImg {
+  opacity: 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes constantOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=landing.css.map */
