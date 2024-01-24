@@ -192,7 +192,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #e6e6e6;
-  border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
+  border-radius: 0rem 0rem 0.625rem 0.625rem;
   z-index: 11;
 }
 
@@ -210,15 +210,23 @@
   font-size: 0.8rem;
   margin: 10px;
   padding: 0;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: inherit;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  max-width: 60%;
-  height: 80%;
-  left: -10%;
+  height: auto; /* Allow text to expand vertically */
+  left: -5vw;
+  overflow: hidden; /* Hide overflowing text initially */
+  max-width: 0; /* Start with no width */
+  white-space: nowrap; /* Prevent text from wrapping initially */
+  animation: typing 2s steps(40, end) forwards;
 }
 
+@keyframes typing {
+  to {
+    max-width: 60%; /* Expand to full width */
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Show any overflowing text on the next line */
+  }
+}
 .dialogue .rightButton,
 .dialogue .leftButton {
   position: absolute;
@@ -228,7 +236,7 @@
   font-size: 4rem;
   color: #e6e6e6;
   border: none;
-  border-radius: 5px;
+  border-radius: 0 0px 10px 10px;
   cursor: pointer;
 }
 

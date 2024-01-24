@@ -188,12 +188,14 @@
   height: 20vw;
   position: relative;
   top: 12vw;
-  /* Set a maximum size for the background image */
   max-width: 1000px;
   max-height: 1000px;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .bruce {
@@ -204,7 +206,7 @@
 
 .nova {
   left: 30vw;
-  background-image: url("../assets/images/novaTemo.png");
+  background-image: url("../assets/images/novaTemp.png");
   align-self: bottom;
 }
 

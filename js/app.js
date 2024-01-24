@@ -20,9 +20,10 @@ function updateDialogue() {
   bruceElement.style.display = "none";
   novaElement.style.display = "none";
 
-  if (currentDialogue.Gender == null) {
+  if (currentDialogue.Gender == "null") {
     dialogueTitleElement.style.display = "none";
   } else {
+    dialogueTitleElement.style.display = "block";
     dialogueTitleElement.textContent = speakerName + ":";
   }
 
