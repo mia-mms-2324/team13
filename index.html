@@ -1,80 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
-  <link rel="stylesheet" href="css/landing.css" />
-</head>
-
-<body>
-
-  <div id="fade-in-out">
-    <p>Studenten Van <span>Zuyd Hogeschool</span> Presenteren</p>
-  </div>
-
-  <div id="fade-in-out2">
-    <p>In Samenwerking Met Het <span>Centraal Bureau Statestiek</span></p>
-  </div>
-
-  <video id="backgroundVideo" muted>
-    <source src="assets/bg-video/bg-landing-title.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <button id="doorgaanButton" onclick="myButtonClick()" disabled>
-    <div id="doorgaanFrame">
-      <p>Klik hier om door te gaan</p>
-      <img id="bowImg" src="assets/images/shapes/bow.svg" alt="">
+  <body>
+    <div id="fade-in-out">
+      <p>Studenten Van <span>Zuyd Hogeschool</span> Presenteren</p>
     </div>
 
-  </button>
+    <div id="fade-in-out2">
+      <p>In Samenwerking Met Het <span>Centraal Bureau Statestiek</span></p>
+    </div>
 
-  <script>
+    <video id="backgroundVideo" muted>
+      <source src="assets/video/bg-landing-title.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-    function navigateToAnotherPage() {
-      // Define the URL of the page you want to navigate to
-      var nextPageURL = "multimediastory.html";
+    <button id="doorgaanButton" onclick="myButtonClick()" disabled>
+      <div id="doorgaanFrame">
+        <p>Klik hier om door te gaan</p>
+        <img id="bowImg" src="assets/images/shapes/bow.svg" alt="" />
+      </div>
+    </button>
 
-      // Navigate to the specified page
-      window.location.href = nextPageURL;
-    }
-
-
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var backgroundVideo = document.getElementById('backgroundVideo');
-      var myButton = document.getElementById('doorgaanButton');
-
-      // Set a timeout to play the video after 20000ms (20 seconds)
-      setTimeout(function () {
-        if (backgroundVideo) {
-          backgroundVideo.play();
-
-          // Set an event listener to pause the video when it ends
-          backgroundVideo.addEventListener('ended', function () {
-            backgroundVideo.pause();
-            backgroundVideo.currentTime = backgroundVideo.duration; // Set to the last frame
-
-            // Show the button 65px above the viewport's bottom
-            if (myButton) {
-              myButton.style.opacity = 1;
-              myButton.style.bottom = '65px';
-              myButton.disabled = false; // Enable the button
-            }
-          });
-        }
-      }, 11000);
-    });
-
-    function myButtonClick() {
-      // Call the function to navigate to the specified page
-      navigateToAnotherPage();
-    }
-  </script>
-
-
-</body>
-
+    <script src="./js/index.js"></script>
+  </body>
 </html>

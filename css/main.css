@@ -182,4 +182,40 @@
   font-family: "Quicksand", sans-serif;
 }
 
-/*# sourceMappingURL=master.css.map */
+body {
+  background: #0b0c0c;
+  overflow-y: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* Add this to establish a stacking context */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.mainWindow {
+  flex-grow: 1;
+  background: #ec5cc1;
+  overflow-y: auto;
+  background-image: url("../assets/images/mainBG1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sideWindow {
+  width: 12.5vw;
+  height: 100vh;
+  background: #0b0c0c;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main.css.map */

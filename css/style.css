@@ -1,4 +1,17 @@
-@import url("body.css");
-@import url("sideWindow.css");
-@import url("character.css");
+/* reset */
 @import url("reset.css");
+
+/* main styling */
+@import url("main.css");
+
+/* dialogue styling */
+@import url("dialogue.css");
+
+/* sidebar styling */
+@import url("sidebar.css");
+
+/* character CSS */
+@import url("character.css");
+
+/* audio styling */
+@import url("audio.css");

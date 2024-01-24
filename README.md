@@ -1,4 +1,30 @@
-Current version alpha 0.31 Dialogue Script version: beta 0.3 prod version: 0.3
+Current version alpha 0.34 Dialogue Script version: beta 0.3 prod version: 0.3
+
+Changelog 0.24 24-01-2024 12PM Driek van der Meulen
+
+- changed fonts to get them locally and comply with european data protection laws
+- sorted the scss files to make them more readable
+- changed file names to make them more readable
+- changed the way the side window works to make it more readable
+
+current known bugs:
+
+- when the dialogue is too big the side window breaks
+
+Upcoming features
+
+- Changes to expandable window to match new prototype
+- Changes to dialogue function to exclude speaker when an audio window is present
+
+Changelog 0.33 24-01-2024 10AM Joey van der Linden
+
+- Completely changed the intro to match the new prototype
+- Added new fonts
+
+  Changelog 0.32 21-01-2024 4PM Driek van der Meulen
+
+- Added sidebar
+- Complety changed the styling to match the new prototype
 
 Changelog 0.31 21-01-2024 4PM Driek van der Meulen
 -Added charachter image functionality
@@ -7,14 +33,6 @@ Changelog 0.31 21-01-2024 4PM Driek van der Meulen
 
 - Current known bugs:
 - When there is no speaker the previous speaker is still shown
-
-Upcoming features
-
-- Changes to font and styling to match new prototype -> Joey
-- Changes to expandable window to match new prototype -> Joey
-- Changes to dialog window to match new prototype -> Joey
-- Changes to dialogue function to exclude speaker when an audio window is present -> Driek
-- Changes to SCSS, javascript files to make the file more understandable and readable -> Driek
 
 Changelog 0.3 19-01-2024 1pm (from this version onward all developers are in the amsterdam timezone)
 

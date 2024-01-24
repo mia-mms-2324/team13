@@ -1,0 +1,18 @@
+@import "master";
+
+.audio {
+  position: absolute;
+  bottom: 35vh;
+  right: 50%;
+  transform: translateX(50%);
+  width: 5vw;
+  height: 5vw;
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  overflow: none;
+  text-align: justify;
+  display: none;
+}

@@ -1,7 +1,239 @@
-$color-white: #E6E6E6;
-$color-black: #0B0C0C;
-$color-pink: #EC5CC1;
-$color-green: #185460;
-$color-blue: #127DA7;
+// Fonts
+// lol this is a mess, but I have to
+//https://wptavern.com/wordpress-org-strongly-urges-theme-authors-to-switch-to-locally-hosted-webfonts
+// European law kinda forbids us from using Google Fonts, so we have to use locally hosted fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap')
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/inter/Inter-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/inter/Inter-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/inter/Inter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/inter/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/nunito/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/nunito/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/nunito/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/nunito/Nunito-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/nunito/Nunito-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/nunito/Nunito-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/nunito/Nunito-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 1000;
+  src: url("../assets/fonts/nunito/Nunito-ExtraBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../assets/fonts/nunito/Nunito-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../assets/fonts/nunito/Nunito-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/fonts/nunito/Nunito-RegularItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../assets/fonts/nunito/Nunito-SemiBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../assets/fonts/nunito/Nunito-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../assets/fonts/nunito/Nunito-ExtraBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../assets/fonts/nunito/Nunito-BlackItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 1000;
+  src: url("../assets/fonts/nunito/Nunito-ExtraBlackItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/quicksand/Quicksand-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/quicksand/Quicksand-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/quicksand/Quicksand-SemiBold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
+}
+
+// Colors
+$color-white: #e6e6e6;
+$color-black: #0b0c0c;
+$color-pink: #ec5cc1;
+$color-green: #185460;
+$color-blue: #127da7;
+
+$font-family-inter: "Inter", sans-serif;
+$font-family-nunito: "Nunito", sans-serif;
+$font-family-quicksand: "Quicksand", sans-serif;
+
+// // Import Google Fonts
+// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap");
+
+// Global styles
+* {
+  font-family: $font-family-quicksand;
+}
+
+// Additional global styles can be added here

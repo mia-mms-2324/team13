@@ -1,3 +1,5 @@
+@import "master";
+
 .bruce,
 .nova {
   width: 20vw;
@@ -13,14 +15,12 @@
 }
 
 .bruce {
-  position: relative;
   left: 40vw;
   background-image: url("../assets/images/bruceTemp.png");
   align-self: bottom;
 }
 
 .nova {
-  position: relative;
   left: 30vw;
   background-image: url("../assets/images/novaTemo.png");
   align-self: bottom;

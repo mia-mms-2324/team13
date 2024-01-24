@@ -182,4 +182,40 @@
   font-family: "Quicksand", sans-serif;
 }
 
-/*# sourceMappingURL=master.css.map */
+.item {
+  flex: 1; /* This makes the remaining items take an equal portion of the height */
+  width: 100%; /* This makes each item take 100% of the width relative to .sideWindow */
+}
+
+.item1 {
+  background-image: url("../assets/images/frame-aarde.png");
+  max-height: 12.5vw;
+}
+.item1 img {
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.item2 {
+  background-image: url("../assets/images/mission-log.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item3 {
+  background-image: url("../assets/images/ship-status.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.previousdialogue {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  color: #e6e6e6;
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
+/*# sourceMappingURL=sidebar.css.map */
