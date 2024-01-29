@@ -10,7 +10,7 @@ function checkAudioStatus() {
 
 function updateDialogue() {
   let currentDialogue = dialogues[currentDialogueIndex];
-  let speakerName = currentDialogue.Gender === "male" ? "Bruce" : "Nova";
+  let speakerName = currentDialogue.Gender === "male" ? "BRUCE" : "NOVA";
   let dialogueTitleElement = document.querySelector(".dialogueTitle");
   let bruceElement = document.querySelector(".bruce");
   let novaElement = document.querySelector(".nova");
@@ -24,7 +24,7 @@ function updateDialogue() {
     dialogueTitleElement.style.display = "none";
   } else {
     dialogueTitleElement.style.display = "block";
-    dialogueTitleElement.textContent = speakerName + ":";
+    dialogueTitleElement.textContent = speakerName + "";
   }
 
   dialogueTitleElement.classList.toggle(
@@ -38,25 +38,25 @@ function updateDialogue() {
 
   console.log(
     "ID: " +
-    currentDialogue.ID +
-    ", Gender: " +
-    currentDialogue.Gender +
-    ", SpriteID: " +
-    currentDialogue.SpriteID
+      currentDialogue.ID +
+      ", Gender: " +
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
   );
 
   // Add animation to .bruce and .nova
   document.querySelector(".bruce").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".bruce").style.opacity = "0";
+  document.querySelector(".bruce").style.opacity = 0;
   document.querySelector(".nova").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".nova").style.opacity = "0";
+  document.querySelector(".nova").style.opacity = 0;
 
   setTimeout(() => {
     // After a short delay, reset the transform to move them up
     document.querySelector(".bruce").style.transform = "translateY(-10vh)";
-    document.querySelector(".bruce").style.opacity = "1";
+    document.querySelector(".bruce").style.opacity = 1;
     document.querySelector(".nova").style.transform = "translateY(-10vh)";
-    document.querySelector(".nova").style.opacity = "1";
+    document.querySelector(".nova").style.opacity = 1;
   }, 300); // 0.3s to match the transition duration
 
   let audioStatus = checkAudioStatus();
@@ -77,9 +77,9 @@ function updateDialogue() {
   // Add debugging statements to check values
   console.log(
     "Gender: " +
-    currentDialogue.Gender +
-    ", SpriteID: " +
-    currentDialogue.SpriteID
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
   );
 
   switch (currentDialogue.Gender) {
@@ -191,12 +191,24 @@ function loadPreviousDialogue() {
   let previous = currentDialogueIndex - 1;
 
   if (previous >= 0 && previous < dialogues.length) {
-    document.querySelector(".previousdialogue").textContent =
-      dialogues[previous].dialogue;
+    let previousDialogue = dialogues[previous];
+    let speakerName = previousDialogue.Gender === "male" ? "Bruce" : "Nova";
+    let previousText = `<i>Previous dialogue:</i> <b>${speakerName}:</b> ${previousDialogue.dialogue}`;
+    let previousDialogueElement = document.querySelector(".previousdialogue");
+
+    // Remove any existing animation class
+    previousDialogueElement.classList.remove("fade-in");
+
+    // Set the innerHTML with the HTML tags for formatting
+    previousDialogueElement.innerHTML = previousText;
+
+    // Add the animation class to trigger the animation
+    setTimeout(() => {
+      previousDialogueElement.classList.add("fade-in");
+    }, 0); // Use a small delay to ensure the animation class is applied after the text update
   } else {
     // Handle the case where there's no valid previous dialogue
-    document.querySelector(".previousdialogue").textContent =
-      "No previous dialogue available";
+    document.querySelector(".previousdialogue").textContent = "";
   }
 }
 
@@ -243,9 +255,7 @@ fetch("./json/dialogue.json")
   .catch(function (error) {
     return console.error("Error loading dialogue data:", error);
   });
-document
-  .querySelector(".rightButton")
-  .addEventListener("click", loadNextDialogue);
+document.querySelector(".dialogue").addEventListener("click", loadNextDialogue);
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "r" || event.key === "R") {
@@ -278,66 +288,61 @@ document.querySelector(".audio").addEventListener("click", function () {
 
 // CODE JOEY //
 
-// Apps window die groter wordt 
+// Apps window die groter wordt
 function toggleBoxOn() {
-  var box = document.getElementById('apps');
-  var box2 = document.querySelector('.scene');
-  box.classList.remove('collapsing');
-  box.classList.add('expanding');
+  let box = document.getElementById("apps");
+  let box2 = document.querySelector(".scene");
+  box.classList.remove("collapsing");
+  box.classList.add("expanding");
 
-  box2.classList.remove('collapsing');
-  box2.classList.add('expanding');
+  box2.classList.remove("collapsing");
+  box2.classList.add("expanding");
 
-  var titles = box.querySelectorAll('h1');
-  titles.forEach(function(title) {
-    title.style.opacity = '1';
+  let titles = box.querySelectorAll("h1");
+  titles.forEach(function (title) {
+    title.style.opacity = "1";
   });
 
   // opacity appsBG
-  var bgS = ['.inbox', '.systemen', '.onderzoek'];
+  let bgS = [".inbox", ".systemen", ".onderzoek"];
 
-  bgS.forEach(function(className) {
-    var elements = document.querySelectorAll(className);
-    elements.forEach(function(element) {
-      element.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+  bgS.forEach(function (className) {
+    let elements = document.querySelectorAll(className);
+    elements.forEach(function (element) {
+      element.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
     });
   });
-  
 }
 
-
 function toggleBoxOff() {
-  var box = document.getElementById('apps');
-  var box2 = document.querySelector('.scene');
-  box.classList.remove('expanding');
-  box.classList.add('collapsing');
+  let box = document.getElementById("apps");
+  let box2 = document.querySelector(".scene");
+  box.classList.remove("expanding");
+  box.classList.add("collapsing");
 
-  box2.classList.remove('expanding');
-  box2.classList.add('collapsing');
+  box2.classList.remove("expanding");
+  box2.classList.add("collapsing");
 
   //titles
 
-  var titles = box.querySelectorAll('h1');
-  titles.forEach(function(title) {
-    title.style.opacity = '.25';
+  let titles = box.querySelectorAll("h1");
+  titles.forEach(function (title) {
+    title.style.opacity = ".25";
   });
 }
 
-//bg video 
+//bg video
 
 // Get the video element
-var video = document.getElementById('backgroundVideo');
+let video = document.getElementById("backgroundVideo");
 
 // Add an event listener to detect when the video ends
-video.addEventListener('ended', function() {
-  // Reset the video to the beginning and play it again
-  this.currentTime = 0;
-  this.play();
-}, false);
-
-
-
-
-
-
-
+video.addEventListener(
+  "ended",
+  function () {
+    // Reset the video to the beginning and play it again
+    this.currentTime = 0;
+    this.play();
+  },
+  false
+);

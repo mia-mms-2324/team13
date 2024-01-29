@@ -183,6 +183,14 @@ h1 {
   font-size: 36px;
 }
 
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: bold;
+}
+
 * {
   font-family: "Quicksand", sans-serif;
 }
@@ -191,18 +199,31 @@ h1 {
 .nova {
   width: 30vw;
   height: 30vw;
-  top: 10vw;
+  top: 0vw;
   max-width: 1000px;
   max-height: 1000px;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
   opacity: 1;
-  transition: transform 0.3s ease-in-out;
+  animation: animation 0.5s ease-in-out; /* Use the animation property */
   transform: translateY(0); /* Start at their original position */
   position: relative; /* Change to absolute positioning */
 }
 
+@keyframes animation {
+  0% {
+    transform: translateY(0); /* Start at their original position */
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10vh); /* Move them up */
+    opacity: 1;
+  }
+}
 .bruce {
   left: 30vw;
   background-image: url("../assets/images/bruceTemp.png");
@@ -213,15 +234,6 @@ h1 {
   left: 30vw;
   background-image: url("../assets/images/novaTemp.png");
   align-self: bottom;
-}
-
-.fix {
-  position: absolute;
-  bottom: 0;
-  object-position: center;
-  width: 87.5vw;
-  object-fit: cover;
-  z-index: 5;
 }
 
 /*# sourceMappingURL=character.css.map */
