@@ -1,4 +1,18 @@
-Current version alpha 0.34 Dialogue Script version: beta 0.3 prod version: 0.3
+Current version beta 0.4 Dialogue Script version: beta 0.3 prod version: 0.3
+
+Changelog beta 0.4 29-01-2024 3PM Driek van der Meulen | Joey van der Linden
+
+- Added top window
+- Changed sprite animation to match new prototype
+- Changed the way the dialogue window works to match new prototype
+- Changed the dialogue window to match new prototype
+
+- when the dialogue is too big the side window breaks > smaller text content in new json file
+
+Upcoming features
+
+- Changes to top window to add functionality
+- Bug fixes
 
 Changelog 0.24 24-01-2024 12PM Driek van der Meulen
 
@@ -10,11 +24,6 @@ Changelog 0.24 24-01-2024 12PM Driek van der Meulen
 current known bugs:
 
 - when the dialogue is too big the side window breaks
-
-Upcoming features
-
-- Changes to expandable window to match new prototype
-- Changes to dialogue function to exclude speaker when an audio window is present
 
 Changelog 0.33 24-01-2024 10AM Joey van der Linden
 
