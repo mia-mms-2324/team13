@@ -178,19 +178,6 @@
   font-weight: 700;
   src: url("../assets/fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
 }
-h1 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 36px;
-}
-
-i {
-  font-style: italic;
-}
-
-b {
-  font-weight: bold;
-}
-
 * {
   font-family: "Quicksand", sans-serif;
 }
@@ -199,11 +186,9 @@ b {
   font-family: "consolas";
   position: relative;
   max-width: 50%;
-  height: 25vh;
-  top: 49vh;
+  height: 20vh;
+  top: 70vh;
   background-image: url("../assets/images/dialoguebox.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   left: 50%;
   transform: translateX(-50%);
   color: #e6e6e6;
@@ -212,44 +197,40 @@ b {
 }
 
 .dialogue .dialogueTitle {
-  font-size: 1.4rem;
+  font-size: 2rem;
   padding: 0;
   position: relative;
-  top: 78%;
-  left: 8%;
+  top: 70%;
+  left: 10%;
   width: 15%;
-  font-family: "Nunito", sans-serif;
-  font-weight: 200;
 }
 
 .dialogue .dialogueText {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin: 10px;
   padding: 0;
-  top: 5vh;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
   height: auto; /* Allow text to expand vertically */
-  left: 0vw;
+  left: -5vw;
   overflow: hidden; /* Hide overflowing text initially */
   max-width: 0; /* Start with no width */
   white-space: nowrap; /* Prevent text from wrapping initially */
   animation: typing 2s steps(40, end) forwards;
-  font-family: "Inter", sans-serif;
-  font-weight: 100;
 }
 
 @keyframes typing {
   to {
-    max-width: 80%; /* Expand to full width */
+    max-width: 60%; /* Expand to full width */
     white-space: normal; /* Allow text to wrap */
     overflow: visible; /* Show any overflowing text on the next line */
   }
 }
-.dialogue .rightButton {
+.dialogue .rightButton,
+.dialogue .leftButton {
   position: absolute;
-  bottom: 10%;
-  right: 4%;
+  bottom: 22%;
   margin: 10px;
   padding: 0;
   font-size: 4rem;
@@ -257,22 +238,18 @@ b {
   border: none;
   border-radius: 0 0px 10px 10px;
   cursor: pointer;
-  animation: switchOpacity 0.5s alternate infinite; /* Apply the opacity switching animation */
 }
 
-@keyframes switchOpacity {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+.dialogue .rightButton {
+  right: 2%;
+}
+
+.dialogue .leftButton {
+  left: 2%;
+}
+
+.dialogue button:hover {
+  color: #185460;
 }
 
 /*# sourceMappingURL=dialogue.css.map */
