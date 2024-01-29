@@ -178,6 +178,11 @@
   font-weight: 700;
   src: url("../assets/fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
 }
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+}
+
 * {
   font-family: "Quicksand", sans-serif;
 }
@@ -190,6 +195,17 @@ body {
   position: relative; /* Add this to establish a stacking context */
 }
 
+video {
+  position: fixed;
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -200,13 +216,10 @@ body {
 }
 
 .mainWindow {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  background: #ec5cc1;
-  overflow-y: hidden;
-  background-image: url("../assets/images/mainBG1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .sideWindow {
@@ -216,6 +229,128 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+}
+
+.scene {
+  position: relative;
+  opacity: 1;
+  transition: 0.3s ease;
+  height: 70%;
+  background: #ec5cc1;
+  overflow-y: hidden;
+  background-image: url("../assets/images/mainBG1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.inbox {
+  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
+  width: 70%;
+}
+
+.inbox h1 {
+  color: #e6e6e6;
+  margin-top: 25px;
+  margin-left: 25px;
+  opacity: 0.25;
+  transition: 0.3s ease;
+}
+
+.systemen h1 {
+  color: #e6e6e6;
+  margin-top: 25px;
+  margin-left: 25px;
+  opacity: 0.25;
+  transition: 0.3s ease;
+}
+
+.onderzoek h1 {
+  color: #e6e6e6;
+  margin-top: 25px;
+  margin-left: 25px;
+  opacity: 0.25;
+  transition: 0.3s ease;
+}
+
+.extra-apps {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+
+.systemen {
+  height: 50%;
+  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
+}
+
+.onderzoek {
+  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
+  height: 50%;
+}
+
+#apps {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 87.5vw;
+  height: 20%;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+#apps:hover {
+  transition: 0.3s ease;
+  opacity: 0.75;
+}
+
+#apps.expanding {
+  cursor: default;
+  height: 70%;
+  animation: expandAnimation 0.3s ease-out forwards;
+  opacity: 1;
+}
+
+#apps.collapsing {
+  cursor: pointer; /* Add this to indicate it's clickable */
+  height: 20%;
+  animation: collapseAnimation 0.3s ease-out forwards;
+}
+
+.scene.expanding {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.scene.expanding:hover {
+  opacity: 1;
+}
+
+.scene.collapsing {
+  cursor: default;
+}
+
+@keyframes expandAnimation {
+  from {
+    height: 20%;
+  }
+  to {
+    height: 70%; /* Set to your desired expanded height */
+  }
+}
+@keyframes collapseAnimation {
+  from {
+    height: 70%; /* Set to your desired expanded height */
+  }
+  to {
+    height: 20%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

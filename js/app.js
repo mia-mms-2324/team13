@@ -38,11 +38,11 @@ function updateDialogue() {
 
   console.log(
     "ID: " +
-      currentDialogue.ID +
-      ", Gender: " +
-      currentDialogue.Gender +
-      ", SpriteID: " +
-      currentDialogue.SpriteID
+    currentDialogue.ID +
+    ", Gender: " +
+    currentDialogue.Gender +
+    ", SpriteID: " +
+    currentDialogue.SpriteID
   );
 
   // Add animation to .bruce and .nova
@@ -77,9 +77,9 @@ function updateDialogue() {
   // Add debugging statements to check values
   console.log(
     "Gender: " +
-      currentDialogue.Gender +
-      ", SpriteID: " +
-      currentDialogue.SpriteID
+    currentDialogue.Gender +
+    ", SpriteID: " +
+    currentDialogue.SpriteID
   );
 
   switch (currentDialogue.Gender) {
@@ -275,3 +275,69 @@ document.querySelector(".audio").addEventListener("click", function () {
   audio.play();
   console.log("audio played ");
 });
+
+// CODE JOEY //
+
+// Apps window die groter wordt 
+function toggleBoxOn() {
+  var box = document.getElementById('apps');
+  var box2 = document.querySelector('.scene');
+  box.classList.remove('collapsing');
+  box.classList.add('expanding');
+
+  box2.classList.remove('collapsing');
+  box2.classList.add('expanding');
+
+  var titles = box.querySelectorAll('h1');
+  titles.forEach(function(title) {
+    title.style.opacity = '1';
+  });
+
+  // opacity appsBG
+  var bgS = ['.inbox', '.systemen', '.onderzoek'];
+
+  bgS.forEach(function(className) {
+    var elements = document.querySelectorAll(className);
+    elements.forEach(function(element) {
+      element.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+    });
+  });
+  
+}
+
+
+function toggleBoxOff() {
+  var box = document.getElementById('apps');
+  var box2 = document.querySelector('.scene');
+  box.classList.remove('expanding');
+  box.classList.add('collapsing');
+
+  box2.classList.remove('expanding');
+  box2.classList.add('collapsing');
+
+  //titles
+
+  var titles = box.querySelectorAll('h1');
+  titles.forEach(function(title) {
+    title.style.opacity = '.25';
+  });
+}
+
+//bg video 
+
+// Get the video element
+var video = document.getElementById('backgroundVideo');
+
+// Add an event listener to detect when the video ends
+video.addEventListener('ended', function() {
+  // Reset the video to the beginning and play it again
+  this.currentTime = 0;
+  this.play();
+}, false);
+
+
+
+
+
+
+
