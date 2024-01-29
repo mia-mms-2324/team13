@@ -1,4 +1,4 @@
-Current version alpha 0.34 Dialogue Script version: beta 0.3 prod version: 0.3
+Current version beta 0.4 Dialogue Script version: beta 0.3 prod version: 0.3
 
 Changelog 0.24 24-01-2024 12PM Driek van der Meulen
 
