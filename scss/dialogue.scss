@@ -3,9 +3,11 @@
   font-family: "consolas";
   position: relative;
   max-width: 50%;
-  height: 20vh;
-  top: 70vh;
+  height: 25vh;
+  top: 49vh;
   background-image: url("../assets/images/dialoguebox.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   left: 50%;
   transform: translateX(-50%);
   color: $color-white;
@@ -14,41 +16,45 @@
 }
 
 .dialogue .dialogueTitle {
-  font-size: 2rem;
+  font-size: 1.4rem;
   padding: 0;
   position: relative;
-  top: 70%;
-  left: 10%;
+  top: 78%;
+  left: 8%;
   width: 15%;
+  font-family: $font-family-nunito;
+  font-weight: 200;
 }
 
 .dialogue .dialogueText {
   position: relative;
-  font-size: 0.8rem;
-  margin: 10px;
+  font-size: 1rem;
   padding: 0;
+  top: 5vh;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
   height: auto; /* Allow text to expand vertically */
-  left: -5vw;
+  left: 0vw;
   overflow: hidden; /* Hide overflowing text initially */
   max-width: 0; /* Start with no width */
   white-space: nowrap; /* Prevent text from wrapping initially */
   animation: typing 2s steps(40, end) forwards;
+  font-family: $font-family-inter;
+  font-weight: 100;
 }
 
 @keyframes typing {
   to {
-    max-width: 60%; /* Expand to full width */
+    max-width: 80%; /* Expand to full width */
     white-space: normal; /* Allow text to wrap */
     overflow: visible; /* Show any overflowing text on the next line */
   }
 }
 
-.dialogue .rightButton,
-.dialogue .leftButton {
+.dialogue .rightButton {
   position: absolute;
-  bottom: 22%;
+  bottom: 10%;
+  right: 4%;
   margin: 10px;
   padding: 0;
   font-size: 4rem;
@@ -56,16 +62,20 @@
   border: none;
   border-radius: 0 0px 10px 10px;
   cursor: pointer;
+  animation: switchOpacity 0.5s alternate infinite; /* Apply the opacity switching animation */
 }
 
-.dialogue .rightButton {
-  right: 2%;
-}
-
-.dialogue .leftButton {
-  left: 2%;
-}
-
-.dialogue button:hover {
-  color: $color-green;
+@keyframes switchOpacity {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

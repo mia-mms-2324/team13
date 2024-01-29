@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
+  <body>
+    <video id="backgroundVideo" loop autoplay muted>
+      <source src="assets/video/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-<body>
-
-  <video id="backgroundVideo" loop autoplay muted>
-    <source src="assets/video/bg.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-
-  <div class="container" id="container">
-    <div class="mainWindow">
-      <div id="apps" onclick="toggleBoxOn()">
-        <div class="inbox">
-          <h1>INBOX</h1>
+    <div class="container" id="container">
+      <div class="mainWindow">
+        <div id="apps" onclick="toggleBoxOn()">
+          <div class="inbox">
+            <h1>INBOX</h1>
+          </div>
+          <div class="extra-apps">
+            <div class="systemen">
+              <h1>SYSTEMEN</h1>
+            </div>
+            <div class="onderzoek">
+              <h1>ONDERZOEK</h1>
+            </div>
+          </div>
         </div>
-        <div class="extra-apps">
-          <div class="systemen">
-            <h1>SYSTEMEN</h1>
+
+        <div class="scene" onclick="toggleBoxOff()">
+          <div class="content-dialoog">
+            <!--Dialogue box-->
+            <div class="dialogue" id="dialogue">
+              <h2 class="dialogueTitle"></h2>
+              <p class="dialogueText">test text</p>
+              <button class="rightButton" id="button">
+                <img class="nextBTN" src="assets/images/next.png" alt="" />
+              </button>
+            </div>
+            <div class="audio">
+              <img
+                src="./assets/images/Black-Play-Button-PNG-Free-Download.png"
+                alt="play"
+              />
+            </div>
+            <!-- characters-->
+            <div class="bruce"></div>
+            <div class="nova"></div>
           </div>
-          <div class="onderzoek">
-            <h1>ONDERZOEK</h1>
-          </div>
+          <div class="fix"></div>
         </div>
       </div>
 
-
-      <div class="scene" onclick="toggleBoxOff()">
-        <div class="content-dialoog"><!--Dialogue box-->
-          <div class="dialogue" id="dialogue">
-            <h2 class="dialogueTitle"></h2>
-            <p class="dialogueText">test text</p>
-            <button class="rightButton" id="button">></button>
-          </div>
-          <div class="audio">
-            <img src="./assets/images/Black-Play-Button-PNG-Free-Download.png" alt="play" />
-          </div>
-          <!-- characters-->
-          <div class="bruce"></div>
-          <div class="nova"></div>
+      <div class="sideWindow">
+        <div class="item item1">
+          <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
         </div>
-
-
+        <div class="item item2">
+          <p class="previousdialogue"></p>
+        </div>
+        <div class="item item3"></div>
       </div>
     </div>
-
-    <div class="sideWindow">
-      <div class="item item1">
-        <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
-      </div>
-      <div class="item item2">
-        <p class="previousdialogue"></p>
-      </div>
-      <div class="item item3"></div>
-    </div>
-  </div>
-  <!--Scripts-->
-  <!-- <div class="fix">
-      <img src="./assets/images/fix.png" alt="" />
-    </div> -->
-  <script src="./js/app.js"></script>
-</body>
-
+    <!--Scripts-->
+    <script src="./js/app.js"></script>
+  </body>
 </html>

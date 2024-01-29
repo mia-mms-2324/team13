@@ -183,6 +183,14 @@ h1 {
   font-size: 36px;
 }
 
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: bold;
+}
+
 * {
   font-family: "Quicksand", sans-serif;
 }
@@ -235,7 +243,7 @@ video {
   position: relative;
   opacity: 1;
   transition: 0.3s ease;
-  height: 70%;
+  height: 100%;
   background: #ec5cc1;
   overflow-y: hidden;
   background-image: url("../assets/images/mainBG1.png");
@@ -297,7 +305,7 @@ video {
   display: flex;
   flex-direction: row;
   width: 87.5vw;
-  height: 20%;
+  height: 30%;
   opacity: 0.5;
   cursor: pointer;
   z-index: 2;
@@ -319,7 +327,7 @@ video {
 
 #apps.collapsing {
   cursor: pointer; /* Add this to indicate it's clickable */
-  height: 20%;
+  height: 30%;
   animation: collapseAnimation 0.3s ease-out forwards;
 }
 
@@ -338,7 +346,7 @@ video {
 
 @keyframes expandAnimation {
   from {
-    height: 20%;
+    height: 30%;
   }
   to {
     height: 70%; /* Set to your desired expanded height */
@@ -349,7 +357,7 @@ video {
     height: 70%; /* Set to your desired expanded height */
   }
   to {
-    height: 20%;
+    height: 30%;
   }
 }
 
