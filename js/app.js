@@ -20,7 +20,7 @@ function checkAudioStatus() {
 
 function updateDialogue() {
   let currentDialogue = dialogues[currentDialogueIndex];
-  let speakerName = currentDialogue.Gender === "male" ? "Bruce" : "Nova";
+  let speakerName = currentDialogue.Gender === "male" ? "BRUCE" : "NOVA";
   let dialogueTitleElement = document.querySelector(".dialogueTitle");
   let bruceElement = document.querySelector(".bruce");
   let novaElement = document.querySelector(".nova");
@@ -34,7 +34,7 @@ function updateDialogue() {
     dialogueTitleElement.style.display = "none";
   } else {
     dialogueTitleElement.style.display = "block";
-    dialogueTitleElement.textContent = speakerName + ":";
+    dialogueTitleElement.textContent = speakerName + "";
   }
 
   dialogueTitleElement.classList.toggle(
@@ -57,16 +57,16 @@ function updateDialogue() {
 
   // Add animation to .bruce and .nova
   document.querySelector(".bruce").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".bruce").style.opacity = "0";
+  document.querySelector(".bruce").style.opacity = 0;
   document.querySelector(".nova").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".nova").style.opacity = "0";
+  document.querySelector(".nova").style.opacity = 0;
 
   setTimeout(() => {
     // After a short delay, reset the transform to move them up
     document.querySelector(".bruce").style.transform = "translateY(-10vh)";
-    document.querySelector(".bruce").style.opacity = "1";
+    document.querySelector(".bruce").style.opacity = 1;
     document.querySelector(".nova").style.transform = "translateY(-10vh)";
-    document.querySelector(".nova").style.opacity = "1";
+    document.querySelector(".nova").style.opacity = 1;
   }, 300); // 0.3s to match the transition duration
 
   let audioStatus = checkAudioStatus();
@@ -253,9 +253,7 @@ fetch("./json/dialogue.json")
   .catch(function (error) {
     return console.error("Error loading dialogue data:", error);
   });
-document
-  .querySelector(".rightButton")
-  .addEventListener("click", loadNextDialogue);
+document.querySelector(".dialogue").addEventListener("click", loadNextDialogue);
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "r" || event.key === "R") {

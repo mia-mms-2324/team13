@@ -49,7 +49,7 @@ video {
   position: relative;
   opacity: 1;
   transition: 0.3s ease;
-  height: 70%;
+  height: 100%;
   background: $color-pink;
   overflow-y: hidden;
   background-image: url("../assets/images/mainBG1.png");
@@ -395,7 +395,7 @@ video {
 #apps.collapsing {
   cursor: pointer;
   /* Add this to indicate it's clickable */
-  height: 20%;
+  height: 30%;
   animation: collapseAnimation 0.3s ease-out forwards;
 }
 
@@ -495,7 +495,7 @@ video {
 
 @keyframes expandAnimation {
   from {
-    height: 20%;
+    height: 30%;
   }
 
   to {
@@ -511,6 +511,6 @@ video {
   }
 
   to {
-    height: 20%;
+    height: 30%;
   }
 }
