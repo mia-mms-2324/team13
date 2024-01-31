@@ -33,6 +33,7 @@
   top: 5vh;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
+  line-height: 130%;
   height: auto; /* Allow text to expand vertically */
   left: 0vw;
   overflow: hidden; /* Hide overflowing text initially */
@@ -45,7 +46,8 @@
 
 @keyframes typing {
   to {
-    max-width: 80%; /* Expand to full width */
+    max-width: 75%; /* Expand to full width */
+
     white-space: normal; /* Allow text to wrap */
     overflow: visible; /* Show any overflowing text on the next line */
   }
@@ -62,7 +64,8 @@
   border: none;
   border-radius: 0 0px 10px 10px;
   cursor: pointer;
-  animation: switchOpacity 0.5s alternate infinite; /* Apply the opacity switching animation */
+  animation: switchOpacity 1s alternate infinite; /* Apply the opacity switching animation */
+
 }
 
 @keyframes switchOpacity {

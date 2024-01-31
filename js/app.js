@@ -1,3 +1,18 @@
+addEventListener("click", function () {
+  var el = document.documentElement,
+    rfs =
+      el.requestFullScreen ||
+      el.webkitRequestFullScreen ||
+      el.mozRequestFullScreen;
+  rfs.call(el);
+});
+//event listener for esc key
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 27) {
+    alert("Onze multimedia story is alleen te gebruiken in full screen modus");
+  }
+});
+
 let currentDialogueIndex = 0;
 let dialogues = [];
 let audioUnlocked = 0;
@@ -13,6 +28,7 @@ let systemen = document.querySelector(".systemen");
 let onderzoek = document.querySelector(".onderzoek");
 let onderzoekImg = document.querySelector(".onderzoekImg");
 
+
 let mail1Var = document.getElementById('mail1');
 let mail2Var = document.getElementById('mail2');
 let mail3Var = document.getElementById('mail3');
@@ -22,6 +38,7 @@ let mail5Var = document.getElementById('mail5');
 let zin1 = document.getElementById('zin1');
 let zin2 = document.getElementById('zin2');
 let zin3 = document.getElementById('zin3');
+
 
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
@@ -39,7 +56,12 @@ function updateDialogue() {
   dialogueTitleElement.style.display = "block";
   bruceElement.style.display = "none";
   novaElement.style.display = "none";
-
+  let rightButton = document.querySelector(".rightButton");
+  rightButton.style.display = " none";
+  //wait for 5 seconds
+  setTimeout(function () {
+    rightButton.style.display = "block";
+  }, 5000);
   if (currentDialogue.Gender == "null") {
     dialogueTitleElement.style.display = "none";
   } else {
@@ -211,8 +233,10 @@ function loadPreviousDialogue() {
   let previous = currentDialogueIndex - 1;
 
   if (previous >= 0 && previous < dialogues.length) {
-    document.querySelector(".previousdialogue").textContent =
-      dialogues[previous].dialogue;
+    let speakerName = dialogues[previous].Gender === "male" ? "BRUCE" : "NOVA";
+    document.querySelector(
+      ".previousdialogue"
+    ).innerHTML = `<span style="font-weight: 400;">${speakerName}</span><br> ${dialogues[previous].dialogue}`;
   } else {
     // Handle the case where there's no valid previous dialogue
     document.querySelector(".previousdialogue").textContent =
@@ -391,6 +415,7 @@ function openOnderzoek() {
   document.querySelector(".inbox").classList.add("os1");
   document.querySelector(".onderzoek").classList.add("os1");
   document.querySelector(".zinnen").classList.add("os1");
+
 }
 
 function closeOnderzoek() {
@@ -399,6 +424,7 @@ function closeOnderzoek() {
   document.querySelector(".desc3").classList.remove("os1");
   document.querySelector(".inbox").classList.remove("os1");
   document.querySelector(".onderzoek").classList.remove("os1");
+
   document.querySelector(".zinnen").classList.remove("os1");
 }
 
