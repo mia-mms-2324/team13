@@ -1,3 +1,12 @@
+addEventListener("click", function () {
+  var el = document.documentElement,
+    rfs =
+      el.requestFullScreen ||
+      el.webkitRequestFullScreen ||
+      el.mozRequestFullScreen;
+  rfs.call(el);
+});
+
 // Function to navigate to another page with an optional URL parameter
 function navigateToAnotherPage(url) {
   // Navigate to the specified page or use a default URL
