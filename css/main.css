@@ -178,19 +178,6 @@
   font-weight: 700;
   src: url("../assets/fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
 }
-h1 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 36px;
-}
-
-i {
-  font-style: italic;
-}
-
-b {
-  font-weight: bold;
-}
-
 * {
   font-family: "Quicksand", sans-serif;
 }
@@ -243,7 +230,7 @@ video {
   position: relative;
   opacity: 1;
   transition: 0.3s ease;
-  height: 100%;
+  height: 70%;
   background: #ec5cc1;
   overflow-y: hidden;
   background-image: url("../assets/images/mainBG1.png");
@@ -256,28 +243,137 @@ video {
 .inbox {
   background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
   width: 70%;
+  cursor: pointer;
 }
 
-.inbox h1 {
+.h1-apps {
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.inbox p {
+  position: absolute;
   color: #e6e6e6;
-  margin-top: 25px;
-  margin-left: 25px;
+  top: 25px;
+  left: 25px;
   opacity: 0.25;
   transition: 0.3s ease;
 }
 
-.systemen h1 {
+.inbox .desc {
+  opacity: 0;
+  font-family: "Quicksand", sans-serif;
+  line-height: normal;
+  width: 50%;
+  position: relative;
+  top: 70px;
+  transition: 0.3s ease;
+}
+
+.systemen .desc2 {
+  opacity: 0;
+  font-family: "Quicksand", sans-serif;
+  line-height: normal;
+  width: 50%;
+  position: relative;
+  top: 70px;
+  transition: 0.3s ease;
+}
+
+.onderzoek .desc3 {
+  opacity: 0;
+  font-family: "Quicksand", sans-serif;
+  line-height: normal;
+  width: 50%;
+  position: relative;
+  top: 70px;
+  transition: 0.3s ease;
+}
+
+.desc.show {
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.desc2.show {
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.desc3.show {
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.blue-bar {
+  position: absolute;
+  width: 50%;
+  height: 0.3vw;
+  background-color: #127da7;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.blue-bar.grow {
+  transition: 0.3s ease;
+  width: 70%;
+}
+
+.blue-bar-extra {
+  position: absolute;
+  width: 20%;
+  height: 0.3vw;
+  background-color: #127da7;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.blue-bar-extra.grow {
+  transition: 0.3s ease;
+  width: 30%;
+}
+
+.blue-bar-extra2 {
+  position: absolute;
+  width: 20%;
+  height: 0.3vw;
+  background-color: #127da7;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.blue-bar-extra2.grow {
+  transition: 0.3s ease;
+  width: 30%;
+}
+
+#bloomInbox.highlight {
+  filter: blur(2.5px);
+}
+
+#bloomSystemen.highlight {
+  filter: blur(2.5px);
+}
+
+#bloomOnderzoek.highlight {
+  filter: blur(2.5px);
+}
+
+.systemen p {
+  position: absolute;
   color: #e6e6e6;
-  margin-top: 25px;
-  margin-left: 25px;
+  top: 25px;
+  left: 25px;
   opacity: 0.25;
   transition: 0.3s ease;
 }
 
-.onderzoek h1 {
+.onderzoek p {
+  position: absolute;
   color: #e6e6e6;
-  margin-top: 25px;
-  margin-left: 25px;
+  top: 25px;
+  left: 25px;
   opacity: 0.25;
   transition: 0.3s ease;
 }
@@ -292,11 +388,13 @@ video {
 .systemen {
   height: 50%;
   background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
+  cursor: pointer;
 }
 
 .onderzoek {
   background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
   height: 50%;
+  cursor: pointer;
 }
 
 #apps {
@@ -305,7 +403,7 @@ video {
   display: flex;
   flex-direction: row;
   width: 87.5vw;
-  height: 30%;
+  height: 20%;
   opacity: 0.5;
   cursor: pointer;
   z-index: 2;
@@ -327,7 +425,7 @@ video {
 
 #apps.collapsing {
   cursor: pointer; /* Add this to indicate it's clickable */
-  height: 30%;
+  height: 20%;
   animation: collapseAnimation 0.3s ease-out forwards;
 }
 
@@ -344,9 +442,90 @@ video {
   cursor: default;
 }
 
+.inbox-titlebox {
+  position: absolute;
+  width: 70%;
+}
+
+.systemen-titlebox {
+  position: absolute;
+  width: 30%;
+}
+
+.onderzoek-titlebox {
+  position: absolute;
+  width: 30%;
+}
+
+.systemenImg.expanding {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/apps-bg/systemen.png");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.75;
+  filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.systemenImg.noBlur {
+  filter: blur(0px);
+}
+
+.systemenImg.collapsing {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.onderzoekImg.expanding {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/apps-bg/onderzoek.png");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.75;
+  filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.onderzoekImg.noBlur {
+  filter: blur(0px);
+}
+
+.onderzoekImg.collapsing {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.inboxImg.expanding {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/apps-bg/inbox.png");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.75;
+  filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.inboxImg.noBlur {
+  filter: blur(0px);
+}
+
+.inboxImg.collapsing {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
 @keyframes expandAnimation {
   from {
-    height: 30%;
+    height: 20%;
   }
   to {
     height: 70%; /* Set to your desired expanded height */
@@ -357,7 +536,7 @@ video {
     height: 70%; /* Set to your desired expanded height */
   }
   to {
-    height: 30%;
+    height: 20%;
   }
 }
 

@@ -3,6 +3,16 @@ let dialogues = [];
 let audioUnlocked = 0;
 let audio = null;
 
+//let's - > apps
+let box = document.getElementById('apps');
+let box2 = document.querySelector('.scene');
+let inbox = document.querySelector('.inbox');
+let inboxImg = document.querySelector('.inboxImg');
+let systemenImg = document.querySelector('.systemenImg');
+let systemen = document.querySelector('.systemen');
+let onderzoek = document.querySelector('.onderzoek');
+let onderzoekImg = document.querySelector('.onderzoekImg');
+
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
   return currentDialogue.audio;
@@ -10,7 +20,7 @@ function checkAudioStatus() {
 
 function updateDialogue() {
   let currentDialogue = dialogues[currentDialogueIndex];
-  let speakerName = currentDialogue.Gender === "male" ? "BRUCE" : "NOVA";
+  let speakerName = currentDialogue.Gender === "male" ? "Bruce" : "Nova";
   let dialogueTitleElement = document.querySelector(".dialogueTitle");
   let bruceElement = document.querySelector(".bruce");
   let novaElement = document.querySelector(".nova");
@@ -24,7 +34,7 @@ function updateDialogue() {
     dialogueTitleElement.style.display = "none";
   } else {
     dialogueTitleElement.style.display = "block";
-    dialogueTitleElement.textContent = speakerName + "";
+    dialogueTitleElement.textContent = speakerName + ":";
   }
 
   dialogueTitleElement.classList.toggle(
@@ -38,25 +48,25 @@ function updateDialogue() {
 
   console.log(
     "ID: " +
-      currentDialogue.ID +
-      ", Gender: " +
-      currentDialogue.Gender +
-      ", SpriteID: " +
-      currentDialogue.SpriteID
+    currentDialogue.ID +
+    ", Gender: " +
+    currentDialogue.Gender +
+    ", SpriteID: " +
+    currentDialogue.SpriteID
   );
 
   // Add animation to .bruce and .nova
   document.querySelector(".bruce").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".bruce").style.opacity = 0;
+  document.querySelector(".bruce").style.opacity = "0";
   document.querySelector(".nova").style.transform = "translateY(20vw)"; // Move down
-  document.querySelector(".nova").style.opacity = 0;
+  document.querySelector(".nova").style.opacity = "0";
 
   setTimeout(() => {
     // After a short delay, reset the transform to move them up
     document.querySelector(".bruce").style.transform = "translateY(-10vh)";
-    document.querySelector(".bruce").style.opacity = 1;
+    document.querySelector(".bruce").style.opacity = "1";
     document.querySelector(".nova").style.transform = "translateY(-10vh)";
-    document.querySelector(".nova").style.opacity = 1;
+    document.querySelector(".nova").style.opacity = "1";
   }, 300); // 0.3s to match the transition duration
 
   let audioStatus = checkAudioStatus();
@@ -77,9 +87,9 @@ function updateDialogue() {
   // Add debugging statements to check values
   console.log(
     "Gender: " +
-      currentDialogue.Gender +
-      ", SpriteID: " +
-      currentDialogue.SpriteID
+    currentDialogue.Gender +
+    ", SpriteID: " +
+    currentDialogue.SpriteID
   );
 
   switch (currentDialogue.Gender) {
@@ -191,24 +201,12 @@ function loadPreviousDialogue() {
   let previous = currentDialogueIndex - 1;
 
   if (previous >= 0 && previous < dialogues.length) {
-    let previousDialogue = dialogues[previous];
-    let speakerName = previousDialogue.Gender === "male" ? "Bruce" : "Nova";
-    let previousText = `<i>Previous dialogue:</i> <b>${speakerName}:</b> ${previousDialogue.dialogue}`;
-    let previousDialogueElement = document.querySelector(".previousdialogue");
-
-    // Remove any existing animation class
-    previousDialogueElement.classList.remove("fade-in");
-
-    // Set the innerHTML with the HTML tags for formatting
-    previousDialogueElement.innerHTML = previousText;
-
-    // Add the animation class to trigger the animation
-    setTimeout(() => {
-      previousDialogueElement.classList.add("fade-in");
-    }, 0); // Use a small delay to ensure the animation class is applied after the text update
+    document.querySelector(".previousdialogue").textContent =
+      dialogues[previous].dialogue;
   } else {
     // Handle the case where there's no valid previous dialogue
-    document.querySelector(".previousdialogue").textContent = "";
+    document.querySelector(".previousdialogue").textContent =
+      "No previous dialogue available";
   }
 }
 
@@ -255,7 +253,9 @@ fetch("./json/dialogue.json")
   .catch(function (error) {
     return console.error("Error loading dialogue data:", error);
   });
-document.querySelector(".dialogue").addEventListener("click", loadNextDialogue);
+document
+  .querySelector(".rightButton")
+  .addEventListener("click", loadNextDialogue);
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "r" || event.key === "R") {
@@ -288,61 +288,161 @@ document.querySelector(".audio").addEventListener("click", function () {
 
 // CODE JOEY //
 
-// Apps window die groter wordt
+//titleGlow en desc
+
+function handleInboxMouseOver() {
+
+  //inbox
+  document.getElementById('bloomInbox').classList.add('highlight');
+  document.querySelector('.desc').classList.add('show');
+  document.querySelector('.blue-bar').classList.add('grow');
+  document.querySelector('.inboxImg').classList.add('noBlur');
+}
+
+function handleSystemenMouseOver() {
+  //systemen
+  document.getElementById('bloomSystemen').classList.add('highlight');
+  document.querySelector('.desc2').classList.add('show');
+  document.querySelector('.blue-bar-extra').classList.add('grow');
+  document.querySelector('.systemenImg').classList.add('noBlur');
+}
+
+function handleOnderzoekMouseOver() {
+  //onderzoek
+  document.getElementById('bloomOnderzoek').classList.add('highlight');
+  document.querySelector('.desc3').classList.add('show');
+  document.querySelector('.blue-bar-extra2').classList.add('grow');
+  document.querySelector('.onderzoekImg').classList.add('noBlur');
+}
+
+function handleInboxMouseLeave() {
+
+  //inbox
+  document.getElementById('bloomInbox').classList.remove('highlight');
+  document.querySelector('.desc').classList.remove('show');
+  document.querySelector('.blue-bar').classList.remove('grow');
+  document.querySelector('.inboxImg').classList.remove('noBlur');
+}
+
+function handleSystemenMouseLeave() {
+  //systemen
+  document.getElementById('bloomSystemen').classList.remove('highlight');
+  document.querySelector('.desc2').classList.remove('show');
+  document.querySelector('.blue-bar-extra').classList.remove('grow');
+  document.querySelector('.systemenImg').classList.remove('noBlur');
+}
+
+function handleOnderzoekMouseLeave() {
+  //onderzoek
+  document.getElementById('bloomOnderzoek').classList.remove('highlight');
+  document.querySelector('.desc3').classList.remove('show');
+  document.querySelector('.blue-bar-extra2').classList.remove('grow');
+  document.querySelector('.onderzoekImg').classList.remove('noBlur');
+}
+
+// Add event listeners when expanding
+function addEventListeners() {
+  inbox.addEventListener('mouseover', handleInboxMouseOver);
+  inbox.addEventListener('mouseleave', handleInboxMouseLeave);
+
+  systemen.addEventListener('mouseover', handleSystemenMouseOver);
+  systemen.addEventListener('mouseleave', handleSystemenMouseLeave);
+
+  onderzoek.addEventListener('mouseover', handleOnderzoekMouseOver);
+  onderzoek.addEventListener('mouseleave', handleOnderzoekMouseLeave);
+}
+
+// Remove event listeners when collapsing
+function removeEventListeners() {
+  inbox.removeEventListener('mouseover', handleInboxMouseOver);
+  inbox.removeEventListener('mouseleave', handleInboxMouseLeave);
+
+  systemen.removeEventListener('mouseover', handleSystemenMouseOver);
+  systemen.removeEventListener('mouseleave', handleSystemenMouseLeave);
+
+  onderzoek.removeEventListener('mouseover', handleOnderzoekMouseOver);
+  onderzoek.removeEventListener('mouseleave', handleOnderzoekMouseLeave);
+}
+
+// Apps window die groter wordt //////////////////////////////////////////////////////////
+
 function toggleBoxOn() {
-  let box = document.getElementById("apps");
-  let box2 = document.querySelector(".scene");
-  box.classList.remove("collapsing");
-  box.classList.add("expanding");
+  box.classList.remove('collapsing');
+  box.classList.add('expanding');
 
-  box2.classList.remove("collapsing");
-  box2.classList.add("expanding");
+  box2.classList.remove('collapsing');
+  box2.classList.add('expanding');
 
-  let titles = box.querySelectorAll("h1");
+  inboxImg.classList.remove('collapsing');
+  inboxImg.classList.add('expanding');
+
+  systemenImg.classList.remove('collapsing');
+  systemenImg.classList.add('expanding');
+
+  onderzoekImg.classList.remove('collapsing');
+  onderzoekImg.classList.add('expanding');
+
+  let titles = box.querySelectorAll('.h1-apps');
   titles.forEach(function (title) {
-    title.style.opacity = "1";
+    title.style.opacity = '1';
   });
 
   // opacity appsBG
-  let bgS = [".inbox", ".systemen", ".onderzoek"];
+  let bgS = ['.inbox', '.systemen', '.onderzoek'];
 
   bgS.forEach(function (className) {
     let elements = document.querySelectorAll(className);
     elements.forEach(function (element) {
-      element.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+      element.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
     });
   });
+
+  addEventListeners();
 }
 
-function toggleBoxOff() {
-  let box = document.getElementById("apps");
-  let box2 = document.querySelector(".scene");
-  box.classList.remove("expanding");
-  box.classList.add("collapsing");
+//apps collapsed //////////////////////////////////////////////////////////////////
 
-  box2.classList.remove("expanding");
-  box2.classList.add("collapsing");
+function toggleBoxOff() {
+  box.classList.remove('expanding');
+  box.classList.add('collapsing');
+
+  box2.classList.remove('expanding');
+  box2.classList.add('collapsing');
+
+  inboxImg.classList.remove('expanding');
+  inboxImg.classList.add('collapsing');
+
+  systemenImg.classList.remove('expanding');
+  systemenImg.classList.add('collapsing');
+
+  onderzoekImg.classList.remove('expanding');
+  onderzoekImg.classList.add('collapsing');
 
   //titles
 
-  let titles = box.querySelectorAll("h1");
+  let titles = box.querySelectorAll('.h1-apps');
   titles.forEach(function (title) {
-    title.style.opacity = ".25";
+    title.style.opacity = '.25';
   });
+
+  removeEventListeners();
 }
 
-//bg video
+//bg video 
 
 // Get the video element
-let video = document.getElementById("backgroundVideo");
+var video = document.getElementById('backgroundVideo');
 
 // Add an event listener to detect when the video ends
-video.addEventListener(
-  "ended",
-  function () {
-    // Reset the video to the beginning and play it again
-    this.currentTime = 0;
-    this.play();
-  },
-  false
-);
+video.addEventListener('ended', function () {
+  // Reset the video to the beginning and play it again
+  this.currentTime = 0;
+  this.play();
+}, false);
+
+
+
+
+
+
+

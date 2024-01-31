@@ -1,69 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <video id="backgroundVideo" loop autoplay muted>
-      <source src="assets/video/bg.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-    <div class="container" id="container">
-      <div class="mainWindow">
-        <div id="apps" onclick="toggleBoxOn()">
-          <div class="inbox">
-            <h1>INBOX</h1>
+<body>
+
+  <video id="backgroundVideo" loop autoplay muted>
+    <source src="assets/video/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+  <div class="container" id="container">
+    <div class="mainWindow">
+      <div id="apps" onclick="toggleBoxOn()">
+        <div class="inbox">
+          <div class="blue-bar"></div>
+          <div class="inbox-titlebox">
+            <p class="h1-apps">INBOX</p>
+            <p class="h1-apps" id="bloomInbox">INBOX</p>
+            <p class="desc">Hier ontvang je alle belangrijke communicatie transmissies, zowel intern als
+              van buitenaf. De DO-1 hoofdantenna is verantwoordelijk voor het zowel
+              ontvangen als versturen van boodschappen, en is in staat zowel tekst als
+              media bestanden te versturen/ontvangen</p>
           </div>
-          <div class="extra-apps">
-            <div class="systemen">
-              <h1>SYSTEMEN</h1>
-            </div>
-            <div class="onderzoek">
-              <h1>ONDERZOEK</h1>
-            </div>
-          </div>
+
+          <div class="inboxImg"></div>
         </div>
+        <div class="extra-apps">
+          <div class="systemen">
+            <div class="blue-bar-extra"></div>
+            <div class="systemen-titlebox">
+              <p class="h1-apps">SYSTEMEN</p>
+              <p class="h1-apps" id="bloomSystemen">SYSTEMEN</p>
+              <p class="desc2">Inventaris en proces van middelen die aanwezig zijn
+                op het schip.</p>
+            </div>
 
-        <div class="scene" onclick="toggleBoxOff()">
-          <div class="content-dialoog">
-            <!--Dialogue box-->
-            <div class="dialogue" id="dialogue">
-              <h2 class="dialogueTitle"></h2>
-              <p class="dialogueText">test text</p>
-              <button class="rightButton" id="button">
-                <img class="nextBTN" src="assets/images/next.png" alt="" />
-              </button>
-            </div>
-            <div class="audio">
-              <img
-                src="./assets/images/Black-Play-Button-PNG-Free-Download.png"
-                alt="play"
-              />
-            </div>
-            <!-- characters-->
-            <div class="bruce"></div>
-            <div class="nova"></div>
+            <div class="systemenImg"></div>
           </div>
-          <div class="fix"></div>
+          <div class="onderzoek">
+            <div class="blue-bar-extra2"></div>
+            <div class="onderzoek-titlebox">
+              <p class="h1-apps">ONDERZOEK</p>
+              <p class="h1-apps" id="bloomOnderzoek">ONDERZOEK</p>
+              <p class="desc3">Notatie en verzamelpunt van verkregen informatie 
+                tijdens de missie.</p>
+            </div>
+
+            <div class="onderzoekImg"></div>
+          </div>
         </div>
       </div>
 
-      <div class="sideWindow">
-        <div class="item item1">
-          <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
+
+      <div class="scene" onclick="toggleBoxOff()">
+        <div class="content-dialoog"><!--Dialogue box-->
+          <div class="dialogue" id="dialogue">
+            <h2 class="dialogueTitle"></h2>
+            <p class="dialogueText">test text</p>
+            <button class="rightButton" id="button">></button>
+          </div>
+          <div class="audio">
+            <img src="./assets/images/Black-Play-Button-PNG-Free-Download.png" alt="play" />
+          </div>
+          <!-- characters-->
+          <div class="bruce"></div>
+          <div class="nova"></div>
         </div>
-        <div class="item item2">
-          <p class="previousdialogue"></p>
-        </div>
-        <div class="item item3"></div>
+
+
       </div>
     </div>
-    <!--Scripts-->
-    <script src="./js/app.js"></script>
-  </body>
+
+    <div class="sideWindow">
+      <div class="item item1">
+        <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
+      </div>
+      <div class="item item2">
+        <p class="previousdialogue"></p>
+      </div>
+      <div class="item item3"></div>
+    </div>
+  </div>
+  <!--Scripts-->
+  <!-- <div class="fix">
+      <img src="./assets/images/fix.png" alt="" />
+    </div> -->
+  <script src="./js/app.js"></script>
+</body>
+
 </html>

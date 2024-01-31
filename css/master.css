@@ -178,19 +178,6 @@
   font-weight: 700;
   src: url("../assets/fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
 }
-h1 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 36px;
-}
-
-i {
-  font-style: italic;
-}
-
-b {
-  font-weight: bold;
-}
-
 * {
   font-family: "Quicksand", sans-serif;
 }
