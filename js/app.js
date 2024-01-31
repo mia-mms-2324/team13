@@ -6,6 +6,12 @@ addEventListener("click", function () {
       el.mozRequestFullScreen;
   rfs.call(el);
 });
+//event listener for esc key
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 27) {
+    alert("Onze multimedia story is alleen te gebruiken in full screen modus");
+  }
+});
 
 let currentDialogueIndex = 0;
 let dialogues = [];
