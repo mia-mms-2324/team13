@@ -288,6 +288,7 @@ document.querySelector(".audio").addEventListener("click", function () {
 
 // CODE JOEY //
 
+
 //titleGlow en desc
 
 function handleInboxMouseOver() {
@@ -340,6 +341,77 @@ function handleOnderzoekMouseLeave() {
   document.querySelector('.onderzoekImg').classList.remove('noBlur');
 }
 
+// Function to open Inbox
+function openInbox() {
+  // Add the logic to open Inbox here
+  document.querySelector('.inbox').classList.add('is1');
+  document.querySelector('.desc').classList.add('is1');
+  document.querySelector('.emails').classList.add('is1');
+  document.querySelector('.systemen').classList.add('is1');
+  document.querySelector('.onderzoek').classList.add('is1');
+}
+
+function closeInbox() {
+  // Add the logic to open Inbox here
+  document.querySelector('.inbox').classList.remove('is1');
+  document.querySelector('.desc').classList.remove('is1');
+  document.querySelector('.emails').classList.remove('is1');
+  document.querySelector('.systemen').classList.remove('is1');
+  document.querySelector('.onderzoek').classList.remove('is1');
+}
+
+// Function to open Systemen
+function openSystemen() {
+  // Add the logic to open Systemen here
+  document.querySelector('.systemen').classList.add('ss1');
+  document.querySelector('.desc2').classList.add('ss1');
+  document.querySelector('.inbox').classList.add('ss1');
+  document.querySelector('.onderzoek').classList.add('ss1');
+}
+
+function closeSystemen() {
+  // Add the logic to open Systemen here
+  document.querySelector('.systemen').classList.remove('ss1');
+  document.querySelector('.desc').classList.remove('ss1');
+  document.querySelector('.desc2').classList.remove('ss1');
+  document.querySelector('.inbox').classList.remove('ss1');
+  document.querySelector('.onderzoek').classList.remove('ss1');
+}
+
+// Function to open Systemen
+function openOnderzoek() {
+  // Add the logic to open Onderzoek here
+  document.querySelector('.systemen').classList.add('os1');
+  document.querySelector('.desc3').classList.add('os1');
+  document.querySelector('.inbox').classList.add('os1');
+  document.querySelector('.onderzoek').classList.add('os1');
+}
+
+function closeOnderzoek() {
+  // Add the logic to open Onderzoek here
+  document.querySelector('.systemen').classList.remove('os1');
+  document.querySelector('.desc3').classList.remove('os1');
+  document.querySelector('.inbox').classList.remove('os1');
+  document.querySelector('.onderzoek').classList.remove('os1');
+}
+
+// Function hide blue bars
+function blueHide() {
+  // Add the logic to open Onderzoek here
+  document.querySelector('.blue-bar').classList.remove('show');
+  document.querySelector('.blue-bar-extra').classList.remove('show');
+  document.querySelector('.blue-bar-extra2').classList.remove('show');
+}
+
+// Function show blue bars
+function blueShow() {
+  // Add the logic to open Onderzoek here
+  document.querySelector('.blue-bar').classList.add('show');
+  document.querySelector('.blue-bar-extra').classList.add('show');
+  document.querySelector('.blue-bar-extra2').classList.add('show');
+}
+
+
 // Add event listeners when expanding
 function addEventListeners() {
   inbox.addEventListener('mouseover', handleInboxMouseOver);
@@ -350,6 +422,29 @@ function addEventListeners() {
 
   onderzoek.addEventListener('mouseover', handleOnderzoekMouseOver);
   onderzoek.addEventListener('mouseleave', handleOnderzoekMouseLeave);
+
+  // Check if #apps is expanding before adding click event
+  if (box.classList.contains('expanding')) {
+    inbox.addEventListener('click', openInbox);
+    systemen.addEventListener('click', openSystemen);
+    onderzoek.addEventListener('click', openOnderzoek);
+
+    systemen.addEventListener('click', closeInbox);
+    onderzoek.addEventListener('click', closeInbox);
+    box2.addEventListener('click', closeInbox);
+
+    inbox.addEventListener('click', closeSystemen);
+    onderzoek.addEventListener('click', closeSystemen);
+    box2.addEventListener('click', closeSystemen);
+
+    systemen.addEventListener('click', closeOnderzoek);
+    inbox.addEventListener('click', closeOnderzoek);
+    box2.addEventListener('click', closeOnderzoek);
+
+    box2.addEventListener('click', blueHide);
+  }
+
+  // Check if #apps is collapsing before adding click event
 }
 
 // Remove event listeners when collapsing
@@ -362,6 +457,11 @@ function removeEventListeners() {
 
   onderzoek.removeEventListener('mouseover', handleOnderzoekMouseOver);
   onderzoek.removeEventListener('mouseleave', handleOnderzoekMouseLeave);
+
+  // Remove click event when collapsing
+  inbox.removeEventListener('click', openInbox);
+  systemen.removeEventListener('click', openSystemen);
+  onderzoek.removeEventListener('click', openOnderzoek);
 }
 
 // Apps window die groter wordt //////////////////////////////////////////////////////////
@@ -398,26 +498,30 @@ function toggleBoxOn() {
   });
 
   addEventListeners();
+  blueShow();
 }
 
 //apps collapsed //////////////////////////////////////////////////////////////////
 
 function toggleBoxOff() {
-  box.classList.remove('expanding');
-  box.classList.add('collapsing');
 
-  box2.classList.remove('expanding');
-  box2.classList.add('collapsing');
+  if (box.classList.contains('expanding')) {
+    box.classList.remove('expanding');
+    box.classList.add('collapsing');
 
-  inboxImg.classList.remove('expanding');
-  inboxImg.classList.add('collapsing');
+    box2.classList.remove('expanding');
+    box2.classList.add('collapsing');
 
-  systemenImg.classList.remove('expanding');
-  systemenImg.classList.add('collapsing');
+    inboxImg.classList.remove('expanding');
+    inboxImg.classList.add('collapsing');
 
-  onderzoekImg.classList.remove('expanding');
-  onderzoekImg.classList.add('collapsing');
+    systemenImg.classList.remove('expanding');
+    systemenImg.classList.add('collapsing');
 
+    onderzoekImg.classList.remove('expanding');
+    onderzoekImg.classList.add('collapsing');
+
+  }
   //titles
 
   let titles = box.querySelectorAll('.h1-apps');
@@ -431,7 +535,7 @@ function toggleBoxOff() {
 //bg video 
 
 // Get the video element
-var video = document.getElementById('backgroundVideo');
+let video = document.getElementById('backgroundVideo');
 
 // Add an event listener to detect when the video ends
 video.addEventListener('ended', function () {
@@ -439,10 +543,3 @@ video.addEventListener('ended', function () {
   this.currentTime = 0;
   this.play();
 }, false);
-
-
-
-
-
-
-
