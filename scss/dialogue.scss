@@ -47,6 +47,7 @@
 @keyframes typing {
   to {
     max-width: 75%; /* Expand to full width */
+
     white-space: normal; /* Allow text to wrap */
     overflow: visible; /* Show any overflowing text on the next line */
   }
@@ -64,6 +65,7 @@
   border-radius: 0 0px 10px 10px;
   cursor: pointer;
   animation: switchOpacity 1s alternate infinite; /* Apply the opacity switching animation */
+
 }
 
 @keyframes switchOpacity {

@@ -28,6 +28,18 @@ let systemen = document.querySelector(".systemen");
 let onderzoek = document.querySelector(".onderzoek");
 let onderzoekImg = document.querySelector(".onderzoekImg");
 
+
+let mail1Var = document.getElementById('mail1');
+let mail2Var = document.getElementById('mail2');
+let mail3Var = document.getElementById('mail3');
+let mail4Var = document.getElementById('mail4');
+let mail5Var = document.getElementById('mail5');
+
+let zin1 = document.getElementById('zin1');
+let zin2 = document.getElementById('zin2');
+let zin3 = document.getElementById('zin3');
+
+
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
   return currentDialogue.audio;
@@ -402,6 +414,8 @@ function openOnderzoek() {
   document.querySelector(".desc3").classList.add("os1");
   document.querySelector(".inbox").classList.add("os1");
   document.querySelector(".onderzoek").classList.add("os1");
+  document.querySelector(".zinnen").classList.add("os1");
+
 }
 
 function closeOnderzoek() {
@@ -410,6 +424,114 @@ function closeOnderzoek() {
   document.querySelector(".desc3").classList.remove("os1");
   document.querySelector(".inbox").classList.remove("os1");
   document.querySelector(".onderzoek").classList.remove("os1");
+
+  document.querySelector(".zinnen").classList.remove("os1");
+}
+
+// EMAILS /////////////////////////////////////////////////////////////////////////////////
+
+function mail1() {
+  document.getElementById('mail1').classList.add('read');
+
+  document.getElementById('mail2').classList.add('hide');
+  document.getElementById('mail3').classList.add('hide');
+  document.getElementById('mail4').classList.add('hide');
+  document.getElementById('mail5').classList.add('hide');
+}
+
+function mail1Exit() {
+  document.getElementById('mail1').classList.remove('read');
+
+  document.getElementById('mail2').classList.remove('hide');
+  document.getElementById('mail3').classList.remove('hide');
+  document.getElementById('mail4').classList.remove('hide');
+  document.getElementById('mail5').classList.remove('hide');
+}
+
+function mail2() {
+  document.getElementById('mail2').classList.add('read');
+
+  document.getElementById('mail1').classList.add('hide');
+  document.getElementById('mail3').classList.add('hide');
+  document.getElementById('mail4').classList.add('hide');
+  document.getElementById('mail5').classList.add('hide');
+}
+
+function mail2Exit() {
+  document.getElementById('mail2').classList.remove('read');
+
+  document.getElementById('mail1').classList.remove('hide');
+  document.getElementById('mail3').classList.remove('hide');
+  document.getElementById('mail4').classList.remove('hide');
+  document.getElementById('mail5').classList.remove('hide');
+}
+
+function mail3() {
+  document.getElementById('mail3').classList.add('read');
+
+  document.getElementById('mail1').classList.add('hide');
+  document.getElementById('mail2').classList.add('hide');
+  document.getElementById('mail4').classList.add('hide');
+  document.getElementById('mail5').classList.add('hide');
+}
+
+function mail3Exit() {
+  document.getElementById('mail3').classList.remove('read');
+
+  document.getElementById('mail1').classList.remove('hide');
+  document.getElementById('mail2').classList.remove('hide');
+  document.getElementById('mail4').classList.remove('hide');
+  document.getElementById('mail5').classList.remove('hide');
+}
+
+function mail4() {
+  document.getElementById('mail4').classList.add('read');
+
+  document.getElementById('mail1').classList.add('hide');
+  document.getElementById('mail2').classList.add('hide');
+  document.getElementById('mail3').classList.add('hide');
+  document.getElementById('mail5').classList.add('hide');
+}
+
+function mail4Exit() {
+  document.getElementById('mail4').classList.remove('read');
+
+  document.getElementById('mail1').classList.remove('hide');
+  document.getElementById('mail2').classList.remove('hide');
+  document.getElementById('mail3').classList.remove('hide');
+  document.getElementById('mail5').classList.remove('hide');
+}
+
+function mail5() {
+  document.getElementById('mail5').classList.add('read');
+
+  document.getElementById('mail1').classList.add('hide');
+  document.getElementById('mail2').classList.add('hide');
+  document.getElementById('mail3').classList.add('hide');
+  document.getElementById('mail4').classList.add('hide');
+}
+
+function mail5Exit() {
+  document.getElementById('mail5').classList.remove('read');
+
+  document.getElementById('mail1').classList.remove('hide');
+  document.getElementById('mail2').classList.remove('hide');
+  document.getElementById('mail3').classList.remove('hide');
+  document.getElementById('mail4').classList.remove('hide');
+}
+
+function zin1Exp() {
+  document.querySelector('.zinnen').classList.add('hide');
+  document.querySelector('.conclusies').classList.add('exp');
+  onderzoek.classList.add('exp');
+  document.querySelector('.exitCon').classList.add('leave');
+}
+
+function zin1Exit() {
+  document.querySelector('.zinnen').classList.remove('hide');
+  document.querySelector('.conclusies').classList.remove('exp');
+  onderzoek.classList.remove('exp');
+  document.querySelector('.exitCon').classList.remove('leave');
 }
 
 // Function hide blue bars
@@ -458,6 +580,15 @@ function addEventListeners() {
     box2.addEventListener("click", closeOnderzoek);
 
     box2.addEventListener("click", blueHide);
+
+    mail1Var.addEventListener('click', mail1);
+    mail2Var.addEventListener('click', mail2);
+    mail3Var.addEventListener('click', mail3);
+    mail4Var.addEventListener('click', mail4);
+    mail5Var.addEventListener('click', mail5);
+
+    zin1.addEventListener('click', zin1Exp);
+    document.querySelector('.exitCon').addEventListener('click', zin1Exit);
   }
 
   // Check if #apps is collapsing before adding click event
