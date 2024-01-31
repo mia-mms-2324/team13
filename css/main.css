@@ -187,7 +187,8 @@ body {
   overflow-y: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; /* Add this to establish a stacking context */
+  position: relative;
+  /* Add this to establish a stacking context */
 }
 
 video {
@@ -246,6 +247,54 @@ video {
   cursor: pointer;
 }
 
+.inbox.is1 {
+  width: 90%;
+  cursor: default;
+  transition: 0.3s ease;
+}
+
+.inbox.ss1 {
+  width: 70%;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.inbox.os1 {
+  width: 70%;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.emails {
+  position: absolute;
+  top: 15%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  transition: 0.3s ease;
+}
+
+.emails.is1 {
+  opacity: 1;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.mail {
+  position: relative;
+  margin-top: 1.5%;
+  left: 2%;
+  width: 20%;
+  height: 2vw;
+  background-color: #185460;
+  cursor: pointer;
+  z-index: 2;
+}
+
 .h1-apps {
   font-family: "Quicksand", sans-serif;
   font-size: 36px;
@@ -271,6 +320,18 @@ video {
   transition: 0.3s ease;
 }
 
+.inbox .desc.is1 {
+  opacity: 0;
+}
+
+.systemen .desc2.ss1 {
+  opacity: 0;
+}
+
+.onderzoek .desc3.os1 {
+  opacity: 0;
+}
+
 .systemen .desc2 {
   opacity: 0;
   font-family: "Quicksand", sans-serif;
@@ -279,6 +340,68 @@ video {
   position: relative;
   top: 70px;
   transition: 0.3s ease;
+}
+
+.inbox.ss1:hover {
+  opacity: 1;
+}
+
+.inbox.os1:hover {
+  opacity: 1;
+}
+
+.systemen.is1 {
+  transition: 0.3s ease;
+  opacity: 0.25;
+}
+
+.systemen.is1:hover {
+  opacity: 1;
+}
+
+.systemen.os1:hover {
+  opacity: 1;
+}
+
+.onderzoek.is1:hover {
+  opacity: 1;
+}
+
+.onderzoek.ss1:hover {
+  opacity: 1;
+}
+
+.systemen.os1 {
+  transition: 0.3s ease;
+  opacity: 0.25;
+}
+
+.systemen.ss1 {
+  position: relative;
+  right: 10%;
+  transition: 0.3s ease;
+  width: 130%;
+  height: 130%;
+  opacity: 1;
+}
+
+.onderzoek.is1 {
+  transition: 0.3s ease;
+  opacity: 0.25;
+}
+
+.onderzoek.ss1 {
+  transition: 0.3s ease;
+  opacity: 0.25;
+}
+
+.onderzoek.os1 {
+  position: relative;
+  right: 10%;
+  transition: 0.3s ease;
+  width: 130%;
+  height: 130%;
+  opacity: 1;
 }
 
 .onderzoek .desc3 {
@@ -307,6 +430,7 @@ video {
 }
 
 .blue-bar {
+  opacity: 0;
   position: absolute;
   width: 50%;
   height: 0.3vw;
@@ -317,10 +441,11 @@ video {
 
 .blue-bar.grow {
   transition: 0.3s ease;
-  width: 70%;
+  width: 75%;
 }
 
 .blue-bar-extra {
+  opacity: 0;
   position: absolute;
   width: 20%;
   height: 0.3vw;
@@ -331,10 +456,11 @@ video {
 
 .blue-bar-extra.grow {
   transition: 0.3s ease;
-  width: 30%;
+  width: 100%;
 }
 
 .blue-bar-extra2 {
+  opacity: 0;
   position: absolute;
   width: 20%;
   height: 0.3vw;
@@ -345,7 +471,19 @@ video {
 
 .blue-bar-extra2.grow {
   transition: 0.3s ease;
-  width: 30%;
+  width: 100%;
+}
+
+.blue-bar.show {
+  opacity: 1;
+}
+
+.blue-bar-extra.show {
+  opacity: 1;
+}
+
+.blue-bar-extra2.show {
+  opacity: 1;
 }
 
 #bloomInbox.highlight {
@@ -389,12 +527,14 @@ video {
   height: 50%;
   background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .onderzoek {
   background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0) 100%);
   height: 50%;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 #apps {
@@ -424,7 +564,8 @@ video {
 }
 
 #apps.collapsing {
-  cursor: pointer; /* Add this to indicate it's clickable */
+  cursor: pointer;
+  /* Add this to indicate it's clickable */
   height: 20%;
   animation: collapseAnimation 0.3s ease-out forwards;
 }
@@ -528,12 +669,14 @@ video {
     height: 20%;
   }
   to {
-    height: 70%; /* Set to your desired expanded height */
+    height: 70%;
+    /* Set to your desired expanded height */
   }
 }
 @keyframes collapseAnimation {
   from {
-    height: 70%; /* Set to your desired expanded height */
+    height: 70%;
+    /* Set to your desired expanded height */
   }
   to {
     height: 20%;
