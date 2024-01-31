@@ -4,14 +4,14 @@ let audioUnlocked = 0;
 let audio = null;
 
 //let's - > apps
-let box = document.getElementById('apps');
-let box2 = document.querySelector('.scene');
-let inbox = document.querySelector('.inbox');
-let inboxImg = document.querySelector('.inboxImg');
-let systemenImg = document.querySelector('.systemenImg');
-let systemen = document.querySelector('.systemen');
-let onderzoek = document.querySelector('.onderzoek');
-let onderzoekImg = document.querySelector('.onderzoekImg');
+let box = document.getElementById("apps");
+let box2 = document.querySelector(".scene");
+let inbox = document.querySelector(".inbox");
+let inboxImg = document.querySelector(".inboxImg");
+let systemenImg = document.querySelector(".systemenImg");
+let systemen = document.querySelector(".systemen");
+let onderzoek = document.querySelector(".onderzoek");
+let onderzoekImg = document.querySelector(".onderzoekImg");
 
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
@@ -48,11 +48,11 @@ function updateDialogue() {
 
   console.log(
     "ID: " +
-    currentDialogue.ID +
-    ", Gender: " +
-    currentDialogue.Gender +
-    ", SpriteID: " +
-    currentDialogue.SpriteID
+      currentDialogue.ID +
+      ", Gender: " +
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
   );
 
   // Add animation to .bruce and .nova
@@ -87,9 +87,9 @@ function updateDialogue() {
   // Add debugging statements to check values
   console.log(
     "Gender: " +
-    currentDialogue.Gender +
-    ", SpriteID: " +
-    currentDialogue.SpriteID
+      currentDialogue.Gender +
+      ", SpriteID: " +
+      currentDialogue.SpriteID
   );
 
   switch (currentDialogue.Gender) {
@@ -288,160 +288,156 @@ document.querySelector(".audio").addEventListener("click", function () {
 
 // CODE JOEY //
 
-
 //titleGlow en desc
 
 function handleInboxMouseOver() {
-
   //inbox
-  document.getElementById('bloomInbox').classList.add('highlight');
-  document.querySelector('.desc').classList.add('show');
-  document.querySelector('.blue-bar').classList.add('grow');
-  document.querySelector('.inboxImg').classList.add('noBlur');
+  document.getElementById("bloomInbox").classList.add("highlight");
+  document.querySelector(".desc").classList.add("show");
+  document.querySelector(".blue-bar").classList.add("grow");
+  document.querySelector(".inboxImg").classList.add("noBlur");
 }
 
 function handleSystemenMouseOver() {
   //systemen
-  document.getElementById('bloomSystemen').classList.add('highlight');
-  document.querySelector('.desc2').classList.add('show');
-  document.querySelector('.blue-bar-extra').classList.add('grow');
-  document.querySelector('.systemenImg').classList.add('noBlur');
+  document.getElementById("bloomSystemen").classList.add("highlight");
+  document.querySelector(".desc2").classList.add("show");
+  document.querySelector(".blue-bar-extra").classList.add("grow");
+  document.querySelector(".systemenImg").classList.add("noBlur");
 }
 
 function handleOnderzoekMouseOver() {
   //onderzoek
-  document.getElementById('bloomOnderzoek').classList.add('highlight');
-  document.querySelector('.desc3').classList.add('show');
-  document.querySelector('.blue-bar-extra2').classList.add('grow');
-  document.querySelector('.onderzoekImg').classList.add('noBlur');
+  document.getElementById("bloomOnderzoek").classList.add("highlight");
+  document.querySelector(".desc3").classList.add("show");
+  document.querySelector(".blue-bar-extra2").classList.add("grow");
+  document.querySelector(".onderzoekImg").classList.add("noBlur");
 }
 
 function handleInboxMouseLeave() {
-
   //inbox
-  document.getElementById('bloomInbox').classList.remove('highlight');
-  document.querySelector('.desc').classList.remove('show');
-  document.querySelector('.blue-bar').classList.remove('grow');
-  document.querySelector('.inboxImg').classList.remove('noBlur');
+  document.getElementById("bloomInbox").classList.remove("highlight");
+  document.querySelector(".desc").classList.remove("show");
+  document.querySelector(".blue-bar").classList.remove("grow");
+  document.querySelector(".inboxImg").classList.remove("noBlur");
 }
 
 function handleSystemenMouseLeave() {
   //systemen
-  document.getElementById('bloomSystemen').classList.remove('highlight');
-  document.querySelector('.desc2').classList.remove('show');
-  document.querySelector('.blue-bar-extra').classList.remove('grow');
-  document.querySelector('.systemenImg').classList.remove('noBlur');
+  document.getElementById("bloomSystemen").classList.remove("highlight");
+  document.querySelector(".desc2").classList.remove("show");
+  document.querySelector(".blue-bar-extra").classList.remove("grow");
+  document.querySelector(".systemenImg").classList.remove("noBlur");
 }
 
 function handleOnderzoekMouseLeave() {
   //onderzoek
-  document.getElementById('bloomOnderzoek').classList.remove('highlight');
-  document.querySelector('.desc3').classList.remove('show');
-  document.querySelector('.blue-bar-extra2').classList.remove('grow');
-  document.querySelector('.onderzoekImg').classList.remove('noBlur');
+  document.getElementById("bloomOnderzoek").classList.remove("highlight");
+  document.querySelector(".desc3").classList.remove("show");
+  document.querySelector(".blue-bar-extra2").classList.remove("grow");
+  document.querySelector(".onderzoekImg").classList.remove("noBlur");
 }
 
 // Function to open Inbox
 function openInbox() {
   // Add the logic to open Inbox here
-  document.querySelector('.inbox').classList.add('is1');
-  document.querySelector('.desc').classList.add('is1');
-  document.querySelector('.emails').classList.add('is1');
-  document.querySelector('.systemen').classList.add('is1');
-  document.querySelector('.onderzoek').classList.add('is1');
+  document.querySelector(".inbox").classList.add("is1");
+  document.querySelector(".desc").classList.add("is1");
+  document.querySelector(".emails").classList.add("is1");
+  document.querySelector(".systemen").classList.add("is1");
+  document.querySelector(".onderzoek").classList.add("is1");
 }
 
 function closeInbox() {
   // Add the logic to open Inbox here
-  document.querySelector('.inbox').classList.remove('is1');
-  document.querySelector('.desc').classList.remove('is1');
-  document.querySelector('.emails').classList.remove('is1');
-  document.querySelector('.systemen').classList.remove('is1');
-  document.querySelector('.onderzoek').classList.remove('is1');
+  document.querySelector(".inbox").classList.remove("is1");
+  document.querySelector(".desc").classList.remove("is1");
+  document.querySelector(".emails").classList.remove("is1");
+  document.querySelector(".systemen").classList.remove("is1");
+  document.querySelector(".onderzoek").classList.remove("is1");
 }
 
 // Function to open Systemen
 function openSystemen() {
   // Add the logic to open Systemen here
-  document.querySelector('.systemen').classList.add('ss1');
-  document.querySelector('.desc2').classList.add('ss1');
-  document.querySelector('.inbox').classList.add('ss1');
-  document.querySelector('.onderzoek').classList.add('ss1');
+  document.querySelector(".systemen").classList.add("ss1");
+  document.querySelector(".desc2").classList.add("ss1");
+  document.querySelector(".inbox").classList.add("ss1");
+  document.querySelector(".onderzoek").classList.add("ss1");
 }
 
 function closeSystemen() {
   // Add the logic to open Systemen here
-  document.querySelector('.systemen').classList.remove('ss1');
-  document.querySelector('.desc').classList.remove('ss1');
-  document.querySelector('.desc2').classList.remove('ss1');
-  document.querySelector('.inbox').classList.remove('ss1');
-  document.querySelector('.onderzoek').classList.remove('ss1');
+  document.querySelector(".systemen").classList.remove("ss1");
+  document.querySelector(".desc").classList.remove("ss1");
+  document.querySelector(".desc2").classList.remove("ss1");
+  document.querySelector(".inbox").classList.remove("ss1");
+  document.querySelector(".onderzoek").classList.remove("ss1");
 }
 
 // Function to open Systemen
 function openOnderzoek() {
   // Add the logic to open Onderzoek here
-  document.querySelector('.systemen').classList.add('os1');
-  document.querySelector('.desc3').classList.add('os1');
-  document.querySelector('.inbox').classList.add('os1');
-  document.querySelector('.onderzoek').classList.add('os1');
+  document.querySelector(".systemen").classList.add("os1");
+  document.querySelector(".desc3").classList.add("os1");
+  document.querySelector(".inbox").classList.add("os1");
+  document.querySelector(".onderzoek").classList.add("os1");
 }
 
 function closeOnderzoek() {
   // Add the logic to open Onderzoek here
-  document.querySelector('.systemen').classList.remove('os1');
-  document.querySelector('.desc3').classList.remove('os1');
-  document.querySelector('.inbox').classList.remove('os1');
-  document.querySelector('.onderzoek').classList.remove('os1');
+  document.querySelector(".systemen").classList.remove("os1");
+  document.querySelector(".desc3").classList.remove("os1");
+  document.querySelector(".inbox").classList.remove("os1");
+  document.querySelector(".onderzoek").classList.remove("os1");
 }
 
 // Function hide blue bars
 function blueHide() {
   // Add the logic to open Onderzoek here
-  document.querySelector('.blue-bar').classList.remove('show');
-  document.querySelector('.blue-bar-extra').classList.remove('show');
-  document.querySelector('.blue-bar-extra2').classList.remove('show');
+  document.querySelector(".blue-bar").classList.remove("show");
+  document.querySelector(".blue-bar-extra").classList.remove("show");
+  document.querySelector(".blue-bar-extra2").classList.remove("show");
 }
 
 // Function show blue bars
 function blueShow() {
   // Add the logic to open Onderzoek here
-  document.querySelector('.blue-bar').classList.add('show');
-  document.querySelector('.blue-bar-extra').classList.add('show');
-  document.querySelector('.blue-bar-extra2').classList.add('show');
+  document.querySelector(".blue-bar").classList.add("show");
+  document.querySelector(".blue-bar-extra").classList.add("show");
+  document.querySelector(".blue-bar-extra2").classList.add("show");
 }
-
 
 // Add event listeners when expanding
 function addEventListeners() {
-  inbox.addEventListener('mouseover', handleInboxMouseOver);
-  inbox.addEventListener('mouseleave', handleInboxMouseLeave);
+  inbox.addEventListener("mouseover", handleInboxMouseOver);
+  inbox.addEventListener("mouseleave", handleInboxMouseLeave);
 
-  systemen.addEventListener('mouseover', handleSystemenMouseOver);
-  systemen.addEventListener('mouseleave', handleSystemenMouseLeave);
+  systemen.addEventListener("mouseover", handleSystemenMouseOver);
+  systemen.addEventListener("mouseleave", handleSystemenMouseLeave);
 
-  onderzoek.addEventListener('mouseover', handleOnderzoekMouseOver);
-  onderzoek.addEventListener('mouseleave', handleOnderzoekMouseLeave);
+  onderzoek.addEventListener("mouseover", handleOnderzoekMouseOver);
+  onderzoek.addEventListener("mouseleave", handleOnderzoekMouseLeave);
 
   // Check if #apps is expanding before adding click event
-  if (box.classList.contains('expanding')) {
-    inbox.addEventListener('click', openInbox);
-    systemen.addEventListener('click', openSystemen);
-    onderzoek.addEventListener('click', openOnderzoek);
+  if (box.classList.contains("expanding")) {
+    inbox.addEventListener("click", openInbox);
+    systemen.addEventListener("click", openSystemen);
+    onderzoek.addEventListener("click", openOnderzoek);
 
-    systemen.addEventListener('click', closeInbox);
-    onderzoek.addEventListener('click', closeInbox);
-    box2.addEventListener('click', closeInbox);
+    systemen.addEventListener("click", closeInbox);
+    onderzoek.addEventListener("click", closeInbox);
+    box2.addEventListener("click", closeInbox);
 
-    inbox.addEventListener('click', closeSystemen);
-    onderzoek.addEventListener('click', closeSystemen);
-    box2.addEventListener('click', closeSystemen);
+    inbox.addEventListener("click", closeSystemen);
+    onderzoek.addEventListener("click", closeSystemen);
+    box2.addEventListener("click", closeSystemen);
 
-    systemen.addEventListener('click', closeOnderzoek);
-    inbox.addEventListener('click', closeOnderzoek);
-    box2.addEventListener('click', closeOnderzoek);
+    systemen.addEventListener("click", closeOnderzoek);
+    inbox.addEventListener("click", closeOnderzoek);
+    box2.addEventListener("click", closeOnderzoek);
 
-    box2.addEventListener('click', blueHide);
+    box2.addEventListener("click", blueHide);
   }
 
   // Check if #apps is collapsing before adding click event
@@ -449,51 +445,51 @@ function addEventListeners() {
 
 // Remove event listeners when collapsing
 function removeEventListeners() {
-  inbox.removeEventListener('mouseover', handleInboxMouseOver);
-  inbox.removeEventListener('mouseleave', handleInboxMouseLeave);
+  inbox.removeEventListener("mouseover", handleInboxMouseOver);
+  inbox.removeEventListener("mouseleave", handleInboxMouseLeave);
 
-  systemen.removeEventListener('mouseover', handleSystemenMouseOver);
-  systemen.removeEventListener('mouseleave', handleSystemenMouseLeave);
+  systemen.removeEventListener("mouseover", handleSystemenMouseOver);
+  systemen.removeEventListener("mouseleave", handleSystemenMouseLeave);
 
-  onderzoek.removeEventListener('mouseover', handleOnderzoekMouseOver);
-  onderzoek.removeEventListener('mouseleave', handleOnderzoekMouseLeave);
+  onderzoek.removeEventListener("mouseover", handleOnderzoekMouseOver);
+  onderzoek.removeEventListener("mouseleave", handleOnderzoekMouseLeave);
 
   // Remove click event when collapsing
-  inbox.removeEventListener('click', openInbox);
-  systemen.removeEventListener('click', openSystemen);
-  onderzoek.removeEventListener('click', openOnderzoek);
+  inbox.removeEventListener("click", openInbox);
+  systemen.removeEventListener("click", openSystemen);
+  onderzoek.removeEventListener("click", openOnderzoek);
 }
 
 // Apps window die groter wordt //////////////////////////////////////////////////////////
 
 function toggleBoxOn() {
-  box.classList.remove('collapsing');
-  box.classList.add('expanding');
+  box.classList.remove("collapsing");
+  box.classList.add("expanding");
 
-  box2.classList.remove('collapsing');
-  box2.classList.add('expanding');
+  box2.classList.remove("collapsing");
+  box2.classList.add("expanding");
 
-  inboxImg.classList.remove('collapsing');
-  inboxImg.classList.add('expanding');
+  inboxImg.classList.remove("collapsing");
+  inboxImg.classList.add("expanding");
 
-  systemenImg.classList.remove('collapsing');
-  systemenImg.classList.add('expanding');
+  systemenImg.classList.remove("collapsing");
+  systemenImg.classList.add("expanding");
 
-  onderzoekImg.classList.remove('collapsing');
-  onderzoekImg.classList.add('expanding');
+  onderzoekImg.classList.remove("collapsing");
+  onderzoekImg.classList.add("expanding");
 
-  let titles = box.querySelectorAll('.h1-apps');
+  let titles = box.querySelectorAll(".h1-apps");
   titles.forEach(function (title) {
-    title.style.opacity = '1';
+    title.style.opacity = "1";
   });
 
   // opacity appsBG
-  let bgS = ['.inbox', '.systemen', '.onderzoek'];
+  let bgS = [".inbox", ".systemen", ".onderzoek"];
 
   bgS.forEach(function (className) {
     let elements = document.querySelectorAll(className);
     elements.forEach(function (element) {
-      element.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+      element.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
     });
   });
 
@@ -504,42 +500,44 @@ function toggleBoxOn() {
 //apps collapsed //////////////////////////////////////////////////////////////////
 
 function toggleBoxOff() {
+  if (box.classList.contains("expanding")) {
+    box.classList.remove("expanding");
+    box.classList.add("collapsing");
 
-  if (box.classList.contains('expanding')) {
-    box.classList.remove('expanding');
-    box.classList.add('collapsing');
+    box2.classList.remove("expanding");
+    box2.classList.add("collapsing");
 
-    box2.classList.remove('expanding');
-    box2.classList.add('collapsing');
+    inboxImg.classList.remove("expanding");
+    inboxImg.classList.add("collapsing");
 
-    inboxImg.classList.remove('expanding');
-    inboxImg.classList.add('collapsing');
+    systemenImg.classList.remove("expanding");
+    systemenImg.classList.add("collapsing");
 
-    systemenImg.classList.remove('expanding');
-    systemenImg.classList.add('collapsing');
-
-    onderzoekImg.classList.remove('expanding');
-    onderzoekImg.classList.add('collapsing');
-
+    onderzoekImg.classList.remove("expanding");
+    onderzoekImg.classList.add("collapsing");
   }
   //titles
 
-  let titles = box.querySelectorAll('.h1-apps');
+  let titles = box.querySelectorAll(".h1-apps");
   titles.forEach(function (title) {
-    title.style.opacity = '.25';
+    title.style.opacity = ".25";
   });
 
   removeEventListeners();
 }
 
-//bg video 
+//bg video
 
 // Get the video element
-let video = document.getElementById('backgroundVideo');
+let video = document.getElementById("backgroundVideo");
 
 // Add an event listener to detect when the video ends
-video.addEventListener('ended', function () {
-  // Reset the video to the beginning and play it again
-  this.currentTime = 0;
-  this.play();
-}, false);
+video.addEventListener(
+  "ended",
+  function () {
+    // Reset the video to the beginning and play it again
+    this.currentTime = 0;
+    this.play();
+  },
+  false
+);

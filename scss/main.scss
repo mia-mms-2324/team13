@@ -11,7 +11,7 @@ body {
 
 video {
   position: fixed;
-  opacity: .25;
+  opacity: 0.25;
   top: 0;
   left: 0;
   width: 100%;
@@ -48,7 +48,7 @@ video {
 .scene {
   position: relative;
   opacity: 1;
-  transition: .3s ease;
+  transition: 0.3s ease;
   height: 70%;
   background: $color-pink;
   overflow-y: hidden;
@@ -60,7 +60,11 @@ video {
 }
 
 .inbox {
-  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0.00) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 84, 96, 0.75) 0%,
+    rgba(24, 84, 96, 0) 100%
+  );
   width: 70%;
   cursor: pointer;
 }
@@ -68,21 +72,21 @@ video {
 .inbox.is1 {
   width: 90%;
   cursor: default;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inbox.ss1 {
   width: 70%;
-  opacity: .25;
+  opacity: 0.25;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inbox.os1 {
   width: 70%;
-  opacity: .25;
+  opacity: 0.25;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .emails {
@@ -93,13 +97,13 @@ video {
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .emails.is1 {
   opacity: 1;
   display: block;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .mail {
@@ -124,8 +128,8 @@ video {
   color: $color-white;
   top: 25px;
   left: 25px;
-  opacity: .25;
-  transition: .3s ease;
+  opacity: 0.25;
+  transition: 0.3s ease;
 }
 
 .inbox .desc {
@@ -135,22 +139,19 @@ video {
   width: 50%;
   position: relative;
   top: 70px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inbox .desc.is1 {
   opacity: 0;
-
 }
 
 .systemen .desc2.ss1 {
   opacity: 0;
-
 }
 
 .onderzoek .desc3.os1 {
   opacity: 0;
-
 }
 
 .systemen .desc2 {
@@ -160,7 +161,7 @@ video {
   width: 50%;
   position: relative;
   top: 70px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inbox.ss1:hover {
@@ -172,8 +173,8 @@ video {
 }
 
 .systemen.is1 {
-  transition: .3s ease;
-  opacity: .25;
+  transition: 0.3s ease;
+  opacity: 0.25;
 }
 
 .systemen.is1:hover {
@@ -192,35 +193,34 @@ video {
   opacity: 1;
 }
 
-
 .systemen.os1 {
-  transition: .3s ease;
-  opacity: .25;
+  transition: 0.3s ease;
+  opacity: 0.25;
 }
 
 .systemen.ss1 {
   position: relative;
   right: 10%;
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 130%;
   height: 130%;
   opacity: 1;
 }
 
 .onderzoek.is1 {
-  transition: .3s ease;
-  opacity: .25;
+  transition: 0.3s ease;
+  opacity: 0.25;
 }
 
 .onderzoek.ss1 {
-  transition: .3s ease;
-  opacity: .25;
+  transition: 0.3s ease;
+  opacity: 0.25;
 }
 
 .onderzoek.os1 {
   position: relative;
   right: 10%;
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 130%;
   height: 130%;
   opacity: 1;
@@ -233,21 +233,21 @@ video {
   width: 50%;
   position: relative;
   top: 70px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .desc.show {
-  transition: .3s ease;
+  transition: 0.3s ease;
   opacity: 1;
 }
 
 .desc2.show {
-  transition: .3s ease;
+  transition: 0.3s ease;
   opacity: 1;
 }
 
 .desc3.show {
-  transition: .3s ease;
+  transition: 0.3s ease;
   opacity: 1;
 }
 
@@ -255,14 +255,14 @@ video {
   opacity: 0;
   position: absolute;
   width: 50%;
-  height: .3vw;
+  height: 0.3vw;
   background-color: $color-blue;
   z-index: 5;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .blue-bar.grow {
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 75%;
 }
 
@@ -270,14 +270,14 @@ video {
   opacity: 0;
   position: absolute;
   width: 20%;
-  height: .3vw;
+  height: 0.3vw;
   background-color: $color-blue;
   z-index: 5;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .blue-bar-extra.grow {
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 100%;
 }
 
@@ -285,14 +285,14 @@ video {
   opacity: 0;
   position: absolute;
   width: 20%;
-  height: .3vw;
+  height: 0.3vw;
   background-color: $color-blue;
   z-index: 5;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .blue-bar-extra2.grow {
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 100%;
 }
 
@@ -323,8 +323,8 @@ video {
   color: $color-white;
   top: 25px;
   left: 25px;
-  opacity: .25;
-  transition: .3s ease;
+  opacity: 0.25;
+  transition: 0.3s ease;
 }
 
 .onderzoek p {
@@ -332,8 +332,8 @@ video {
   color: $color-white;
   top: 25px;
   left: 25px;
-  opacity: .25;
-  transition: .3s ease;
+  opacity: 0.25;
+  transition: 0.3s ease;
 }
 
 .extra-apps {
@@ -345,16 +345,24 @@ video {
 
 .systemen {
   height: 50%;
-  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0.00) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 84, 96, 0.75) 0%,
+    rgba(24, 84, 96, 0) 100%
+  );
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .onderzoek {
-  background: linear-gradient(180deg, rgba(24, 84, 96, 0.75) 0%, rgba(24, 84, 96, 0.00) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 84, 96, 0.75) 0%,
+    rgba(24, 84, 96, 0) 100%
+  );
   height: 50%;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 #apps {
@@ -364,17 +372,17 @@ video {
   flex-direction: row;
   width: 87.5vw;
   height: 20%;
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
   z-index: 2;
-  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.5);
 
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 #apps:hover {
-  transition: .3s ease;
-  opacity: .75;
+  transition: 0.3s ease;
+  opacity: 0.75;
 }
 
 #apps.expanding {
@@ -393,7 +401,7 @@ video {
 
 .scene.expanding {
   cursor: pointer;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .scene.expanding:hover {
@@ -424,12 +432,12 @@ video {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/apps-bg/systemen.png');
+  background-image: url("/assets/images/apps-bg/systemen.png");
   background-size: cover;
   background-position: center center;
-  opacity: .75;
+  opacity: 0.75;
   filter: blur(10px);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .systemenImg.noBlur {
@@ -438,7 +446,7 @@ video {
 
 .systemenImg.collapsing {
   opacity: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .onderzoekImg.expanding {
@@ -446,12 +454,12 @@ video {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/apps-bg/onderzoek.png');
+  background-image: url("/assets/images/apps-bg/onderzoek.png");
   background-size: cover;
   background-position: center center;
-  opacity: .75;
+  opacity: 0.75;
   filter: blur(10px);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .onderzoekImg.noBlur {
@@ -460,7 +468,7 @@ video {
 
 .onderzoekImg.collapsing {
   opacity: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inboxImg.expanding {
@@ -468,12 +476,12 @@ video {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/apps-bg/inbox.png');
+  background-image: url("/assets/images/apps-bg/inbox.png");
   background-size: cover;
   background-position: center center;
-  opacity: .75;
+  opacity: 0.75;
   filter: blur(10px);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .inboxImg.noBlur {
@@ -482,7 +490,7 @@ video {
 
 .inboxImg.collapsing {
   opacity: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 @keyframes expandAnimation {
