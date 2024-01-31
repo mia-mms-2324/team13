@@ -4,7 +4,7 @@
       "ID": 1,
       "Gender": "female",
       "SpriteID": "1",
-      "dialogue": "Bijna klaar? Hoe anders kan ik mijn onderzoek van aarde doen?",
+      "dialogue": "Bijna klaar? Hoe anders kan ik mijn onderzoek doen?",
       "audio": false
     },
     "dia2": {
@@ -25,21 +25,21 @@
       "ID": 4,
       "Gender": "female",
       "SpriteID": "3",
-      "dialogue": "(mijmerend) \"Maanden geen contact met aarde... Wat zou er gebeurd kunnen zijn daar beneden?\"",
+      "dialogue": "(mijmerend) \"Maanden geen contact...\"",
       "audio": false
     },
     "dia5": {
       "ID": 5,
       "Gender": "male",
       "SpriteID": "4",
-      "dialogue": "Geen idee, maar we moeten nog veel inpakken voordat we weg gaan. Ga jij nu op zoek naar een veilige landingsplek nu dat de antenne het weer doet?",
+      "dialogue": "Geen idee, maar we...",
       "audio": false
     },
     "dia6": {
       "ID": 6,
       "Gender": "female",
       "SpriteID": "5",
-      "dialogue": "\"Is dat... Een transmissie? Van de aarde?\"",
+      "dialogue": "\"Is dat... Een transmissie?\"",
       "audio": false
     },
     "dia7": {
@@ -53,42 +53,42 @@
       "ID": 8,
       "Gender": "female",
       "SpriteID": "4",
-      "dialogue": "Bekijkt bestanden* (geschokt) \"Dit... Dit zijn audiofragmenten van verschillende mensen.\"",
+      "dialogue": "Bekijkt bestanden* (geschokt)...",
       "audio": false
     },
     "dia9": {
       "ID": 9,
       "Gender": "male",
       "SpriteID": "2",
-      "dialogue": "Wat heeft dat met de wereld redden te maken? Verdoe je tijd niet, we moeten nog veel doen voordat we met de capsule terug naar aarde kunnen.",
+      "dialogue": "Wat heeft dat met de wereld te maken?",
       "audio": false
     },
     "dia10": {
       "ID": 10,
       "Gender": "female",
       "SpriteID": "4",
-      "dialogue": "Maar we kunnen het toch op zijn minst een kans geven? We hebben al heel lang niets gehoord van aarde, en ik wil weten waarom!",
+      "dialogue": "Maar we kunnen het toch een kans geven?",
       "audio": false
     },
     "dia11": {
       "ID": 11,
       "Gender": "male",
       "SpriteID": "1",
-      "dialogue": "Wat een kans geven? De aarde heeft haar kansen gehad. Ga nu weg van die computer en help me met de escape pod.",
+      "dialogue": "Wat een kans geven? De aarde...",
       "audio": false
     },
     "dia12": {
       "ID": 12,
       "Gender": "female",
       "SpriteID": "3",
-      "dialogue": "\"Laat hem maar gaan, ik heb hem toch niet nodig\"",
+      "dialogue": "\"Laat hem maar gaan, ik heb...\"",
       "audio": false
     },
     "dia13": {
       "ID": 13,
       "Gender": "female",
       "SpriteID": "2",
-      "dialogue": "\"Wow, is er al zo lang geleden onderzoek geweest de vervuilende werking van plastic in de natuur? Waarom zijn mensen dan niet harder gaan recyclen? De wereld waarin ik leef is letterlijk geruïneerd door de acties van een ander..\"",
+      "dialogue": "\"Wow, is er al zo lang...\"",
       "audio": false
     },
     "dia14": {
@@ -109,7 +109,7 @@
       "ID": 16,
       "Gender": "female",
       "SpriteID": "6",
-      "dialogue": "Dus als ik deze stof gebruik... zal het verdampen en als het goed is alle microplastics uit de lucht vreten.",
+      "dialogue": "Dus als ik deze stof gebruik...",
       "audio": false
     },
     "dia17": {
@@ -158,7 +158,7 @@
       "ID": 23,
       "Gender": "male",
       "SpriteID": "3",
-      "dialogue": "Nee JIJ luistert nu naar mij, we hebben al maanden geen contact meer met aarde, het voedsel raakt op en de missie is gefaald. Aarde heeft haar laatste adem gehad.",
+      "dialogue": "Nee JIJ luistert nu naar mij, we hebben al maanden...",
       "audio": false
     },
     "dia24": {
@@ -179,7 +179,7 @@
       "ID": 26,
       "Gender": "female",
       "SpriteID": "4",
-      "dialogue": "Aha! Als we deze stoffen mixen en loslaten over aarde, zou als het goed is alles goed moeten komen.",
+      "dialogue": "Aha! Als we deze stoffen mixen en loslaten over aarde...",
       "audio": false
     },
     "dia27": {
@@ -221,35 +221,35 @@
       "ID": 32,
       "Gender": "female",
       "SpriteID": "3",
-      "dialogue": "Watervervuiling heeft ervoor gezorgd dat vissen en andere zee organismen onderuit gaan. Geen wonder dat voedsel voorraden zo schaars waren de laatste tijd.",
+      "dialogue": "Watervervuiling heeft ervoor gezorgd dat vissen en andere...",
       "audio": false
     },
     "dia33": {
       "ID": 33,
       "Gender": "male",
       "SpriteID": "4",
-      "dialogue": "Ze klonk heel... wanhopig. Alsof haar leven van de visserij af hing. Is vis zo belangrijk? Ik kan wel leven zonder een visje op mijn bord",
+      "dialogue": "Ze klonk heel... wanhopig. Alsof haar leven...",
       "audio": false
     },
     "dia34": {
       "ID": 34,
       "Gender": "female",
       "SpriteID": "6",
-      "dialogue": "Bruce, de visserij van haar familie is alles voor haar. Zowel haar inkomen als haar mentale drive. Een reden om zo hard te werken.",
+      "dialogue": "Bruce, de visserij van haar familie is alles...",
       "audio": false
     },
     "dia35": {
       "ID": 35,
       "Gender": "female",
       "SpriteID": "2",
-      "dialogue": "Maar los van haar leven, gaat het hier om miljoenen, of misschien wel miljarden levens van zee organismen die sterven aan de gevolgen van plastic in het water.",
+      "dialogue": "Maar los van haar leven, gaat het hier om miljoenen...",
       "audio": false
     },
     "dia36": {
       "ID": 36,
       "Gender": "male",
       "SpriteID": "5",
-      "dialogue": "Bruce snapt het wel, maar ook weer niet...* \"Speel het volgende audiofragment eens af\"",
+      "dialogue": "Bruce snapt het wel, maar ook weer niet...* \"Speel...",
       "audio": false
     },
     "dia37": {
@@ -277,7 +277,7 @@
       "ID": 40,
       "Gender": "female",
       "SpriteID": "4",
-      "dialogue": "Wat een egoïstische acties allemaal... Tata steel heeft bewust gekozen voor een vervuilende manier van staal produceren! Het leven op aarde dat we verwachten te hebben als we terug gaan zal niet hetzelfde zijn.",
+      "dialogue": "Wat een egoïstische acties allemaal... Tata steel heeft bewust...",
       "audio": false
     },
     "dia41": {
@@ -291,21 +291,21 @@
       "ID": 42,
       "Gender": "female",
       "SpriteID": "1",
-      "dialogue": "Co2 is niet de enige vorm van vervuiling door de staal industrie. Maar los daarvan, de gevolgen zijn catastrofaal.",
+      "dialogue": "Co2 is niet de enige vorm van vervuiling door de staal industrie...",
       "audio": false
     },
     "dia43": {
       "ID": 43,
       "Gender": "female",
       "SpriteID": "6",
-      "dialogue": "Niet alleen de werknemers die bij Tata steel hebben gewerkt werden gedupeerd, maar ook de omwonenden.",
+      "dialogue": "Niet alleen de werknemers die bij Tata steel hebben gewerkt werden gedupeerd...",
       "audio": false
     },
     "dia44": {
       "ID": 44,
       "Gender": "female",
       "SpriteID": "2",
-      "dialogue": "En dat zijn pas de acties die aan het licht gekomen zijn. Wie weet wat er op globaal niveau is gebeurt!?",
+      "dialogue": "En dat zijn pas de acties die aan het licht gekomen zijn...",
       "audio": false
     },
     "dia45": {
@@ -347,14 +347,14 @@
       "ID": 50,
       "Gender": "male",
       "SpriteID": "2",
-      "dialogue": "Ik wist dat er verschillende districten bestonden, MAAR NIEMAND HEEFT ME WAT VERTELD OVER DE BUITENWERELD!",
+      "dialogue": "Ik wist dat er verschillende districten bestonden...",
       "audio": false
     },
     "dia51": {
       "ID": 51,
       "Gender": "female",
       "SpriteID": "1",
-      "dialogue": "Dat verklaart waarom ik mijn extern onderzoek niet op aarde mocht doen, omdat ze de realiteit niet willen laten zien!",
+      "dialogue": "Dat verklaart waarom ik mijn extern onderzoek niet op aarde mocht doen...",
       "audio": false
     },
     "dia52": {
@@ -382,7 +382,7 @@
       "ID": 55,
       "Gender": "female",
       "SpriteID": "2",
-      "dialogue": "Aha! Als we deze stoffen mixen en loslaten over aarde, zou als het goed is alles goed moeten komen.",
+      "dialogue": "Aha! Als we deze stoffen mixen en loslaten over aarde...",
       "audio": false
     },
     "dia56": {

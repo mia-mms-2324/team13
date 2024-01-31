@@ -29,7 +29,12 @@ function updateDialogue() {
   dialogueTitleElement.style.display = "block";
   bruceElement.style.display = "none";
   novaElement.style.display = "none";
-
+  let rightButton = document.querySelector(".rightButton");
+  rightButton.style.display = " none";
+  //wait for 5 seconds
+  setTimeout(function () {
+    rightButton.style.display = "block";
+  }, 5000);
   if (currentDialogue.Gender == "null") {
     dialogueTitleElement.style.display = "none";
   } else {
@@ -201,8 +206,10 @@ function loadPreviousDialogue() {
   let previous = currentDialogueIndex - 1;
 
   if (previous >= 0 && previous < dialogues.length) {
-    document.querySelector(".previousdialogue").textContent =
-      dialogues[previous].dialogue;
+    let speakerName = dialogues[previous].Gender === "male" ? "BRUCE" : "NOVA";
+    document.querySelector(
+      ".previousdialogue"
+    ).innerHTML = `<span style="font-weight: 400;">${speakerName}</span><br> ${dialogues[previous].dialogue}`;
   } else {
     // Handle the case where there's no valid previous dialogue
     document.querySelector(".previousdialogue").textContent =
