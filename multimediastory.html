@@ -6,39 +6,39 @@
     <title>🔴</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+  <body>
+    <video id="backgroundVideo" loop autoplay muted>
+      <source src="assets/video/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-<body>
-  <video id="backgroundVideo" loop autoplay muted>
-    <source src="assets/video/bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="container" id="container">
-    <div class="mainWindow">
-      <div id="apps" onclick="toggleBoxOn()">
-        <div class="inbox">
-          <div class="blue-bar"></div>
-          <div class="inbox-titlebox">
-            <p class="h1-apps">INBOX</p>
-            <p class="h1-apps" id="bloomInbox">INBOX</p>
-            <p class="desc">
-              Hier ontvang je alle belangrijke communicatie transmissies,
-              zowel intern als van buitenaf. De DO-1 hoofdantenna is
-              verantwoordelijk voor het zowel ontvangen als versturen van
-              boodschappen, en is in staat zowel tekst als media bestanden te
-              versturen/ontvangen
-            </p>
-          </div>
-
-          <div class="emails">
-            <div id="mail1" class="mail">
-              <div class="mailAudio"></div>
+    <div class="container" id="container">
+      <div class="mainWindow">
+        <div id="apps" onclick="toggleBoxOn()">
+          <div class="inbox">
+            <div class="blue-bar"></div>
+            <div class="inbox-titlebox">
+              <p class="h1-apps">INBOX</p>
+              <p class="h1-apps" id="bloomInbox">INBOX</p>
+              <p class="desc">
+                Hier ontvang je alle belangrijke communicatie transmissies,
+                zowel intern als van buitenaf. De DO-1 hoofdantenna is
+                verantwoordelijk voor het zowel ontvangen als versturen van
+                boodschappen, en is in staat zowel tekst als media bestanden te
+                versturen/ontvangen
+              </p>
             </div>
-            <div id="mail2" class="mail"></div>
-            <div id="mail3" class="mail"></div>
-            <div id="mail4" class="mail"></div>
-            <div id="mail5" class="mail"></div>
-  
+
+            <div class="emails">
+              <div id="mail1" class="mail">
+                <div class="mailAudio"></div>
+              </div>
+              <div id="mail2" class="mail"></div>
+              <div id="mail3" class="mail"></div>
+              <div id="mail4" class="mail"></div>
+              <div id="mail5" class="mail"></div>
+            </div>
+            <div class="inboxImg"></div>
           </div>
           <div class="extra-apps">
             <div class="systemen">
@@ -51,21 +51,7 @@
                   schip.
                 </p>
               </div>
-
-
-          <div class="inboxImg"></div>
-        </div>
-        <div class="extra-apps">
-          <div class="systemen">
-            <div class="blue-bar-extra"></div>
-            <div class="systemen-titlebox">
-              <p class="h1-apps">SYSTEMEN</p>
-              <p class="h1-apps" id="bloomSystemen">SYSTEMEN</p>
-              <p class="desc2">
-                Inventaris en proces van middelen die aanwezig zijn op het
-                schip.
-              </p>
-
+              <div class="systemenImg"></div>
             </div>
             <div class="onderzoek">
               <div class="blue-bar-extra2"></div>
@@ -76,36 +62,23 @@
                   Notatie en verzamelpunt van verkregen informatie tijdens de
                   missie.
                 </p>
+                <div class="zinnen">
+                  <p class="zinO" id="zin1">zin1</p>
+                  <p class="zinO" id="zin2">zin2</p>
+                  <p class="zinO" id="zin3">zin3</p>
+                </div>
+                <div class="conclusies">
+                  <p>
+                    Het doel was om in 2030 al het plastic recyclebaar te maken.
+                  </p>
+                  <div class="afbCon"></div>
+                  <div class="exitCon"></div>
+                </div>
               </div>
-
-
-            <div class="systemenImg"></div>
-          </div>
-          <div class="onderzoek">
-            <div class="blue-bar-extra2"></div>
-            <div class="onderzoek-titlebox">
-              <p class="h1-apps">ONDERZOEK</p>
-              <p class="h1-apps" id="bloomOnderzoek">ONDERZOEK</p>
-              <p class="desc3">
-                Notatie en verzamelpunt van verkregen informatie tijdens de
-                missie.
-              </p>
-              <div class="zinnen">
-                <p class="zinO" id="zin1">zin1</p>
-                <p class="zinO" id="zin2">zin2</p>
-                <p class="zinO" id="zin3">zin3</p>
-              </div>
-              <div class="conclusies">
-                <p>Het doel was om in 2030 al het plastic recyclebaar te maken.</p>
-                <div class="afbCon"></div>
-                <div class="exitCon"></div>
-              </div>
-
               <div class="onderzoekImg"></div>
             </div>
           </div>
         </div>
-
         <div class="scene" onclick="toggleBoxOff()">
           <div class="content-dialoog">
             <!--Dialogue box-->
@@ -125,11 +98,9 @@
             <!-- characters-->
             <div class="bruce"></div>
             <div class="nova"></div>
-
           </div>
         </div>
       </div>
-
       <div class="sideWindow">
         <div class="item item1">
           <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
@@ -142,8 +113,8 @@
     </div>
     <!--Scripts-->
     <!-- <div class="fix">
-      <img src="./assets/images/fix.png" alt="" />
-    </div> -->
+    <img src="./assets/images/fix.png" alt="" />
+  </div> -->
     <script src="./js/app.js"></script>
   </body>
 </html>
