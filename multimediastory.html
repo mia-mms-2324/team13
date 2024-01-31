@@ -9,12 +9,10 @@
 </head>
 
 <body>
-
   <video id="backgroundVideo" loop autoplay muted>
-    <source src="assets/video/bg.mp4" type="video/mp4">
+    <source src="assets/video/bg.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-
 
   <div class="container" id="container">
     <div class="mainWindow">
@@ -24,14 +22,19 @@
           <div class="inbox-titlebox">
             <p class="h1-apps">INBOX</p>
             <p class="h1-apps" id="bloomInbox">INBOX</p>
-            <p class="desc">Hier ontvang je alle belangrijke communicatie transmissies, zowel intern als
-              van buitenaf. De DO-1 hoofdantenna is verantwoordelijk voor het zowel
-              ontvangen als versturen van boodschappen, en is in staat zowel tekst als
-              media bestanden te versturen/ontvangen</p>
+            <p class="desc">
+              Hier ontvang je alle belangrijke communicatie transmissies,
+              zowel intern als van buitenaf. De DO-1 hoofdantenna is
+              verantwoordelijk voor het zowel ontvangen als versturen van
+              boodschappen, en is in staat zowel tekst als media bestanden te
+              versturen/ontvangen
+            </p>
           </div>
 
           <div class="emails">
-            <div id="mail1" class="mail"></div>
+            <div id="mail1" class="mail">
+              <div class="mailAudio"></div>
+            </div>
             <div id="mail2" class="mail"></div>
             <div id="mail3" class="mail"></div>
             <div id="mail4" class="mail"></div>
@@ -46,8 +49,10 @@
             <div class="systemen-titlebox">
               <p class="h1-apps">SYSTEMEN</p>
               <p class="h1-apps" id="bloomSystemen">SYSTEMEN</p>
-              <p class="desc2">Inventaris en proces van middelen die aanwezig zijn
-                op het schip.</p>
+              <p class="desc2">
+                Inventaris en proces van middelen die aanwezig zijn op het
+                schip.
+              </p>
             </div>
 
             <div class="systemenImg"></div>
@@ -57,8 +62,20 @@
             <div class="onderzoek-titlebox">
               <p class="h1-apps">ONDERZOEK</p>
               <p class="h1-apps" id="bloomOnderzoek">ONDERZOEK</p>
-              <p class="desc3">Notatie en verzamelpunt van verkregen informatie
-                tijdens de missie.</p>
+              <p class="desc3">
+                Notatie en verzamelpunt van verkregen informatie tijdens de
+                missie.
+              </p>
+              <div class="zinnen">
+                <p class="zinO" id="zin1">zin1</p>
+                <p class="zinO" id="zin2">zin2</p>
+                <p class="zinO" id="zin3">zin3</p>
+              </div>
+              <div class="conclusies">
+                <p>Het doel was om in 2030 al het plastic recyclebaar te maken.</p>
+                <div class="afbCon"></div>
+                <div class="exitCon"></div>
+              </div>
             </div>
 
             <div class="onderzoekImg"></div>
@@ -66,13 +83,15 @@
         </div>
       </div>
 
-
       <div class="scene" onclick="toggleBoxOff()">
-        <div class="content-dialoog"><!--Dialogue box-->
+        <div class="content-dialoog">
+          <!--Dialogue box-->
           <div class="dialogue" id="dialogue">
             <h2 class="dialogueTitle"></h2>
             <p class="dialogueText">test text</p>
-            <button class="rightButton" id="button">></button>
+            <button class="rightButton" id="button">
+              <img class="nextBTN" src="assets/images/next.png" alt="" />
+            </button>
           </div>
           <div class="audio">
             <img src="./assets/images/Black-Play-Button-PNG-Free-Download.png" alt="play" />
@@ -81,8 +100,6 @@
           <div class="bruce"></div>
           <div class="nova"></div>
         </div>
-
-
       </div>
     </div>
 
