@@ -1,0 +1,718 @@
+{
+  "dialogue": {
+    "dia1": {
+      "ID": 1,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Bijna klaar met de antenne?",
+      "eventID": null
+    },
+    "dia2": {
+      "ID": 2,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Hoe anders kan ik een veilige plek vinden om te landen?",
+      "eventID": null
+    },
+    "dia3": {
+      "ID": 3,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Ik wil net zo graag terug naar aarde als jou hoor.",
+      "eventID": null
+    },
+    "dia4": {
+      "ID": 4,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Geef me nog een paar seconden...",
+      "eventID": null
+    },
+    "dia5": {
+      "ID": 5,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Bijnaaa.....",
+      "eventID": null
+    },
+    "dia6": {
+      "ID": 6,
+      "Gender": "male",
+      "SpriteID": "4",
+      "dialogue": "KLAAR!",
+      "eventID": null
+    },
+    "dia7": {
+      "ID": 7,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Beeldscherm van computer gaat aan*",
+      "eventID": null
+    },
+    "dia8": {
+      "ID": 8,
+      "Gender": "male",
+      "SpriteID": "2",
+      "dialogue": "En daarom was ik de beste technicus op de opleiding.",
+      "eventID": null
+    },
+    "dia9": {
+      "ID": 9,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "Bruce, je was de enige technicus op de opleiding...",
+      "eventID": null
+    },
+    "dia10": {
+      "ID": 10,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "We hadden toevallig een technicus nodig voor de 'Rover' die operationeel is op Mars.",
+      "eventID": null
+    },
+    "dia11": {
+      "ID": 11,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "Maar inderdaad... Goed gedaan.",
+      "eventID": null
+    },
+    "dia12": {
+      "ID": 12,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Hey, niet zo naïef! Ik was niet voor niets de enige technicus op de opleiding.",
+      "eventID": null
+    },
+    "dia13": {
+      "ID": 13,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Ik kwam met een ingenieus idee om buiten het district energie op te wekken door middel van stromend water.",
+      "eventID": null
+    },
+    "dia14": {
+      "ID": 14,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Maar in plaats daarvan stuurden ze mij mee met jou, om deze technologie toe te passen op jouw minuscuul onderkomen.",
+      "eventID": null
+    },
+    "dia15": {
+      "ID": 15,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "Dat 'minuscuul onderkomen' is toevallig wel het eerste zelfvoorzienend huis op mars.",
+      "eventID": null
+    },
+    "dia16": {
+      "ID": 16,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Zucht* Jaren geen contact met aarde... Wat zou er gebeurd kunnen zijn daar beneden?",
+      "eventID": null
+    },
+    "dia17": {
+      "ID": 17,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Geen idee, maar we moeten nog veel doen voordat we landen.",
+      "eventID": null
+    },
+    "dia18": {
+      "ID": 18,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Het landingsmechanisme controleren, het systeem klaarmaken voor de landing...",
+      "eventID": null
+    },
+    "dia19": {
+      "ID": 19,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Als we landen, heb je genoeg tijd om bij te praten.",
+      "eventID": null
+    },
+    "dia20": {
+      "ID": 20,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Ga je op zoek naar een veilige landingsplek nu dat de antenne het weer doet?",
+      "eventID": null
+    },
+    "dia21": {
+      "ID": 21,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "[Een plotselinge pieptoon klinkt. Beiden kijken op, verrast.]",
+      "eventID": null
+    },
+    "dia22": {
+      "ID": 22,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Is dat... Een transmissie? Van aarde?",
+      "eventID": null
+    },
+    "dia23": {
+      "ID": 23,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "[Het scherm licht op, tonend een serie gedateerde audiofragmenten gelabeld met jaartallen. Audiofragment professor speelt]",
+      "eventID": null
+    },
+    "dia24": {
+      "ID": 24,
+      "Gender": "female",
+      "SpriteID": "2",
+      "dialogue": "Dit... Dit zijn audiofragmenten van verschillende mensen op aarde!",
+      "eventID": null
+    },
+    "dia25": {
+      "ID": 25,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Wat heeft dat met thuis komen te maken?",
+      "eventID": null
+    },
+    "dia26": {
+      "ID": 26,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Verdoe je tijd niet, we moeten nog veel doen voordat we met de capsule terug naar aarde kunnen.",
+      "eventID": null
+    },
+    "dia27": {
+      "ID": 27,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Maar we kunnen het toch op zijn minst een kans geven?",
+      "eventID": null
+    },
+    "dia28": {
+      "ID": 28,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "We hebben al heel lang niks gehoord van aarde, en ik wil weten waarom!",
+      "eventID": null
+    },
+    "dia29": {
+      "ID": 29,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Wat een kans geven? Als er echt iets gaande was, hadden ze ons al lang gecontacteerd.",
+      "eventID": null
+    },
+    "dia30": {
+      "ID": 30,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Ga nu weg van die computer en help me met de escape pod.",
+      "eventID": null
+    },
+    "dia31": {
+      "ID": 31,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Het onderstel is stuk gegaan tijdens onze laatste missie, en zonder kunnen we niet landen.",
+      "eventID": null
+    },
+    "dia32": {
+      "ID": 32,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Bruce heeft de ruimte verlaten...*",
+      "eventID": null
+    },
+    "dia33": {
+      "ID": 33,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "Laat hem maar gaan, ik heb hem toch niet nodig.",
+      "eventID": null
+    },
+    "dia34": {
+      "ID": 34,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en speel het audiofragment af in het inbox tabblad",
+      "eventID": null
+    },
+    "dia35": {
+      "ID": 35,
+      "Gender": "female",
+      "SpriteID": "4",
+      "dialogue": "\"Wow, is er al zo lang geleden onderzoek gedaan over de vervuilende werking van plastic in de natuur?",
+      "eventID": null
+    },
+    "dia36": {
+      "ID": 36,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Waarom zijn mensen dan niet harder gaan recyclen?",
+      "eventID": null
+    },
+    "dia37": {
+      "ID": 37,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "De wereld waarin ik dadelijk leef, is letterlijk geruïneerd door de acties van de mens...",
+      "eventID": null
+    },
+    "dia38": {
+      "ID": 38,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "\"Oké, wat kan ik hieruit halen?\"",
+      "eventID": null
+    },
+    "dia39": {
+      "ID": 39,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk de informatie in het onderzoek tabblad.",
+      "eventID": null
+    },
+    "dia40": {
+      "ID": 40,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk je voortgang in het systemen tablad.",
+      "eventID": null
+    },
+    "dia41": {
+      "ID": 41,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Dus als ik deze stof gebruik... zal het verdampen en als het goed is zal het alle microplastics uit de lucht vreten.",
+      "eventID": null
+    },
+    "dia42": {
+      "ID": 42,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Ze wil het volgende audiofragment afspelen, maar schrikt als ze ziet dat het beeldscherm uit gaat*",
+      "eventID": null
+    },
+    "dia43": {
+      "ID": 43,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Bruce, kan je even komen?",
+      "eventID": null
+    },
+    "dia44": {
+      "ID": 44,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Ik ben er al.",
+      "eventID": null
+    },
+    "dia45": {
+      "ID": 45,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Waarom doet deze terminal het niet meer?",
+      "eventID": null
+    },
+    "dia46": {
+      "ID": 46,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Omdat ik de stroom eruit heb getrokken misschien?",
+      "eventID": null
+    },
+    "dia47": {
+      "ID": 47,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "Bruce luister...",
+      "eventID": null
+    },
+    "dia48": {
+      "ID": 48,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Nee JIJ luistert nu naar mij, we hebben al maanden geen contact meer met aarde, het voedsel raakt op en onze missie is gefaald.",
+      "eventID": null
+    },
+    "dia49": {
+      "ID": 49,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "De aarde heeft haar laatste adem gehad. Dus laten we er het beste van maken en onze families opzoeken.",
+      "eventID": null
+    },
+    "dia50": {
+      "ID": 50,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "We gaan gewoon terug, het is daar beneden.",
+      "eventID": null
+    },
+    "dia51": {
+      "ID": 51,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Luister, het gras lijkt groener aan de overkant.",
+      "eventID": null
+    },
+    "dia52": {
+      "ID": 52,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Het enige probleem is dat het gras daarbeneden niet meer groeit, aangezien de bodem vervuild is.",
+      "eventID": null
+    },
+    "dia53": {
+      "ID": 53,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "En dat is ALS, je het gras überhaupt kan zien. Er zweeft zoveel rotzooi rondom aarde dat ik door de bomen het bos niet meer zie.",
+      "eventID": null
+    },
+    "dia54": {
+      "ID": 54,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "De audio fragmenten die zijn opgestuurd bevatten het antwoord op een nieuw tijdperk van onze thuisplaneet.",
+      "eventID": null
+    },
+    "dia55": {
+      "ID": 55,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Geef het op zijn minst een kans.",
+      "eventID": null
+    },
+    "dia56": {
+      "ID": 56,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Zucht*",
+      "eventID": null
+    },
+    "dia57": {
+      "ID": 57,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Weet je wat, ik luister EEN audiofragment mee.",
+      "eventID": null
+    },
+    "dia58": {
+      "ID": 58,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Als je mij belooft daarna dit onderzoek los te laten en met mij mee gaat terug naar aarde.",
+      "eventID": null
+    },
+    "dia59": {
+      "ID": 59,
+      "Gender": "female",
+      "SpriteID": "4",
+      "dialogue": "Hmm... Oké, deal.",
+      "eventID": null
+    },
+    "dia60": {
+      "ID": 60,
+      "Gender": "null",
+      "SpriteID": "1",
+      "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
+      "eventID": null
+    },
+    "dia61": {
+      "ID": 61,
+      "Gender": "",
+      "SpriteID": "5",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk de informatie in het onderzoek tabblad.",
+      "eventID": null
+    },
+    "dia62": {
+      "ID": 62,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Watervervuiling heeft ervoor gezorgd dat vissen en andere zeeorganismen onderuit gaan.",
+      "eventID": null
+    },
+    "dia63": {
+      "ID": 63,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Geen wonder dat voedselvoorraden zo schaars waren de laatste tijd.",
+      "eventID": null
+    },
+    "dia64": {
+      "ID": 64,
+      "Gender": "male",
+      "SpriteID": "5",
+      "dialogue": "Ze klonk heel... wanhopig.",
+      "eventID": null
+    },
+    "dia65": {
+      "ID": 65,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Alsof haar leven van de visserij af hing. Is vis zo belangrijk?",
+      "eventID": null
+    },
+    "dia66": {
+      "ID": 66,
+      "Gender": "male",
+      "SpriteID": "2",
+      "dialogue": "Ik kan wel leven zonder een visje op mijn bord.",
+      "eventID": null
+    },
+    "dia67": {
+      "ID": 67,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Bruce, de visserij van haar familie is alles voor haar.",
+      "eventID": null
+    },
+    "dia68": {
+      "ID": 68,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Zowel haar inkomen als haar 'mentale drive'. Een reden om zo hard te werken.",
+      "eventID": null
+    },
+    "dia69": {
+      "ID": 69,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Maar los van haar leven, gaat het hier om miljoenen, of misschien wel miljarden levens...",
+      "eventID": null
+    },
+    "dia70": {
+      "ID": 70,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "...van zeeorganismen die sterven aan de gevolgen van plastic in het water.",
+      "eventID": null
+    },
+    "dia71": {
+      "ID": 71,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Uhh.. juist, wat jij zegt.",
+      "eventID": null
+    },
+    "dia72": {
+      "ID": 72,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
+      "eventID": null
+    },
+    "dia73": {
+      "ID": 73,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk de informatie in het onderzoek tabblad.",
+      "eventID": null
+    },
+    "dia74": {
+      "ID": 74,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "\"Oké, wat zijn de belangrijkste zaken?\"",
+      "eventID": null
+    },
+    "dia75": {
+      "ID": 75,
+      "Gender": "",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk je voortgang in het systemen tablad.",
+      "eventID": null
+    },
+    "dia76": {
+      "ID": 76,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "Wat een egoïstische acties allemaal... Het staalbedrijf heeft bewust gekozen voor een vervuilende manier van staal produceren!",
+      "eventID": null
+    },
+    "dia77": {
+      "ID": 77,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Het leven op aarde dat we verwachten te hebben als we teruggaan zal niet hetzelfde zijn.",
+      "eventID": null
+    },
+    "dia78": {
+      "ID": 78,
+      "Gender": "male",
+      "SpriteID": "5",
+      "dialogue": "Ik snap het niet, er is toch al heel lang CO2-uitstoot geweest?",
+      "eventID": null
+    },
+    "dia79": {
+      "ID": 79,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Koolstofdioxide is niet de enige vorm van vervuiling door de staalindustrie. Maar los daarvan, de gevolgen zijn catastrofaal.",
+      "eventID": null
+    },
+    "dia80": {
+      "ID": 80,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "Niet alleen de werknemers die bij het staalbedrijf hebben gewerkt werden gedupeerd, maar ook de omwonenden.",
+      "eventID": null
+    },
+    "dia81": {
+      "ID": 81,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "En dat zijn pas de acties die aan het licht gekomen zijn. Wie weet wat er op andere locaties in de wereld is gebeurd!?",
+      "eventID": null
+    },
+    "dia82": {
+      "ID": 82,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Dat kan je niet weten, maar ik geef toe dat wat staalbedrijf heeft gedaan niet heel professioneel is.",
+      "eventID": null
+    },
+    "dia83": {
+      "ID": 83,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
+      "eventID": null
+    },
+    "dia84": {
+      "ID": 84,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk de informatie in het onderzoek tabblad.",
+      "eventID": null
+    },
+    "dia85": {
+      "ID": 85,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Gooit stoel naar de andere kant van de ruimte*",
+      "eventID": null
+    },
+    "dia86": {
+      "ID": 86,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Hoe zijn we hier nooit achter gekomen...",
+      "eventID": null
+    },
+    "dia87": {
+      "ID": 87,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Ik wist dat er verschillende districten bestonden, MAAR NIEMAND HEEFT ME WAT VERTELD OVER DE BUITENWERELD!",
+      "eventID": null
+    },
+    "dia88": {
+      "ID": 88,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "3Dat verklaart waarom ik mijn extern onderzoek niet op aarde mocht doen, omdat ze de realiteit niet willen laten zien!",
+      "eventID": null
+    },
+    "dia89": {
+      "ID": 89,
+      "Gender": "male",
+      "SpriteID": "5",
+      "dialogue": "Ik.. ik.. ik ben met jou op missie gestuurd..",
+      "eventID": null
+    },
+    "dia90": {
+      "ID": 90,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Alleen maar om ons de mond te snoeren?",
+      "eventID": null
+    },
+    "dia91": {
+      "ID": 91,
+      "Gender": "male",
+      "SpriteID": "3",
+      "dialogue": "Wie weet kunnen we helemaal niet meer leven op aarde!",
+      "eventID": null
+    },
+    "dia92": {
+      "ID": 92,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "Maar... dat middeltje lost alles op toch?",
+      "eventID": null
+    },
+    "dia93": {
+      "ID": 93,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Zo zeker ben ik daar ook niet van... maar we moeten het op zijn minst proberen!",
+      "eventID": null
+    },
+    "dia94": {
+      "ID": 94,
+      "Gender": "female",
+      "SpriteID": "1",
+      "dialogue": "Oké, focus. Wat kunnen we hieruit halen?",
+      "eventID": null
+    },
+    "dia95": {
+      "ID": 95,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Open de overlay bovenin het scherm en bekijk je voortgang in het systemen tablad.",
+      "eventID": null
+    },
+    "dia96": {
+      "ID": 96,
+      "Gender": "female",
+      "SpriteID": "5",
+      "dialogue": "Aha! Als we deze stoffen mixen en loslaten over aarde, zou als het goed is alles goed moeten komen.",
+      "eventID": null
+    },
+    "dia97": {
+      "ID": 97,
+      "Gender": "male",
+      "SpriteID": "1",
+      "dialogue": "En als het niet werkt?",
+      "eventID": null
+    },
+    "dia98": {
+      "ID": 98,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "Dan...",
+      "eventID": null
+    },
+    "dia99": {
+      "ID": 99,
+      "Gender": "female",
+      "SpriteID": "6",
+      "dialogue": "...",
+      "eventID": null
+    },
+    "dia100": {
+      "ID": 100,
+      "Gender": "female",
+      "SpriteID": "3",
+      "dialogue": "Het moet werken!",
+      "eventID": null
+    },
+    "dia101": {
+      "ID": 101,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Bruce en nova mixen de flesjes met stoffen en laten het los over aarde*",
+      "eventID": null
+    },
+    "dia102": {
+      "ID": 102,
+      "Gender": "null",
+      "SpriteID": "",
+      "dialogue": "Aandachtig wachten ze tot de stoffen de aarde bereiken*",
+      "eventID": null
+    }
+  }
+}
