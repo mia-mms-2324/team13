@@ -292,7 +292,43 @@ video {
   height: 2vw;
   background-color: #185460;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
+  transition: 0.3s ease;
+}
+
+.mail .mail-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+.mail .mail-thumbnail.read {
+  display: none;
+}
+
+.mail .mail-thumbnail p {
+  position: relative;
+  top: 35%;
+  left: 2%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.mail .mail-thumbnail p span {
+  font-weight: 800;
+}
+
+.mail:hover {
+  background-color: #127da7;
+}
+
+.mail.read:hover {
+  background-color: #185460;
+}
+
+.mail.read {
+  cursor: default;
 }
 
 .h1-apps {
@@ -308,6 +344,10 @@ video {
   left: 25px;
   opacity: 0.25;
   transition: 0.3s ease;
+}
+
+.inbox.read {
+  cursor: pointer;
 }
 
 .inbox .desc {
@@ -733,28 +773,50 @@ video {
   transition: 0.3s ease;
 }
 
+.titel-zinnen {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.onderzoek .titel-zinnen p {
+  margin-top: 30%;
+  color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  opacity: 1;
+}
+
+.onderzoek .titel-zinnen.os1 {
+  opacity: 1;
+}
+
 .zinnen {
   position: absolute;
-  top: 30%;
+  top: 60%;
   opacity: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: fit-content;
   transition: 0.3s ease;
+  color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .zinnen.os1 {
   opacity: 1;
 }
 
-.onderzoek .zinO {
+.onderzoek .zin-tape {
   position: relative;
+  margin-bottom: 10%;
   opacity: 0.5;
-  margin-top: 1.5%;
   left: 15%;
   width: 20%;
-  height: 2vw;
   cursor: pointer;
   z-index: 2;
 }
@@ -822,12 +884,153 @@ video {
 }
 
 .mailAudio {
-  position: relative;
-  left: 90%;
-  top: 90%;
-  width: 5%;
-  height: 5%;
+  margin-left: 90%;
+  width: 2vw;
+  height: 2vw;
   background-color: #e6e6e6;
+}
+
+.mail-content {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.mail-content.read {
+  opacity: 1;
+}
+
+.mailExitCont {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease;
+}
+
+.pp {
+  width: 5%;
+  height: 30%;
+  background-color: #e6e6e6;
+}
+
+.mail-content .titel-mail {
+  margin-left: 5%;
+  color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
+  opacity: 1;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mail-content .tekst-mail {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 40%;
+  color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
+  opacity: 1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.afbeelding-mail {
+  margin-left: 60%;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  scale: 1.5;
+}
+
+#mailExitCont1.read {
+  display: block;
+}
+
+#mailExitCont2.read {
+  display: block;
+}
+
+#mailExitCont3.read {
+  display: block;
+}
+
+#mailExitCont4.read {
+  display: block;
+}
+
+#mailExitCont5.read {
+  display: block;
+}
+
+.sysBtns {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 20%;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sysBtns p {
+  display: inline;
+  position: relative;
+  top: 20%;
+  left: 2%;
+  color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
+  opacity: 1;
+  font-size: 18px;
+}
+
+.sysBtnsDescs {
+  margin-left: 5%;
+  font-weight: 500;
+}
+
+.sysBtnsTitles {
+  font-weight: 800;
+}
+
+.inv {
+  background-color: #185460;
+  width: 150%;
+  height: 2vw;
+  z-index: 5;
+}
+
+.sysBtns.enable {
+  opacity: 1;
+}
+
+.end {
+  margin-top: 1vw;
+  background-color: #185460;
+  width: 150%;
+  height: 2vw;
+  z-index: 5;
+}
+
+.inv.open {
+  width: 200%;
+  height: 5vw;
+}
+
+.end.open {
+  width: 200%;
+  height: 5vw;
+}
+
+.inv.hide {
+  display: none;
+}
+
+.end.hide {
+  display: none;
 }
 
 @keyframes expandAnimation {
