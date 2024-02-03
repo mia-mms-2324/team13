@@ -36,3 +36,10 @@ function myButtonClick() {
   // Call the function to navigate to the specified page
   navigateToAnotherPage("multimediastory.html");
 }
+
+function pressEnter(event) {
+  if (event.key === "Enter") {
+    // Call the function to navigate to the specified page
+  }
+  navigateToAnotherPage("multimediastory.html");
+}
