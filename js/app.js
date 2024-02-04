@@ -422,24 +422,32 @@ function openInv() {
   // Add the logic to open Inv here
   document.querySelector('.inv').classList.add('open');
   document.querySelector('.end').classList.add('hide');
+
+  document.getElementById('invExitCont').classList.add("read");
 }
 
 function closeInv() {
   // Add the logic to close Inv here
   document.querySelector('.inv').classList.remove('open');
   document.querySelector('.end').classList.remove('hide');
+
+  document.getElementById('invExitCont').classList.remove("read");
 }
 
 function openEnd() {
   // Add the logic to open End here
   document.querySelector('.inv').classList.add('hide');
   document.querySelector('.end').classList.add('open');
+
+  document.getElementById('endExitCont').classList.add("read");
 }
 
 function closeEnd() {
   // Add the logic to close End here
   document.querySelector('.inv').classList.remove('hide');
   document.querySelector('.end').classList.remove('open');
+
+  document.getElementById('endExitCont').classList.remove("read");
 }
 
 // Function to open Systemen
@@ -607,6 +615,8 @@ function zin1Exp() {
   document.querySelector('.conclusies').classList.add('exp');
   onderzoek.classList.add('exp');
   document.querySelector('.exitCon').classList.add('leave');
+
+  document.querySelector('.titel-zinnen').classList.add('exp');
 }
 
 function zin1Exit() {
@@ -614,6 +624,8 @@ function zin1Exit() {
   document.querySelector('.conclusies').classList.remove('exp');
   onderzoek.classList.remove('exp');
   document.querySelector('.exitCon').classList.remove('leave');
+
+  document.querySelector('.titel-zinnen').classList.remove('exp');
 }
 
 // Function hide blue bars
@@ -677,8 +689,14 @@ function addEventListeners() {
     document.querySelector('.inv').addEventListener('click', openInv)
     document.querySelector('.end').addEventListener('click', openEnd)
 
+    document.getElementById('invExitCont').addEventListener('click', closeInv)
+    document.getElementById('endExitCont').addEventListener('click', closeEnd)
+
     zin1.addEventListener('click', zin1Exp);
     document.querySelector('.exitCon').addEventListener('click', zin1Exit);
+    inbox.addEventListener('click', zin1Exit);
+    systemen.addEventListener('click', zin1Exit);
+    box2.addEventListener('click', zin1Exit);
   }
 
   // Check if #apps is collapsing before adding click event
