@@ -106,12 +106,12 @@ function updateDialogue() {
   }, 300); // 0.3s to match the transition duration
 
   let audioStatus = checkAudioStatus();
-  if (audioStatus === true) {
+  if (audioStatus == true) {
     console.log("Audio is set to true.");
     // Mock code for when audio is true
     audioUnlocked++;
     trueaudio();
-  } else if (audioStatus === false) {
+  } else if (audioStatus == false) {
     console.log("Audio is set to false.");
     // Mock code for when audio is false
     falseaudio();
@@ -220,21 +220,52 @@ function updateDialogue() {
       // Execute code specific to eventID 1
       console.log("Executing code for eventID == 1");
       // Example: Open audio overlay, play audio, etc.
+      document.querySelector("#mail1").style.display = "block";
+      document
+        .querySelector(".dialogue")
+        .removeEventListener("click", loadNextDialogue);
       break;
     case 2:
       // Execute code specific to eventID 2
       console.log("Executing code for eventID == 2");
       // Example: Trigger a specific animation, show a message, etc.
+      document.querySelector("#mail2").style.display = "block";
+      document
+        .querySelector(".dialogue")
+        .removeEventListener("click", loadNextDialogue);
       break;
     case 3:
       // Execute code specific to eventID 3
       console.log("Executing code for eventID == 3");
       // Add more cases as needed
+      document.querySelector("#mail3").style.display = "block";
+      document
+        .querySelector(".dialogue")
+        .removeEventListener("click", loadNextDialogue);
+      break;
+    case 4:
+      // Execute code specific to eventID 6
+      console.log("Executing code for eventID == 6");
+      // This could be the end of a sequence or triggering the final action
+      document.querySelector("#mail4").style.display = "block";
+      document
+        .querySelector(".dialogue")
+        .removeEventListener("click", loadNextDialogue);
+      break;
+    case 5:
+      // Execute code specific to eventID 6
+      console.log("Executing code for eventID == 6");
+      // This could be the end of a sequence or triggering the final action
+      document.querySelector("#mail5").style.display = "block";
+      document
+        .querySelector(".dialogue")
+        .removeEventListener("click", loadNextDialogue);
       break;
     case 6:
       // Execute code specific to eventID 6
       console.log("Executing code for eventID == 6");
       // This could be the end of a sequence or triggering the final action
+      window.location.href = "outro.html";
       break;
     default:
       // No specific eventID or code to execute
@@ -276,10 +307,6 @@ function loadPreviousDialogue() {
 }
 
 function trueaudio() {
-  let audioElement = document.querySelector(".audio");
-  if (audioElement) {
-    audioElement.style.display = "block";
-  }
   switch (audioUnlocked) {
     case 1:
       audio = new Audio("./assets/audio/audio1.mp3");
@@ -326,30 +353,57 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-document
-  .getElementById("rightWindowButton")
-  .addEventListener("click", function () {
-    document.querySelector(".right-window").classList.toggle("show");
-    console.log("right ejected");
-  });
+// document.querySelector(".audio").addEventListener("click", function () {
+//   audio.play();
+//   console.log("audio played ");
+// });
 
-document
-  .getElementById("leftWindowButton")
-  .addEventListener("click", function () {
-    document.querySelector(".left-window").classList.toggle("show");
-    console.log("left ejected");
-  });
+// document.querySelector(".mailAudio").addEventListener("click", function () {});
 
-document
-  .querySelector(".leftButton")
-  .addEventListener("click", loadPreviousDialogue);
-
-document.querySelector(".audio").addEventListener("click", function () {
+document.querySelector("#audio1mail").addEventListener("click", function () {
+  audio = new Audio("./assets/audio/audio1.mp3");
   audio.play();
   console.log("audio played ");
+  document
+    .querySelector(".dialogue")
+    .addEventListener("click", loadNextDialogue);
 });
 
-//
+document.querySelector("#audio2mail").addEventListener("click", function () {
+  audio = new Audio("./assets/audio/audio2.mp3");
+  audio.play();
+  console.log("audio played ");
+  document
+    .querySelector(".dialogue")
+    .addEventListener("click", loadNextDialogue);
+});
+
+document.querySelector("#audio3mail").addEventListener("click", function () {
+  audio = new Audio("./assets/audio/audio3.mp3");
+  audio.play();
+  console.log("audio played ");
+  document
+    .querySelector(".dialogue")
+    .addEventListener("click", loadNextDialogue);
+});
+
+document.querySelector("#audio4mail").addEventListener("click", function () {
+  audio = new Audio("./assets/audio/audio4.mp3");
+  audio.play();
+  console.log("audio played ");
+  document
+    .querySelector(".dialogue")
+    .addEventListener("click", loadNextDialogue);
+});
+
+document.querySelector("#audio5mail").addEventListener("click", function () {
+  audio = new Audio("./assets/audio/audio5.mp3");
+  audio.play();
+  console.log("audio played ");
+  document
+    .querySelector(".dialogue")
+    .addEventListener("click", loadNextDialogue);
+});
 //
 //
 //

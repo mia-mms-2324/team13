@@ -5,35 +5,40 @@
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Bijna klaar met de antenne?",
-      "eventID": null
+      "eventID": null,
+      "audio": false
     },
     "dia2": {
       "ID": 2,
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Hoe anders kan ik een veilige plek vinden om te landen?",
-      "eventID": null
+      "eventID": null,
+      "audio": false
     },
     "dia3": {
       "ID": 3,
       "Gender": "male",
       "SpriteID": "3",
       "dialogue": "Ik wil net zo graag terug naar aarde als jou hoor.",
-      "eventID": null
+      "eventID": null,
+      "audio": false
     },
     "dia4": {
       "ID": 4,
       "Gender": "male",
       "SpriteID": "1",
       "dialogue": "Geef me nog een paar seconden...",
-      "eventID": null
+      "eventID": null,
+      "audio": false
     },
     "dia5": {
       "ID": 5,
       "Gender": "male",
       "SpriteID": "1",
       "dialogue": "Bijnaaa.....",
-      "eventID": null
+      "eventID": null,
+      "audio": false
     },
     "dia6": {
       "ID": 6,
@@ -159,7 +164,8 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "[Het scherm licht op, tonend een serie gedateerde audiofragmenten gelabeld met jaartallen.]",
-      "eventID": 1
+      "eventID": 1,
+      "audio": true
     },
     "dia24": {
       "ID": 24,
@@ -236,7 +242,8 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Open de overlay bovenin het scherm en speel het audiofragment af in het inbox tabblad",
-      "eventID": 2
+      "eventID": 2,
+      "audio": true
     },
     "dia35": {
       "ID": 35,
@@ -418,7 +425,8 @@
       "Gender": "null",
       "SpriteID": "1",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": 3
+      "eventID": 3,
+      "audio": true
     },
     "dia61": {
       "ID": 61,
@@ -502,7 +510,8 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": 4
+      "eventID": 4,
+      "audio": true
     },
     "dia73": {
       "ID": 73,
@@ -579,7 +588,8 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": 5
+      "eventID": 5,
+      "audio": true
     },
     "dia84": {
       "ID": 84,
