@@ -158,8 +158,8 @@
       "ID": 23,
       "Gender": "null",
       "SpriteID": "",
-      "dialogue": "[Het scherm licht op, tonend een serie gedateerde audiofragmenten gelabeld met jaartallen. Audiofragment professor speelt]",
-      "eventID": null
+      "dialogue": "[Het scherm licht op, tonend een serie gedateerde audiofragmenten gelabeld met jaartallen.]",
+      "eventID": 1
     },
     "dia24": {
       "ID": 24,
@@ -236,7 +236,7 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Open de overlay bovenin het scherm en speel het audiofragment af in het inbox tabblad",
-      "eventID": null
+      "eventID": 2
     },
     "dia35": {
       "ID": 35,
@@ -418,7 +418,7 @@
       "Gender": "null",
       "SpriteID": "1",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": null
+      "eventID": 3
     },
     "dia61": {
       "ID": 61,
@@ -502,7 +502,7 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": null
+      "eventID": 4
     },
     "dia73": {
       "ID": 73,
@@ -579,7 +579,7 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Speel het volgende audiofragment af in het inbox tabblad.",
-      "eventID": null
+      "eventID": 5
     },
     "dia84": {
       "ID": 84,
@@ -712,7 +712,7 @@
       "Gender": "null",
       "SpriteID": "",
       "dialogue": "Aandachtig wachten ze tot de stoffen de aarde bereiken*",
-      "eventID": null
+      "eventID": 6
     }
   }
 }

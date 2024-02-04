@@ -28,23 +28,21 @@ let systemen = document.querySelector(".systemen");
 let onderzoek = document.querySelector(".onderzoek");
 let onderzoekImg = document.querySelector(".onderzoekImg");
 
+let mail1Var = document.getElementById("mail1");
+let mail2Var = document.getElementById("mail2");
+let mail3Var = document.getElementById("mail3");
+let mail4Var = document.getElementById("mail4");
+let mail5Var = document.getElementById("mail5");
 
-let mail1Var = document.getElementById('mail1');
-let mail2Var = document.getElementById('mail2');
-let mail3Var = document.getElementById('mail3');
-let mail4Var = document.getElementById('mail4');
-let mail5Var = document.getElementById('mail5');
+let mailExitCont1 = document.getElementById("mailExitCont1");
+let mailExitCont2 = document.getElementById("mailExitCont2");
+let mailExitCont3 = document.getElementById("mailExitCont3");
+let mailExitCont4 = document.getElementById("mailExitCont4");
+let mailExitCont5 = document.getElementById("mailExitCont5");
 
-let mailExitCont1 = document.getElementById('mailExitCont1');
-let mailExitCont2 = document.getElementById('mailExitCont2');
-let mailExitCont3 = document.getElementById('mailExitCont3');
-let mailExitCont4 = document.getElementById('mailExitCont4');
-let mailExitCont5 = document.getElementById('mailExitCont5');
-
-let zin1 = document.getElementById('zin1');
-let zin2 = document.getElementById('zin2');
-let zin3 = document.getElementById('zin3');
-
+let zin1 = document.getElementById("zin1");
+let zin2 = document.getElementById("zin2");
+let zin3 = document.getElementById("zin3");
 
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
@@ -216,6 +214,33 @@ function updateDialogue() {
   }
 
   loadPreviousDialogue();
+
+  switch (currentDialogue.eventID) {
+    case 1:
+      // Execute code specific to eventID 1
+      console.log("Executing code for eventID == 1");
+      // Example: Open audio overlay, play audio, etc.
+      break;
+    case 2:
+      // Execute code specific to eventID 2
+      console.log("Executing code for eventID == 2");
+      // Example: Trigger a specific animation, show a message, etc.
+      break;
+    case 3:
+      // Execute code specific to eventID 3
+      console.log("Executing code for eventID == 3");
+      // Add more cases as needed
+      break;
+    case 6:
+      // Execute code specific to eventID 6
+      console.log("Executing code for eventID == 6");
+      // This could be the end of a sequence or triggering the final action
+      break;
+    default:
+      // No specific eventID or code to execute
+      console.log("No specific eventID action required.");
+      break;
+  }
 }
 
 function loadNextDialogue() {
@@ -324,6 +349,26 @@ document.querySelector(".audio").addEventListener("click", function () {
   console.log("audio played ");
 });
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // CODE JOEY //
 
 //titleGlow en desc
@@ -404,7 +449,6 @@ function openSystemen() {
   document.querySelector(".onderzoek").classList.add("ss1");
 
   document.querySelector(".sysBtns").classList.add("enable");
-  
 }
 
 function closeSystemen() {
@@ -420,34 +464,34 @@ function closeSystemen() {
 
 function openInv() {
   // Add the logic to open Inv here
-  document.querySelector('.inv').classList.add('open');
-  document.querySelector('.end').classList.add('hide');
+  document.querySelector(".inv").classList.add("open");
+  document.querySelector(".end").classList.add("hide");
 
-  document.getElementById('invExitCont').classList.add("read");
+  document.getElementById("invExitCont").classList.add("read");
 }
 
 function closeInv() {
   // Add the logic to close Inv here
-  document.querySelector('.inv').classList.remove('open');
-  document.querySelector('.end').classList.remove('hide');
+  document.querySelector(".inv").classList.remove("open");
+  document.querySelector(".end").classList.remove("hide");
 
-  document.getElementById('invExitCont').classList.remove("read");
+  document.getElementById("invExitCont").classList.remove("read");
 }
 
 function openEnd() {
   // Add the logic to open End here
-  document.querySelector('.inv').classList.add('hide');
-  document.querySelector('.end').classList.add('open');
+  document.querySelector(".inv").classList.add("hide");
+  document.querySelector(".end").classList.add("open");
 
-  document.getElementById('endExitCont').classList.add("read");
+  document.getElementById("endExitCont").classList.add("read");
 }
 
 function closeEnd() {
   // Add the logic to close End here
-  document.querySelector('.inv').classList.remove('hide');
-  document.querySelector('.end').classList.remove('open');
+  document.querySelector(".inv").classList.remove("hide");
+  document.querySelector(".end").classList.remove("open");
 
-  document.getElementById('endExitCont').classList.remove("read");
+  document.getElementById("endExitCont").classList.remove("read");
 }
 
 // Function to open Systemen
@@ -459,7 +503,6 @@ function openOnderzoek() {
   document.querySelector(".onderzoek").classList.add("os1");
   document.querySelector(".zinnen").classList.add("os1");
   document.querySelector(".titel-zinnen").classList.add("os1");
-
 }
 
 function closeOnderzoek() {
@@ -476,156 +519,154 @@ function closeOnderzoek() {
 // EMAILS /////////////////////////////////////////////////////////////////////////////////
 
 function mail1() {
-  document.getElementById('mail1').classList.add('read');
+  document.getElementById("mail1").classList.add("read");
   document.querySelector("#mail1 .mail-content").classList.add("read");
   document.querySelector(".inbox").classList.add("read");
   mailExitCont1.classList.add("read");
-  document.querySelector('.mail-thumbnail').classList.add("read");
+  document.querySelector(".mail-thumbnail").classList.add("read");
 
-  document.getElementById('mail2').classList.add('hide');
-  document.getElementById('mail3').classList.add('hide');
-  document.getElementById('mail4').classList.add('hide');
-  document.getElementById('mail5').classList.add('hide');
+  document.getElementById("mail2").classList.add("hide");
+  document.getElementById("mail3").classList.add("hide");
+  document.getElementById("mail4").classList.add("hide");
+  document.getElementById("mail5").classList.add("hide");
 }
 
 function mail1Exit() {
-  document.getElementById('mail1').classList.remove('read');
+  document.getElementById("mail1").classList.remove("read");
   document.querySelector("#mail1 .mail-content").classList.remove("read");
   document.querySelector(".inbox").classList.remove("read");
   mailExitCont1.classList.remove("read");
-  document.querySelector('.mail-thumbnail').classList.remove("read");
+  document.querySelector(".mail-thumbnail").classList.remove("read");
 
-  document.getElementById('mail2').classList.remove('hide');
-  document.getElementById('mail3').classList.remove('hide');
-  document.getElementById('mail4').classList.remove('hide');
-  document.getElementById('mail5').classList.remove('hide');
+  document.getElementById("mail2").classList.remove("hide");
+  document.getElementById("mail3").classList.remove("hide");
+  document.getElementById("mail4").classList.remove("hide");
+  document.getElementById("mail5").classList.remove("hide");
 }
 
 function mail2() {
-  document.getElementById('mail2').classList.add('read');
+  document.getElementById("mail2").classList.add("read");
   document.querySelector("#mail2 .mail-content").classList.add("read");
   document.querySelector(".inbox").classList.add("read");
   mailExitCont2.classList.add("read");
-  document.querySelector('#mail2 .mail-thumbnail').classList.add("read");
+  document.querySelector("#mail2 .mail-thumbnail").classList.add("read");
 
-  document.getElementById('mail1').classList.add('hide');
-  document.getElementById('mail3').classList.add('hide');
-  document.getElementById('mail4').classList.add('hide');
-  document.getElementById('mail5').classList.add('hide');
+  document.getElementById("mail1").classList.add("hide");
+  document.getElementById("mail3").classList.add("hide");
+  document.getElementById("mail4").classList.add("hide");
+  document.getElementById("mail5").classList.add("hide");
 }
 
 function mail2Exit() {
-  document.getElementById('mail2').classList.remove('read');
+  document.getElementById("mail2").classList.remove("read");
   document.querySelector("#mail2 .mail-content").classList.remove("read");
   document.querySelector(".inbox").classList.remove("read");
   mailExitCont2.classList.remove("read");
-  document.querySelector('#mail2 .mail-thumbnail').classList.remove("read");
+  document.querySelector("#mail2 .mail-thumbnail").classList.remove("read");
 
-  document.getElementById('mail1').classList.remove('hide');
-  document.getElementById('mail3').classList.remove('hide');
-  document.getElementById('mail4').classList.remove('hide');
-  document.getElementById('mail5').classList.remove('hide');
+  document.getElementById("mail1").classList.remove("hide");
+  document.getElementById("mail3").classList.remove("hide");
+  document.getElementById("mail4").classList.remove("hide");
+  document.getElementById("mail5").classList.remove("hide");
 }
-
 
 // Function for mail3
 function mail3() {
-  document.getElementById('mail3').classList.add('read');
+  document.getElementById("mail3").classList.add("read");
   document.querySelector("#mail3 .mail-content").classList.add("read");
   document.querySelector(".inbox").classList.add("read");
   mailExitCont3.classList.add("read");
-  document.querySelector('#mail3 .mail-thumbnail').classList.add("read");
+  document.querySelector("#mail3 .mail-thumbnail").classList.add("read");
 
-  document.getElementById('mail1').classList.add('hide');
-  document.getElementById('mail2').classList.add('hide');
-  document.getElementById('mail4').classList.add('hide');
-  document.getElementById('mail5').classList.add('hide');
+  document.getElementById("mail1").classList.add("hide");
+  document.getElementById("mail2").classList.add("hide");
+  document.getElementById("mail4").classList.add("hide");
+  document.getElementById("mail5").classList.add("hide");
 }
 
 function mail3Exit() {
-  document.getElementById('mail3').classList.remove('read');
+  document.getElementById("mail3").classList.remove("read");
   document.querySelector("#mail3 .mail-content").classList.remove("read");
   document.querySelector(".inbox").classList.remove("read");
   mailExitCont3.classList.remove("read");
-  document.querySelector('#mail3 .mail-thumbnail').classList.remove("read");
+  document.querySelector("#mail3 .mail-thumbnail").classList.remove("read");
 
-  document.getElementById('mail1').classList.remove('hide');
-  document.getElementById('mail2').classList.remove('hide');
-  document.getElementById('mail4').classList.remove('hide');
-  document.getElementById('mail5').classList.remove('hide');
+  document.getElementById("mail1").classList.remove("hide");
+  document.getElementById("mail2").classList.remove("hide");
+  document.getElementById("mail4").classList.remove("hide");
+  document.getElementById("mail5").classList.remove("hide");
 }
 
 // Function for mail4
 function mail4() {
-  document.getElementById('mail4').classList.add('read');
+  document.getElementById("mail4").classList.add("read");
   document.querySelector("#mail4 .mail-content").classList.add("read");
   document.querySelector(".inbox").classList.add("read");
   mailExitCont4.classList.add("read");
-  document.querySelector('#mail4 .mail-thumbnail').classList.add("read");
+  document.querySelector("#mail4 .mail-thumbnail").classList.add("read");
 
-  document.getElementById('mail1').classList.add('hide');
-  document.getElementById('mail2').classList.add('hide');
-  document.getElementById('mail3').classList.add('hide');
-  document.getElementById('mail5').classList.add('hide');
+  document.getElementById("mail1").classList.add("hide");
+  document.getElementById("mail2").classList.add("hide");
+  document.getElementById("mail3").classList.add("hide");
+  document.getElementById("mail5").classList.add("hide");
 }
 
 function mail4Exit() {
-  document.getElementById('mail4').classList.remove('read');
+  document.getElementById("mail4").classList.remove("read");
   document.querySelector("#mail4 .mail-content").classList.remove("read");
   document.querySelector(".inbox").classList.remove("read");
   mailExitCont4.classList.remove("read");
-  document.querySelector('#mail4 .mail-thumbnail').classList.remove("read");
+  document.querySelector("#mail4 .mail-thumbnail").classList.remove("read");
 
-  document.getElementById('mail1').classList.remove('hide');
-  document.getElementById('mail2').classList.remove('hide');
-  document.getElementById('mail3').classList.remove('hide');
-  document.getElementById('mail5').classList.remove('hide');
+  document.getElementById("mail1").classList.remove("hide");
+  document.getElementById("mail2").classList.remove("hide");
+  document.getElementById("mail3").classList.remove("hide");
+  document.getElementById("mail5").classList.remove("hide");
 }
 
 // Function for mail5
 function mail5() {
-  document.getElementById('mail5').classList.add('read');
+  document.getElementById("mail5").classList.add("read");
   document.querySelector("#mail5 .mail-content").classList.add("read");
   document.querySelector(".inbox").classList.add("read");
   mailExitCont5.classList.add("read");
-  document.querySelector('#mail5 .mail-thumbnail').classList.add("read");
+  document.querySelector("#mail5 .mail-thumbnail").classList.add("read");
 
-  document.getElementById('mail1').classList.add('hide');
-  document.getElementById('mail2').classList.add('hide');
-  document.getElementById('mail3').classList.add('hide');
-  document.getElementById('mail4').classList.add('hide');
+  document.getElementById("mail1").classList.add("hide");
+  document.getElementById("mail2").classList.add("hide");
+  document.getElementById("mail3").classList.add("hide");
+  document.getElementById("mail4").classList.add("hide");
 }
 
 function mail5Exit() {
-  document.getElementById('mail5').classList.remove('read');
+  document.getElementById("mail5").classList.remove("read");
   document.querySelector("#mail5 .mail-content").classList.remove("read");
   document.querySelector(".inbox").classList.remove("read");
   mailExitCont5.classList.remove("read");
-  document.querySelector('#mail5 .mail-thumbnail').classList.remove("read");
+  document.querySelector("#mail5 .mail-thumbnail").classList.remove("read");
 
-  document.getElementById('mail1').classList.remove('hide');
-  document.getElementById('mail2').classList.remove('hide');
-  document.getElementById('mail3').classList.remove('hide');
-  document.getElementById('mail4').classList.remove('hide');
+  document.getElementById("mail1").classList.remove("hide");
+  document.getElementById("mail2").classList.remove("hide");
+  document.getElementById("mail3").classList.remove("hide");
+  document.getElementById("mail4").classList.remove("hide");
 }
 
-
 function zin1Exp() {
-  document.querySelector('.zinnen').classList.add('hide');
-  document.querySelector('.conclusies').classList.add('exp');
-  onderzoek.classList.add('exp');
-  document.querySelector('.exitCon').classList.add('leave');
+  document.querySelector(".zinnen").classList.add("hide");
+  document.querySelector(".conclusies").classList.add("exp");
+  onderzoek.classList.add("exp");
+  document.querySelector(".exitCon").classList.add("leave");
 
-  document.querySelector('.titel-zinnen').classList.add('exp');
+  document.querySelector(".titel-zinnen").classList.add("exp");
 }
 
 function zin1Exit() {
-  document.querySelector('.zinnen').classList.remove('hide');
-  document.querySelector('.conclusies').classList.remove('exp');
-  onderzoek.classList.remove('exp');
-  document.querySelector('.exitCon').classList.remove('leave');
+  document.querySelector(".zinnen").classList.remove("hide");
+  document.querySelector(".conclusies").classList.remove("exp");
+  onderzoek.classList.remove("exp");
+  document.querySelector(".exitCon").classList.remove("leave");
 
-  document.querySelector('.titel-zinnen').classList.remove('exp');
+  document.querySelector(".titel-zinnen").classList.remove("exp");
 }
 
 // Function hide blue bars
@@ -675,28 +716,28 @@ function addEventListeners() {
 
     box2.addEventListener("click", blueHide);
 
-    mail1Var.addEventListener('click', mail1);
-    mailExitCont1.addEventListener('click', mail1Exit)
-    mail2Var.addEventListener('click', mail2);
-    mailExitCont2.addEventListener('click', mail2Exit)
-    mail3Var.addEventListener('click', mail3);
-    mailExitCont3.addEventListener('click', mail3Exit)
-    mail4Var.addEventListener('click', mail4);
-    mailExitCont4.addEventListener('click', mail4Exit)
-    mail5Var.addEventListener('click', mail5);
-    mailExitCont5.addEventListener('click', mail5Exit)
+    mail1Var.addEventListener("click", mail1);
+    mailExitCont1.addEventListener("click", mail1Exit);
+    mail2Var.addEventListener("click", mail2);
+    mailExitCont2.addEventListener("click", mail2Exit);
+    mail3Var.addEventListener("click", mail3);
+    mailExitCont3.addEventListener("click", mail3Exit);
+    mail4Var.addEventListener("click", mail4);
+    mailExitCont4.addEventListener("click", mail4Exit);
+    mail5Var.addEventListener("click", mail5);
+    mailExitCont5.addEventListener("click", mail5Exit);
 
-    document.querySelector('.inv').addEventListener('click', openInv)
-    document.querySelector('.end').addEventListener('click', openEnd)
+    document.querySelector(".inv").addEventListener("click", openInv);
+    document.querySelector(".end").addEventListener("click", openEnd);
 
-    document.getElementById('invExitCont').addEventListener('click', closeInv)
-    document.getElementById('endExitCont').addEventListener('click', closeEnd)
+    document.getElementById("invExitCont").addEventListener("click", closeInv);
+    document.getElementById("endExitCont").addEventListener("click", closeEnd);
 
-    zin1.addEventListener('click', zin1Exp);
-    document.querySelector('.exitCon').addEventListener('click', zin1Exit);
-    inbox.addEventListener('click', zin1Exit);
-    systemen.addEventListener('click', zin1Exit);
-    box2.addEventListener('click', zin1Exit);
+    zin1.addEventListener("click", zin1Exp);
+    document.querySelector(".exitCon").addEventListener("click", zin1Exit);
+    inbox.addEventListener("click", zin1Exit);
+    systemen.addEventListener("click", zin1Exit);
+    box2.addEventListener("click", zin1Exit);
   }
 
   // Check if #apps is collapsing before adding click event
