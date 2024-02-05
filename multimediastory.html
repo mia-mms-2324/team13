@@ -13,22 +13,59 @@
       Your browser does not support the video tag.
     </video>
 
-    <div class="container" id="container">
-      <div class="mainWindow">
-        <div id="apps" onclick="toggleBoxOn()">
-          <div class="inbox">
-            <div class="blue-bar"></div>
-            <div class="inbox-titlebox">
-              <p class="h1-apps">INBOX</p>
-              <p class="h1-apps" id="bloomInbox">INBOX</p>
-              <p class="desc">
-                Hier ontvang je alle belangrijke communicatie transmissies,
-                zowel intern als van buitenaf. De DO-1 hoofdantenna is
-                verantwoordelijk voor het zowel ontvangen als versturen van
-                boodschappen, en is in staat zowel tekst als media bestanden te
-                versturen/ontvangen
-              </p>
+  <div class="container" id="container">
+    <div class="mainWindow">
+      <div id="apps" onclick="toggleBoxOn()">
+        <div class="inbox">
+          <div class="blue-bar"></div>
+          <div class="inbox-titlebox">
+            <p class="h1-apps">INBOX</p>
+            <p class="h1-apps" id="bloomInbox">INBOX</p>
+            <p class="desc">
+              Hier ontvang je alle belangrijke communicatie transmissies,
+              zowel intern als van buitenaf. De DO-1 hoofdantenna is
+              verantwoordelijk voor het zowel ontvangen als versturen van
+              boodschappen, en is in staat zowel tekst als media bestanden te
+              versturen/ontvangen
+            </p>
+          </div>
+
+          <div class="emails">
+            <div id="mail1" class="mail">
+              <div class="mail-thumbnail">
+                <p><span>Prof. Janson</span> // Aarde haar laatste hoop</p>
+              </div>
+              <div class="mail-content">
+                <div class="pp"></div>
+                <p class="titel-mail">"Aarde haar laatste hoop"</p>
+                <p class="tekst-mail">Ik heb weinig tijd... hopelijk krijgen... transmissie... 
+                  weinig van over, du... jullie.. onze laatste hoop..
+                </p>
+
+                <p id="date" class="tekst-mail">02/06/2048</p> 
+                <div class="afbeelding-mail"><img src="assets/images/bg-tapes/glitch.jpg" alt=""></div>
+                <div class="mailAudio"></div>
+              </div>
             </div>
+            <div id="mail2" class="mail">
+              <div class="mail-thumbnail">
+                <p>
+                  <span>Prof. van Meulen</span> // Dit loopt uit de hand...
+                </p>
+              </div>
+              <div class="mail-content">
+                <div class="pp"></div>
+                <p class="titel-mail">"Dit loopt uit de hand..."</p>
+                <p class="tekst-mail">
+                  Klimaat index entry 32, datum van opname: 12 December 2030.
+                  Als bioloog maak ik een rapport over de gevolgen van de
+                  afval crisis, precies 15 jaar na het klimaat akkoord van
+                  Parijs reflecteer ik terug op deze crisis...
+                </p>
+
+                <p id="date" class="tekst-mail">12/12/2030</p> 
+                <div class="afbeelding-mail"><img src="assets/images/bg-tapes/img-lab-2030.png" alt=""></div>
+                <div class="mailAudio"></div>
 
             <div class="emails">
               <div id="mail1" class="mail">
@@ -96,6 +133,20 @@
                   <div class="mailAudio"></div>
                 </div>
               </div>
+              <div class="mail-content">
+                <div class="pp"></div>
+                <p class="titel-mail">"De waarheid"</p>
+                <p class="tekst-mail">
+                  Wandelen in een mooi groen bos, omringt door vogels en
+                  andere dieren die het hun thuis noemen. Mijn wens is dat
+                  elke generatie na mij dit nog mag beleven...
+                </p>
+
+                <p id="date" class="tekst-mail">29/04/2043</p> 
+                <div class="afbeelding-mail"><img src="assets/images/bg-tapes/industrie-terrein.png" alt=""></div>
+                <div class="mailAudio"></div>
+              </div>
+            </div>
               <div id="mail5" class="mail">
                 <div class="mail-thumbnail">
                   <p><span>Mnr. van der Linden</span> // Het water</p>
@@ -147,6 +198,14 @@
                     <div class="end-button"></div>
                   </div>
                 </div>
+                <div class="end">
+                  <p class="sysBtnsTitles">SVK-80</p>
+                  <p class="sysBtnsDescs">Externe Spuitkop</p>
+                  <div class="end-button">
+                    <p>EJECT</p>
+                  </div>
+                </div>
+              </div>
 
                 <p class="desc2">
                   Inventaris en proces van middelen die aanwezig zijn op het
@@ -192,8 +251,8 @@
                   <div class="exitCon"></div>
                 </div>
               </div>
-              <div class="onderzoekImg"></div>
             </div>
+            <div class="onderzoekImg"></div>
           </div>
         </div>
         <div class="scene" onclick="toggleBoxOff()">
