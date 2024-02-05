@@ -15,8 +15,10 @@ document.addEventListener("keydown", function (event) {
 
 let currentDialogueIndex = 0;
 let dialogues = [];
+let information = [];
 let audioUnlocked = 0;
 let audio = null;
+let datacounter = 0;
 
 //let's - > apps
 let box = document.getElementById("apps");
@@ -345,6 +347,7 @@ fetch("./json/dialogue.json")
   .catch(function (error) {
     return console.error("Error loading dialogue data:", error);
   });
+
 document.querySelector(".dialogue").addEventListener("click", loadNextDialogue);
 
 document.addEventListener("keydown", function (event) {
@@ -376,6 +379,30 @@ document.querySelector("#audio2mail").addEventListener("click", function () {
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
+  fetch("./json/information.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      information = Object.values(data.tapes);
+      let title = information[0].name; // Access the title here
+      let zin1 = information[0].zin1.title;
+      let zin2 = information[0].zin2.title;
+      let zin3 = information[0].zin3.title;
+      let zin4 = information[0].zin4.title;
+      let zin5 = information[0].zin5.title;
+      datacounter = 1;
+
+      document.querySelector("#tapeName").textContent = title;
+      document.querySelector("#zin1").textContent = zin1;
+      document.querySelector("#zin2").textContent = zin2;
+      document.querySelector("#zin3").textContent = zin3;
+      document.querySelector("#zin4").textContent = zin4;
+      document.querySelector("#zin5").textContent = zin5;
+    })
+    .catch(function (error) {
+      return console.error("Error loading information data:", error);
+    });
 });
 
 document.querySelector("#audio3mail").addEventListener("click", function () {
@@ -385,6 +412,30 @@ document.querySelector("#audio3mail").addEventListener("click", function () {
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
+
+  fetch("./json/information.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      information = Object.values(data.tapes);
+      let title = information[1].name; // Access the title here
+      let zin1 = information[1].zin1.title;
+      let zin2 = information[1].zin2.title;
+      let zin3 = information[1].zin3.title;
+      let zin4 = information[1].zin4.title;
+      let zin5 = information[1].zin5.title;
+
+      document.querySelector("#tapeName").textContent = title;
+      document.querySelector("#zin1").textContent = zin1;
+      document.querySelector("#zin2").textContent = zin2;
+      document.querySelector("#zin3").textContent = zin3;
+      document.querySelector("#zin4").textContent = zin4;
+      document.querySelector("#zin5").textContent = zin5;
+    })
+    .catch(function (error) {
+      return console.error("Error loading information data:", error);
+    });
 });
 
 document.querySelector("#audio4mail").addEventListener("click", function () {
@@ -394,6 +445,29 @@ document.querySelector("#audio4mail").addEventListener("click", function () {
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
+  fetch("./json/information.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      information = Object.values(data.tapes);
+      let title = information[2].name; // Access the title here
+      let zin1 = information[2].zin1.title;
+      let zin2 = information[2].zin2.title;
+      let zin3 = information[2].zin3.title;
+      let zin4 = information[2].zin4.title;
+      let zin5 = information[2].zin5.title;
+
+      document.querySelector("#tapeName").textContent = title;
+      document.querySelector("#zin1").textContent = zin1;
+      document.querySelector("#zin2").textContent = zin2;
+      document.querySelector("#zin3").textContent = zin3;
+      document.querySelector("#zin4").textContent = zin4;
+      document.querySelector("#zin5").textContent = zin5;
+    })
+    .catch(function (error) {
+      return console.error("Error loading information data:", error);
+    });
 });
 
 document.querySelector("#audio5mail").addEventListener("click", function () {
@@ -403,7 +477,31 @@ document.querySelector("#audio5mail").addEventListener("click", function () {
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
+  fetch("./json/information.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      information = Object.values(data.tapes);
+      let title = information[3].name; // Access the title here
+      let zin1 = information[3].zin1.title;
+      let zin2 = information[3].zin2.title;
+      let zin3 = information[3].zin3.title;
+      let zin4 = information[3].zin4.title;
+      let zin5 = information[3].zin5.title;
+
+      document.querySelector("#tapeName").textContent = title;
+      document.querySelector("#zin1").textContent = zin1;
+      document.querySelector("#zin2").textContent = zin2;
+      document.querySelector("#zin3").textContent = zin3;
+      document.querySelector("#zin4").textContent = zin4;
+      document.querySelector("#zin5").textContent = zin5;
+    })
+    .catch(function (error) {
+      return console.error("Error loading information data:", error);
+    });
 });
+
 //
 //
 //

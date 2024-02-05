@@ -1,0 +1,174 @@
+{
+  "tapes": {
+    "tape1": {
+      "ID": 1,
+      "name": "Tape 1",
+      "zin1": {
+        "ID": 1,
+        "title": "Title 1",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin2": {
+        "ID": 2,
+        "title": "Title 2",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin3": {
+        "ID": 3,
+        "title": "Title 3",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin4": {
+        "ID": 4,
+        "title": "Title 4",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin5": {
+        "ID": 5,
+        "title": "Title 5",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      }
+    },
+    "tape2": {
+      "ID": 2,
+      "name": "Tape 2",
+      "zin1": {
+        "ID": 1,
+        "title": "Title 1",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin2": {
+        "ID": 2,
+        "title": "Title 2",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin3": {
+        "ID": 3,
+        "title": "Title 3",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin4": {
+        "ID": 4,
+        "title": "Title 4",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin5": {
+        "ID": 5,
+        "title": "Title 5",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      }
+    },
+    "tape3": {
+      "ID": 3,
+      "name": "Tape 3",
+      "zin1": {
+        "ID": 1,
+        "title": "Title 1",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin2": {
+        "ID": 2,
+        "title": "Title 2",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin3": {
+        "ID": 3,
+        "title": "Title 3",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin4": {
+        "ID": 4,
+        "title": "Title 4",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin5": {
+        "ID": 5,
+        "title": "Title 5",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      }
+    },
+    "tape4": {
+      "ID": 4,
+      "name": "Tape 4",
+      "zin1": {
+        "ID": 1,
+        "title": "Title 1",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin2": {
+        "ID": 2,
+        "title": "Title 2",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin3": {
+        "ID": 3,
+        "title": "Title 3",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin4": {
+        "ID": 4,
+        "title": "Title 4",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin5": {
+        "ID": 5,
+        "title": "Title 5",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      }
+    },
+    "tape5": {
+      "ID": 5,
+      "name": "Tape 5",
+      "zin1": {
+        "ID": 1,
+        "title": "Title 1",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin2": {
+        "ID": 2,
+        "title": "Title 2",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin3": {
+        "ID": 3,
+        "title": "Title 3",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin4": {
+        "ID": 4,
+        "title": "Title 4",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      },
+      "zin5": {
+        "ID": 5,
+        "title": "Title 5",
+        "text1": "Text 1",
+        "text2": "Text 2"
+      }
+    }
+  }
+}
