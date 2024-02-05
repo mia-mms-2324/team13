@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔴</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🔴</title>
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
-<body>
-  <video id="backgroundVideo" loop autoplay muted>
-    <source src="assets/video/bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <body>
+    <video id="backgroundVideo" loop autoplay muted>
+      <source src="assets/video/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
   <div class="container" id="container">
     <div class="mainWindow">
@@ -67,30 +66,72 @@
                 <p id="date" class="tekst-mail">12/12/2030</p> 
                 <div class="afbeelding-mail"><img src="assets/images/bg-tapes/img-lab-2030.png" alt=""></div>
                 <div class="mailAudio"></div>
-              </div>
-            </div>
-            <div id="mail3" class="mail">
-              <div class="mail-thumbnail">
-                <p><span>Mvr. Helga</span> // Niet meer zoals voeger</p>
-              </div>
-              <div class="mail-content">
-                <div class="pp"></div>
-                <p class="titel-mail">"Niet meer zoals voeger"</p>
-                <p class="tekst-mail">
-                  3, 2, 1 eeeeeen actie. logboek 1, dag 1 , opname 1. Vandaag
-                  is het 20 september 2030 en ik heb net besloten om een
-                  logboek bij te gaan houden, zo kan ik bijhouden hoe het er
-                  aan toe...
-                </p>
 
-                <p id="date" class="tekst-mail">20/09/2030</p> 
-                <div class="afbeelding-mail"><img src="assets/images/bg-tapes/vissersdorp-cutscene.png" alt=""></div>
-                <div class="mailAudio"></div>
+            <div class="emails">
+              <div id="mail1" class="mail">
+                <div class="mail-thumbnail">
+                  <p><span>Prof. Janson</span> // Aarde haar laatste hoop</p>
+                </div>
+                <div class="mail-content">
+                  <div class="pp"></div>
+                  <p class="titel-mail">"Aarde haar laatste hoop"</p>
+                  <p class="tekst-mail">...tekst professor...</p>
+                  <div class="afbeelding-mail"></div>
+                  <div class="mailAudio"></div>
+                </div>
               </div>
-            </div>
-            <div id="mail4" class="mail">
-              <div class="mail-thumbnail">
-                <p><span>Mvr. Spapels</span> // De waarheid</p>
+              <div id="mail2" class="mail">
+                <div class="mail-thumbnail">
+                  <p>
+                    <span>Prof. van Meulen</span> // Dit loopt uit de hand...
+                  </p>
+                </div>
+                <div class="mail-content">
+                  <div class="pp"></div>
+                  <p class="titel-mail">"Dit loopt uit de hand..."</p>
+                  <p class="tekst-mail">
+                    Klimaat index entry 32, datum van opname: 12 December 2030.
+                    Als bioloog maak ik een rapport over de gevolgen van de
+                    afval crisis, precies 15 jaar na het klimaat akkoord van
+                    Parijs reflecteer ik terug op deze crisis...
+                  </p>
+                  <div class="afbeelding-mail"></div>
+                  <div class="mailAudio"></div>
+                </div>
+              </div>
+              <div id="mail3" class="mail">
+                <div class="mail-thumbnail">
+                  <p><span>Mvr. Helga</span> // Niet meer zoals voeger</p>
+                </div>
+                <div class="mail-content">
+                  <div class="pp"></div>
+                  <p class="titel-mail">"Niet meer zoals voeger"</p>
+                  <p class="tekst-mail">
+                    3, 2, 1 eeeeeen actie. logboek 1, dag 1 , opname 1. Vandaag
+                    is het 20 september 2030 en ik heb net besloten om een
+                    logboek bij te gaan houden, zo kan ik bijhouden hoe het er
+                    aan toe...
+                  </p>
+
+                  <div class="afbeelding-mail"></div>
+                  <div class="mailAudio"></div>
+                </div>
+              </div>
+              <div id="mail4" class="mail">
+                <div class="mail-thumbnail">
+                  <p><span>Mvr. Spapels</span> // De waarheid</p>
+                </div>
+                <div class="mail-content">
+                  <div class="pp"></div>
+                  <p class="titel-mail">"De waarheid"</p>
+                  <p class="tekst-mail">
+                    Wandelen in een mooi groen bos, omringt door vogels en
+                    andere dieren die het hun thuis noemen. Mijn wens is dat
+                    elke generatie na mij dit nog mag beleven...
+                  </p>
+                  <div class="afbeelding-mail"></div>
+                  <div class="mailAudio"></div>
+                </div>
               </div>
               <div class="mail-content">
                 <div class="pp"></div>
@@ -106,51 +147,55 @@
                 <div class="mailAudio"></div>
               </div>
             </div>
-            <div id="mail5" class="mail">
-              <div class="mail-thumbnail">
-                <p><span>Mnr. van der Linden</span> // Het water</p>
-              </div>
-              <div class="mail-content">
-                <div class="pp"></div>
-                <p class="titel-mail">"Het water"</p>
-                <p class="tekst-mail">
-                  Toen ik als kind onder de kerstboom zat met glinsterende
-                  lichtjes, vroegen mijn ouders me hoe ik de toekomst voor me
-                  zag...
-                </p>
-
-                <p id="date" class="tekst-mail">09/05/2045</p> 
-                <div class="afbeelding-mail"><img src="assets/images/bg-tapes/building-cement.png" alt=""></div>
-                <div class="mailAudio"></div>
+              <div id="mail5" class="mail">
+                <div class="mail-thumbnail">
+                  <p><span>Mnr. van der Linden</span> // Het water</p>
+                </div>
+                <div class="mail-content">
+                  <div class="pp"></div>
+                  <p class="titel-mail">"Het water"</p>
+                  <p class="tekst-mail">
+                    Toen ik als kind onder de kerstboom zat met glinsterende
+                    lichtjes, vroegen mijn ouders me hoe ik de toekomst voor me
+                    zag...
+                  </p>
+                  <div class="afbeelding-mail"></div>
+                  <div class="mailAudio"></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="inboxImg">
-            <div class="mailExitCont" id="mailExitCont1"></div>
-            <div class="mailExitCont" id="mailExitCont2"></div>
-            <div class="mailExitCont" id="mailExitCont3"></div>
-            <div class="mailExitCont" id="mailExitCont4"></div>
-            <div class="mailExitCont" id="mailExitCont5"></div>
+            <div class="inboxImg">
+              <div class="mailExitCont" id="mailExitCont1"></div>
+              <div class="mailExitCont" id="mailExitCont2"></div>
+              <div class="mailExitCont" id="mailExitCont3"></div>
+              <div class="mailExitCont" id="mailExitCont4"></div>
+              <div class="mailExitCont" id="mailExitCont5"></div>
+            </div>
           </div>
-        </div>
-        <div class="extra-apps">
-          <div class="systemen">
-            <div class="blue-bar-extra"></div>
-            <div class="systemen-titlebox">
-              <p class="h1-apps">SYSTEMEN</p>
-              <p class="h1-apps" id="bloomSystemen">SYSTEMEN</p>
+          <div class="extra-apps">
+            <div class="systemen">
+              <div class="blue-bar-extra"></div>
+              <div class="systemen-titlebox">
+                <p class="h1-apps">SYSTEMEN</p>
+                <p class="h1-apps" id="bloomSystemen">SYSTEMEN</p>
 
-              <div class="sysBtns">
-                <div class="inv">
-                  <p class="sysBtnsTitles">SM-230</p>
-                  <p class="sysBtnsDescs">Ruwe Stoffen</p>
-                  <div class="inv-cont">
-                    <div class="stofjes">
-                      <div class="stofje" id="rood"></div>
-                      <div class="stofje" id="blauw"></div>
-                      <div class="stofje" id="groen"></div>
+                <div class="sysBtns">
+                  <div class="inv">
+                    <p class="sysBtnsTitles">SM-230</p>
+                    <p class="sysBtnsDescs">Ruwe Stoffen</p>
+                    <div class="inv-cont">
+                      <div class="stofjes">
+                        <div class="stofje" id="rood"></div>
+                        <div class="stofje" id="blauw"></div>
+                        <div class="stofje" id="groen"></div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="end">
+                    <p class="sysBtnsTitles">SVK-80</p>
+                    <p class="sysBtnsDescs">Externe Spuitkop</p>
+                    <div class="end-button"></div>
                   </div>
                 </div>
                 <div class="end">
@@ -162,88 +207,90 @@
                 </div>
               </div>
 
-              <p class="desc2">
-                Inventaris en proces van middelen die aanwezig zijn op het
-                schip.
-              </p>
-            </div>
-            <div class="systemenImg">
-              <div class="systeemExitCont" id="invExitCont"></div>
-              <div class="systeemExitCont" id="endExitCont"></div>
-            </div>
-          </div>
-          <div class="onderzoek">
-            <div class="blue-bar-extra2"></div>
-            <div class="onderzoek-titlebox">
-              <p class="h1-apps">ONDERZOEK</p>
-              <p class="h1-apps" id="bloomOnderzoek">ONDERZOEK</p>
-
-              <div class="titel-zinnen">
-                <p>...naam tape...</p>
+                <p class="desc2">
+                  Inventaris en proces van middelen die aanwezig zijn op het
+                  schip.
+                </p>
               </div>
-
-              <p class="desc3">
-                Notatie en verzamelpunt van verkregen informatie tijdens de
-                missie.
-              </p>
-
-              <div class="zinnen">
-                <p class="zin-tape" id="zin1">zin1</p>
-                <p class="zin-tape" id="zin2">zin2</p>
-                <p class="zin-tape" id="zin3">zin3</p>
-                <p class="zin-tape" id="zin3">zin4</p>
-                <p class="zin-tape" id="zin3">zin5</p>
+              <div class="systemenImg">
+                <div class="systeemExitCont" id="invExitCont"></div>
+                <div class="systeemExitCont" id="endExitCont"></div>
               </div>
-              <div class="conclusies">
-                <p>
-                  Het doel was om in 2030 al het plastic recyclebaar te maken.
+            </div>
+            <div class="onderzoek">
+              <div class="blue-bar-extra2"></div>
+              <div class="onderzoek-titlebox">
+                <p class="h1-apps">ONDERZOEK</p>
+                <p class="h1-apps" id="bloomOnderzoek">ONDERZOEK</p>
+
+                <div class="titel-zinnen">
+                  <p>...naam tape...</p>
+                </div>
+
+                <p class="desc3">
+                  Notatie en verzamelpunt van verkregen informatie tijdens de
+                  missie.
                 </p>
 
-                <p class="conUitleg">
-                  Dat is niet gelukt en daardoor daalt de vispopulatie
-                </p>
-                <div class="afbCon"></div>
-                <div class="exitCon"></div>
+                <div class="zinnen">
+                  <p class="zin-tape" id="zin1">zin1</p>
+                  <p class="zin-tape" id="zin2">zin2</p>
+                  <p class="zin-tape" id="zin3">zin3</p>
+                  <p class="zin-tape" id="zin3">zin4</p>
+                  <p class="zin-tape" id="zin3">zin5</p>
+                </div>
+                <div class="conclusies">
+                  <p>
+                    Het doel was om in 2030 al het plastic recyclebaar te maken.
+                  </p>
+
+                  <p class="conUitleg">
+                    Dat is niet gelukt en daardoor daalt de vispopulatie
+                  </p>
+                  <div class="afbCon"></div>
+                  <div class="exitCon"></div>
+                </div>
               </div>
             </div>
             <div class="onderzoekImg"></div>
           </div>
         </div>
-      </div>
-      <div class="scene" onclick="toggleBoxOff()">
-        <div class="content-dialoog">
-          <!--Dialogue box-->
-          <div class="dialogue" id="dialogue">
-            <h2 class="dialogueTitle"></h2>
-            <p class="dialogueText">test text</p>
-            <button class="rightButton" id="button">
-              <img class="nextBTN" src="assets/images/next.png" alt="" />
-            </button>
+        <div class="scene" onclick="toggleBoxOff()">
+          <div class="content-dialoog">
+            <!--Dialogue box-->
+            <div class="dialogue" id="dialogue">
+              <h2 class="dialogueTitle"></h2>
+              <p class="dialogueText">test text</p>
+              <button class="rightButton" id="button">
+                <img class="nextBTN" src="assets/images/next.png" alt="" />
+              </button>
+            </div>
+            <div class="audio">
+              <img
+                src="./assets/images/Black-Play-Button-PNG-Free-Download.png"
+                alt="play"
+              />
+            </div>
+            <!-- characters-->
+            <div class="bruce"></div>
+            <div class="nova"></div>
           </div>
-          <div class="audio">
-            <img src="./assets/images/Black-Play-Button-PNG-Free-Download.png" alt="play" />
-          </div>
-          <!-- characters-->
-          <div class="bruce"></div>
-          <div class="nova"></div>
         </div>
       </div>
-    </div>
-    <div class="sideWindow">
-      <div class="item item1">
-        <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
+      <div class="sideWindow">
+        <div class="item item1">
+          <img src="./assets/images/earthGIF.gif" alt="Earth GIF spinning" />
+        </div>
+        <div class="item item2">
+          <p class="previousdialogue"></p>
+        </div>
+        <div class="item item3"></div>
       </div>
-      <div class="item item2">
-        <p class="previousdialogue"></p>
-      </div>
-      <div class="item item3"></div>
     </div>
-  </div>
-  <!--Scripts-->
-  <!-- <div class="fix">
+    <!--Scripts-->
+    <!-- <div class="fix">
     <img src="./assets/images/fix.png" alt="" />
   </div> -->
-  <script src="./js/app.js"></script>
-</body>
-
+    <script src="./js/app.js"></script>
+  </body>
 </html>
