@@ -709,6 +709,26 @@ video {
   transition: 0.3s ease;
 }
 
+#mail1 {
+  display: none;
+}
+
+#mail2 {
+  display: none;
+}
+
+#mail3 {
+  display: none;
+}
+
+#mail4 {
+  display: none;
+}
+
+#mail5 {
+  display: none;
+}
+
 #mail1.hide {
   opacity: 0;
   position: absolute;
@@ -907,6 +927,7 @@ video {
   width: 2vw;
   height: 2vw;
   background-color: #e6e6e6;
+  cursor: pointer;
 }
 
 .mail-content {
