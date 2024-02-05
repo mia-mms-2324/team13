@@ -57,7 +57,7 @@ function updateDialogue() {
   let novaElement = document.querySelector(".nova");
 
   // Reset style properties for elements
-  dialogueTitleElement.style.display = "block";
+  dialogueTitleElement.style.opacity = 1;
   bruceElement.style.display = "none";
   novaElement.style.display = "none";
   let rightButton = document.querySelector(".rightButton");
@@ -67,9 +67,9 @@ function updateDialogue() {
     rightButton.style.display = "block";
   }, 5000);
   if (currentDialogue.Gender == "null") {
-    dialogueTitleElement.style.display = "none";
+    dialogueTitleElement.style.opacity = 0;
   } else {
-    dialogueTitleElement.style.display = "block";
+    dialogueTitleElement.style.opacity = 1;
     dialogueTitleElement.textContent = speakerName + "";
   }
 
@@ -519,27 +519,26 @@ function closeSystemen() {
 function openInv() {
   // Add the logic to open Inv here
 
-  document.querySelector('.inv').classList.add('open');
-  document.querySelector('.end').classList.add('hide');
-  document.querySelector('.inv-cont').classList.add('open');
+  document.querySelector(".inv").classList.add("open");
+  document.querySelector(".end").classList.add("hide");
+  document.querySelector(".inv-cont").classList.add("open");
 
   document.getElementById("invExitCont").classList.add("read");
 }
 
 function closeInv() {
-
-  document.querySelector('.inv').classList.remove('open');
-  document.querySelector('.end').classList.remove('hide');
-  document.querySelector('.inv-cont').classList.remove('open');
+  document.querySelector(".inv").classList.remove("open");
+  document.querySelector(".end").classList.remove("hide");
+  document.querySelector(".inv-cont").classList.remove("open");
 
   document.getElementById("invExitCont").classList.remove("read");
 }
 
 function openEnd() {
   // Add the logic to open End here
-  document.querySelector('.inv').classList.add('hide');
-  document.querySelector('.end').classList.add('open');
-  document.querySelector('.end-button').classList.add('open');
+  document.querySelector(".inv").classList.add("hide");
+  document.querySelector(".end").classList.add("open");
+  document.querySelector(".end-button").classList.add("open");
 
   document.getElementById("endExitCont").classList.add("read");
 }
@@ -547,10 +546,9 @@ function openEnd() {
 function closeEnd() {
   // Add the logic to close End here
 
-  document.querySelector('.inv').classList.remove('hide');
-  document.querySelector('.end').classList.remove('open');
-  document.querySelector('.end-button').classList.remove('open');
-
+  document.querySelector(".inv").classList.remove("hide");
+  document.querySelector(".end").classList.remove("open");
+  document.querySelector(".end-button").classList.remove("open");
 
   document.getElementById("endExitCont").classList.remove("read");
 }
