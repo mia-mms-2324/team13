@@ -518,32 +518,39 @@ function closeSystemen() {
 
 function openInv() {
   // Add the logic to open Inv here
-  document.querySelector(".inv").classList.add("open");
-  document.querySelector(".end").classList.add("hide");
+
+  document.querySelector('.inv').classList.add('open');
+  document.querySelector('.end').classList.add('hide');
+  document.querySelector('.inv-cont').classList.add('open');
 
   document.getElementById("invExitCont").classList.add("read");
 }
 
 function closeInv() {
-  // Add the logic to close Inv here
-  document.querySelector(".inv").classList.remove("open");
-  document.querySelector(".end").classList.remove("hide");
+
+  document.querySelector('.inv').classList.remove('open');
+  document.querySelector('.end').classList.remove('hide');
+  document.querySelector('.inv-cont').classList.remove('open');
 
   document.getElementById("invExitCont").classList.remove("read");
 }
 
 function openEnd() {
   // Add the logic to open End here
-  document.querySelector(".inv").classList.add("hide");
-  document.querySelector(".end").classList.add("open");
+  document.querySelector('.inv').classList.add('hide');
+  document.querySelector('.end').classList.add('open');
+  document.querySelector('.end-button').classList.add('open');
 
   document.getElementById("endExitCont").classList.add("read");
 }
 
 function closeEnd() {
   // Add the logic to close End here
-  document.querySelector(".inv").classList.remove("hide");
-  document.querySelector(".end").classList.remove("open");
+
+  document.querySelector('.inv').classList.remove('hide');
+  document.querySelector('.end').classList.remove('open');
+  document.querySelector('.end-button').classList.remove('open');
+
 
   document.getElementById("endExitCont").classList.remove("read");
 }
