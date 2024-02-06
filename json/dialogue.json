@@ -5,40 +5,40 @@
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Bijna klaar met de antenne?",
-      "eventID": null,
-      "audio": false
+      "eventID": 1,
+      "audio": true
     },
     "dia2": {
       "ID": 2,
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Hoe anders kan ik een veilige plek vinden om te landen?",
-      "eventID": null,
-      "audio": false
+      "eventID": 2,
+      "audio": true
     },
     "dia3": {
       "ID": 3,
       "Gender": "male",
       "SpriteID": "3",
       "dialogue": "Ik wil net zo graag terug naar aarde als jou hoor.",
-      "eventID": null,
-      "audio": false
+      "eventID": 3,
+      "audio": true
     },
     "dia4": {
       "ID": 4,
       "Gender": "male",
       "SpriteID": "1",
       "dialogue": "Geef me nog een paar seconden...",
-      "eventID": null,
-      "audio": false
+      "eventID": 4,
+      "audio": true
     },
     "dia5": {
       "ID": 5,
       "Gender": "male",
       "SpriteID": "1",
       "dialogue": "Bijnaaa.....",
-      "eventID": null,
-      "audio": false
+      "eventID": 5,
+      "audio": true
     },
     "dia6": {
       "ID": 6,

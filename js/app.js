@@ -45,6 +45,8 @@ let mailExitCont5 = document.getElementById("mailExitCont5");
 let zin1 = document.getElementById("zin1");
 let zin2 = document.getElementById("zin2");
 let zin3 = document.getElementById("zin3");
+let zin4 = document.getElementById("zin4");
+let zin5 = document.getElementById("zin5");
 
 function checkAudioStatus() {
   let currentDialogue = dialogues[currentDialogueIndex];
@@ -384,6 +386,7 @@ document.querySelector("#audio2mail").addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
+      datacounter = 1;
       information = Object.values(data.tapes);
       let title = information[0].name; // Access the title here
       let zin1 = information[0].zin1.title;
@@ -391,8 +394,7 @@ document.querySelector("#audio2mail").addEventListener("click", function () {
       let zin3 = information[0].zin3.title;
       let zin4 = information[0].zin4.title;
       let zin5 = information[0].zin5.title;
-      datacounter = 1;
-
+      console.log(information[0].name);
       document.querySelector("#tapeName").textContent = title;
       document.querySelector("#zin1").textContent = zin1;
       document.querySelector("#zin2").textContent = zin2;
@@ -418,6 +420,7 @@ document.querySelector("#audio3mail").addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
+      datacounter = 2;
       information = Object.values(data.tapes);
       let title = information[1].name; // Access the title here
       let zin1 = information[1].zin1.title;
@@ -450,6 +453,7 @@ document.querySelector("#audio4mail").addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
+      datacounter = 3;
       information = Object.values(data.tapes);
       let title = information[2].name; // Access the title here
       let zin1 = information[2].zin1.title;
@@ -482,6 +486,7 @@ document.querySelector("#audio5mail").addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
+      datacounter = 4;
       information = Object.values(data.tapes);
       let title = information[3].name; // Access the title here
       let zin1 = information[3].zin1.title;
@@ -502,6 +507,186 @@ document.querySelector("#audio5mail").addEventListener("click", function () {
     });
 });
 
+function fetchAndProcessInformation(zinType, tapeIndex) {
+  fetch("./json/information.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const tapeKey = `tape${tapeIndex + 1}`; // Adjust tapeIndex to start from 1
+      const info = data.tapes[tapeKey][zinType];
+      if (!info) {
+        console.error(`No information found for ${tapeKey} and ${zinType}`);
+        return;
+      }
+      const title = info.title;
+      const text1 = info.text1;
+      document.querySelector("#conclusies").textContent = title;
+      document.querySelector("#conUitleg").textContent = text1;
+
+      // Update the background image of .afbCon based on tape index
+      const afbConElement = document.querySelector(".afbCon");
+      afbConElement.style.backgroundImage = `url('./assets/images/tape${
+        tapeIndex + 1
+      }_background.jpg')`; // Assuming you have background images named accordingly
+    })
+    .catch((error) => console.error("Error loading information data:", error));
+}
+
+// Attach click listeners for zin1 to zin5 elements
+function attachClickListenersForZins() {
+  ["zin1", "zin2", "zin3", "zin4", "zin5"].forEach((zinType) => {
+    document
+      .querySelector(`#${zinType}`)
+      .addEventListener("click", function () {
+        const tapeIndex = datacounter - 1; // Assuming datacounter ranges from 1 to the number of tapes
+        fetchAndProcessInformation(zinType, tapeIndex);
+      });
+  });
+}
+
+// Call this function to set up the event listeners
+attachClickListenersForZins();
+
+// document.querySelector("#zin1").addEventListener("click", function () {
+//   switch (datacounter) {
+//     case 1:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[0].zin1.title; // Access the title here
+//           let text1 = information[0].zin1.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         })
+//         .catch(function (error) {
+//           return console.error("Error loading information data:", error);
+//         });
+//       break;
+//     case 2:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[1].zin1.title; // Access the title here
+//           let text1 = information[1].zin1.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         })
+//         .catch(function (error) {
+//           return console.error("Error loading information data:", error);
+//         });
+//       break;
+//     case 3:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[2].zin1.title; // Access the title here
+//           let text1 = information[2].zin1.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//     case 4:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[3].zin1.title; // Access the title here
+//           let text1 = information[3].zin1.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//     case 5:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[4].zin1.title; // Access the title here
+//           let text1 = information[4].zin1.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//   }
+// });
+
+// document.querySelector("#zin2").addEventListener("click", function () {
+//   switch (datacounter) {
+//     case 1:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[0].zin2.title; // Access the title here
+//           let text1 = information[0].zin2.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         })
+//         .catch(function (error) {
+//           return console.error("Error loading information data:", error);
+//         });
+//       break;
+//     case 2:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[1].zin2.title; // Access the title here
+//           let text1 = information[1].zin2.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         })
+//         .catch(function (error) {
+//           return console.error("Error loading information data:", error);
+//         });
+//       break;
+//     case 3:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[2].zin2.title; // Access the title here
+//           let text1 = information[2].zin2.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//     case 4:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[3].zin2.title; // Access the title here
+//           let text1 = information[3].zin2.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//     case 5:
+//       fetch("./json/information.json")
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (data) {
+//           let title = information[4].zin2.title; // Access the title here
+//           let text1 = information[4].zin2.text1;
+//           document.querySelector("#conclusies").textContent = title;
+//           document.querySelector("#conUitleg").textContent = text1;
+//         });
+//       break;
+//   }
+// });
 //
 //
 //
@@ -889,7 +1074,6 @@ function addEventListeners() {
 
     document.getElementById("invExitCont").addEventListener("click", closeInv);
     document.getElementById("endExitCont").addEventListener("click", closeEnd);
-
     zin1.addEventListener("click", zin1Exp);
     document.querySelector(".exitCon").addEventListener("click", zin1Exit);
     inbox.addEventListener("click", zin1Exit);

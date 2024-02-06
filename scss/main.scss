@@ -549,7 +549,6 @@ video {
   display: none;
 }
 
-
 #mail3 {
   display: none;
 }
@@ -721,7 +720,10 @@ video {
 
 .onderzoek .afbCon {
   position: relative;
-  background-color: greenyellow;
+  background-image: url("../assets/images/tape1_background.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   top: 30%;
   left: 150%;
   width: 20vw;
@@ -793,7 +795,7 @@ video {
 
 .mailExitCont:hover {
   background-color: $color-blue;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .pp {
@@ -936,7 +938,7 @@ video {
 
 .systeemExitCont:hover {
   background-color: $color-blue;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #invExitCont.read {
@@ -1009,8 +1011,7 @@ video {
   background-color: green;
 }
 
-
-#date{
+#date {
   font-style: italic;
   margin-top: 12%;
 }

@@ -887,7 +887,10 @@ video {
 
 .onderzoek .afbCon {
   position: relative;
-  background-color: greenyellow;
+  background-image: url("../assets/images/tape1_background.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   top: 30%;
   left: 150%;
   width: 20vw;
