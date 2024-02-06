@@ -2,172 +2,102 @@
   "tapes": {
     "tape1": {
       "ID": 1,
-      "name": "Tape 1",
+      "name": "Dit loopt uit de hand...",
       "zin1": {
         "ID": 1,
-        "title": "Title 1.1",
-        "text1": "Text 1.1",
-        "text2": "Text 2"
+        "title": "...Al het afval wat niet gerecycled kon...",
+        "text1": "Veel niet-recyclebaar afval is verbrand en heeft schadelijke stoffen in de lucht gebracht.",
+        "text2": "Dit heeft geleid tot vervuiling van de atmosfeer"
       },
       "zin2": {
         "ID": 2,
-        "title": "Title 2",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...Ook in de ongerepte natuur is het te zien...",
+        "text1": "In natuurgebieden worden afvalstoffen in de grond ontdekt.",
+        "text2": "Dit geeft aan dat zelfs afgelegen en schone plekken worden aangetast."
       },
       "zin3": {
         "ID": 3,
-        "title": "Title 3",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin4": {
-        "ID": 4,
-        "title": "Title 4",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin5": {
-        "ID": 5,
-        "title": "Title 5",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "..precies 15 jaar na het klimaat akkoord...",
+        "text1": "In 2016 is een klimaatakkoord doorgevoerd.",
+        "text2": "De verbeterende effecten van dit akkoord is niet terug te zien op aarde."
       }
     },
     "tape2": {
       "ID": 2,
-      "name": "Tape 2",
+      "name": "Niet meer zoals voeger",
       "zin1": {
         "ID": 1,
-        "title": "Title 1.2",
-        "text1": "Text 1.2",
-        "text2": "Text 2.2"
+        "title": "...Het doel om al het plastic recyclebaar te maken...",
+        "text1": "Het doel was om in 2030 al het plastic recyclebaar te maken.",
+        "text2": "Dit doel is niet behaald, hierdoor is de vispopulatie gedaald."
       },
       "zin2": {
         "ID": 2,
-        "title": "Title 2",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...vissen die vast komen te zitten in plastic afval...",
+        "text1": "Een groot deel van de zee bestaat uit plastic.",
+        "text2": "Er stroomt gemiddeld zo'n 9 miljard kilo plastic per jaar de oceanen in."
       },
       "zin3": {
         "ID": 3,
-        "title": "Title 3",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...De vispopulaties slinken voortdurend...",
+        "text1": "De populatie van vissen is drastisch gedaald.",
+        "text2": "Dit als gevolg van het consumeren van microplastic (heel kleine stukjes plastic)."
       },
       "zin4": {
         "ID": 4,
-        "title": "Title 4",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin5": {
-        "ID": 5,
-        "title": "Title 5",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...ernstige gevolgen voor voedselzekerheid...",
+        "text1": "De populatie van vissen is drastisch gedaald. ",
+        "text2": "Hierdoor is de vangst ook gedaald."
       }
     },
     "tape3": {
       "ID": 3,
-      "name": "Tape 3",
+      "name": "De waarheid",
       "zin1": {
         "ID": 1,
-        "title": "Title 1",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...een bedrijf te werken dat bekend stond om zijn vervuilende praktijken...",
+        "text1": "Staalproductie is de grootste vervuiler in Nederland.",
+        "text2": "Tijdens de productie van staal worden veel kankerverwekkende stoffen uitgestoot."
       },
       "zin2": {
         "ID": 2,
-        "title": "Title 2",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...Nachtenlang heb ik wakker gelegen...",
+        "text1": "De medewerker binnen de staalindustrie voelde zich opgesloten.",
+        "text2": " Ze wilde niet het bedrijf blootleggen, maar wilde ook niet de acties van het bedrijf goedpraten."
       },
       "zin3": {
         "ID": 3,
-        "title": "Title 3",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin4": {
-        "ID": 4,
-        "title": "Title 4",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin5": {
-        "ID": 5,
-        "title": "Title 5",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...een schonere manier van productie. Helaas wordt dit genegeerd...",
+        "text1": "150.000 mensen leven direct onder deze gifwolken",
+        "text2": "In de omgeving komt longkanker tot 50% meer voor en hebben jonge kinderen grotere kans op hersenschade."
       }
     },
     "tape4": {
       "ID": 4,
-      "name": "Tape 4",
+      "name": "Het water",
       "zin1": {
         "ID": 1,
-        "title": "Title 1",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...Het water, ooit zuiver, is besmet...",
+        "text1": "Het water wordt vervuild.",
+        "text2": "Vervuild drinkwater kan leiden tot ziekten zoals tyfus en schade aan lever en nieren."
       },
       "zin2": {
         "ID": 2,
-        "title": "Title 2",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "... een wereld gecreëerd waarin niets onaangetast blijft...",
+        "text1": "In Nederland komt bodemverontreiniging op grote schaal voor.",
+        "text2": "Er zijn ongeveer 250.000 locaties waar de bodem mogelijk ernstig vervuild is."
       },
       "zin3": {
         "ID": 3,
-        "title": "Title 3",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...een blok beton, een teken van genegeerde verwoesting...",
+        "text1": "Het gaat om plekken waar vroeger benzinestations, garages, chemische wasserijen of gasfabrieken stonden.",
+        "text2": "En om landbouwgrond waar vroeger gevaarlijke en inmiddels verboden bestrijdingsmiddelen zijn gebruikt."
       },
       "zin4": {
         "ID": 4,
-        "title": "Title 4",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin5": {
-        "ID": 5,
-        "title": "Title 5",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      }
-    },
-    "tape5": {
-      "ID": 5,
-      "name": "Tape 5",
-      "zin1": {
-        "ID": 1,
-        "title": "Title 1",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin2": {
-        "ID": 2,
-        "title": "Title 2",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin3": {
-        "ID": 3,
-        "title": "Title 3",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin4": {
-        "ID": 4,
-        "title": "Title 4",
-        "text1": "Text 1",
-        "text2": "Text 2"
-      },
-      "zin5": {
-        "ID": 5,
-        "title": "Title 5",
-        "text1": "Text 1",
-        "text2": "Text 2"
+        "title": "...de dieren ziek door chemisch afval...",
+        "text1": "Nieuwe bedreigingen zoals drugsafval, medicijnresten, microplastics, nanodeeltjes, en PFAS worden steeds vaker aangetroffen.",
+        "text2": "Dit heeft negatieve gevolgen op onze omgeving, en die van de wilde dieren."
       }
     }
   }

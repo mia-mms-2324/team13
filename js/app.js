@@ -1075,6 +1075,11 @@ function addEventListeners() {
     document.getElementById("invExitCont").addEventListener("click", closeInv);
     document.getElementById("endExitCont").addEventListener("click", closeEnd);
     zin1.addEventListener("click", zin1Exp);
+    zin2.addEventListener("click", zin1Exp);
+    zin3.addEventListener("click", zin1Exp);
+    zin4.addEventListener("click", zin1Exp);
+    zin5.addEventListener("click", zin1Exp);
+
     document.querySelector(".exitCon").addEventListener("click", zin1Exit);
     inbox.addEventListener("click", zin1Exit);
     systemen.addEventListener("click", zin1Exit);
