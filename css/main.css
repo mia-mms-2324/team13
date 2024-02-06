@@ -852,6 +852,22 @@ video {
   opacity: 1;
 }
 
+.onderzoek #zin2:hover {
+  opacity: 1;
+}
+
+.onderzoek #zin3:hover {
+  opacity: 1;
+}
+
+.onderzoek #zin4:hover {
+  opacity: 1;
+}
+
+.onderzoek #zin5:hover {
+  opacity: 1;
+}
+
 .zinnen.hide {
   opacity: 0;
 }
