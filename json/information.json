@@ -1,11 +1,11 @@
 {
   "tapes": {
-    "tape1": {
+    "tape2": {
       "ID": 1,
       "name": "Dit loopt uit de hand...",
       "zin1": {
         "ID": 1,
-        "title": "...Al het afval wat niet gerecycled kon...",
+        "title": "Gerecyled afval wordt verbrand...",
         "text1": "Veel niet-recyclebaar afval is verbrand en heeft schadelijke stoffen in de lucht gebracht.",
         "text2": "Dit heeft geleid tot vervuiling van de atmosfeer"
       },
@@ -22,7 +22,7 @@
         "text2": "De verbeterende effecten van dit akkoord is niet terug te zien op aarde."
       }
     },
-    "tape2": {
+    "tape3": {
       "ID": 2,
       "name": "Niet meer zoals voeger",
       "zin1": {
@@ -50,7 +50,7 @@
         "text2": "Hierdoor is de vangst ook gedaald."
       }
     },
-    "tape3": {
+    "tape4": {
       "ID": 3,
       "name": "De waarheid",
       "zin1": {
@@ -72,7 +72,7 @@
         "text2": "In de omgeving komt longkanker tot 50% meer voor en hebben jonge kinderen grotere kans op hersenschade."
       }
     },
-    "tape4": {
+    "tape5": {
       "ID": 4,
       "name": "Het water",
       "zin1": {

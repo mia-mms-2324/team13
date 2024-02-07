@@ -228,6 +228,10 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
+
       break;
     case 2:
       // Execute code specific to eventID 2
@@ -237,6 +241,9 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
     case 3:
       // Execute code specific to eventID 3
@@ -246,6 +253,9 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
     case 4:
       // Execute code specific to eventID 6
@@ -255,6 +265,9 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
     case 5:
       // Execute code specific to eventID 6
@@ -264,16 +277,30 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
     case 6:
       // Execute code specific to eventID 6
       console.log("Executing code for eventID == 6");
       // This could be the end of a sequence or triggering the final action
-      window.location.href = "outro.html";
+      document
+        .querySelector(".end-button")
+        .addEventListener("click", function () {
+          window.location.href = "outro.html";
+        });
+      hint();
+      document.querySelector("#shipStatus").textContent =
+        "Er is een nieuwe interactie beschikbaar in het apps paneel.";
+      break;
+    case 7:
+      hint();
       break;
     default:
       // No specific eventID or code to execute
       console.log("No specific eventID action required.");
+      document.querySelector("#shipStatus").textContent = ".";
       break;
   }
 }
@@ -358,350 +385,263 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// document.querySelector(".audio").addEventListener("click", function () {
-//   audio.play();
-//   console.log("audio played ");
-// });
+function hint() {
+  let count = 0;
+  let interval;
 
-// document.querySelector(".mailAudio").addEventListener("click", function () {});
+  // Define the function to adjust brightness
+  function adjustBrightness() {
+    const appsElement = document.getElementById("apps");
+    if (count % 2 === 0) {
+      // Decrease brightness
+      appsElement.style.filter = "brightness(0)"; // Decrease brightness to 50%
+    } else {
+      // Increase brightness
+      appsElement.style.filter = "brightness(2.5)"; // Reset brightness to normal (100%)
+    }
+    count++;
+  }
+
+  // Call the function initially
+  adjustBrightness();
+
+  // Set interval to repeat every second
+  interval = setInterval(adjustBrightness, 1000);
+
+  // Stop the interval and reset brightness when a click event occurs in the top 20% of the screen
+  document.addEventListener("click", function (event) {
+    const clickY = event.clientY;
+    const screenHeight = window.innerHeight;
+    if (clickY <= screenHeight * 0.2) {
+      // If click occurs in the top 20% of the screen
+      clearInterval(interval);
+      const appsElement = document.getElementById("apps");
+      appsElement.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+    }
+  });
+}
+
+// function setupAudioMailListeners() {
+//   // Array of audio file paths for simplicity, assuming the order matches your #audioXmail elements
+//   const audioFiles = [
+//     "./assets/audio/audio1.mp3",
+//     "./assets/audio/audio2.mp3",
+//     "./assets/audio/audio3.mp3",
+//     "./assets/audio/audio4.mp3",
+//     "./assets/audio/audio5.mp3",
+//   ];
+
+//   audioFiles.forEach((filePath, index) => {
+//     document
+//       .querySelector(`#audio${index + 1}mail`)
+//       .addEventListener("click", function () {
+//         var audio = new Audio(filePath);
+//         audio.play();
+//         console.log("audio played");
+//         document
+//           .querySelector(".dialogue")
+//           .addEventListener("click", loadNextDialogue);
+//         fetchAndDisplayInformation(index);
+//       });
+//   });
+// }
+// function fetchAndDisplayInformation(tapeIndex) {
+//   fetch("./json/information.json")
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("Failed to load information data");
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       // Ensure the JSON data is loaded properly
+//       if (!data || !data.tapes) {
+//         throw new Error("Invalid JSON format");
+//       }
+
+//       const tapeKey = `tape${tapeIndex + 1}`;
+//       const tape = data.tapes[tapeKey];
+
+//       if (!tape) {
+//         console.error("No tape information found for tapeIndex: ", tapeIndex);
+//         return; // Exit if no tape data is found for the current index
+//       }
+
+//       // Set tape name
+//       document.querySelector("#tapeName").textContent = tape.name || "";
+
+//       // Clear existing event listeners
+//       ["zin1", "zin2", "zin3", "zin4", "zin5"].forEach((zin) => {
+//         const sentenceElement = document.querySelector(`#${zin}`);
+//         sentenceElement.removeEventListener("click", () => {});
+//       });
+
+//       // Create event listeners for each sentence
+//       ["zin1", "zin2", "zin3", "zin4", "zin5"].forEach((zin) => {
+//         const sentenceElement = document.createElement("div");
+//         sentenceElement.id = zin;
+//         sentenceElement.textContent = tape[zin] ? tape[zin].title : "";
+//         sentenceElement.addEventListener("click", () => {
+//           // Populate .conclusies and .conUitleg with the data from the selected sentence
+//           const conclusionElement = document.querySelector(".conclusies");
+//           const explanationElement = document.querySelector(".conUitleg");
+
+//           if (tape[zin]) {
+//             conclusionElement.textContent = tape[zin].text1 || "";
+//             explanationElement.textContent = tape[zin].text2 || "";
+//           } else {
+//             conclusionElement.textContent = "";
+//             explanationElement.textContent = "";
+//           }
+//         });
+//         document.querySelector(".sentences").appendChild(sentenceElement);
+//       });
+
+//       // Optionally, update the background image or other elements based on the tape
+//       const afbConElement = document.querySelector(".afbCon");
+//       afbConElement.style.backgroundImage = `url('./assets/images/${tapeKey}_background.jpg')`;
+//     })
+//     .catch((error) => {
+//       console.error("Error loading information data:", error);
+//     });
+// }
+
+// // Initialize the audio mail listeners
+// setupAudioMailListeners();
+document.addEventListener("DOMContentLoaded", function () {
+  setupAudioMailListeners();
+});
+function setupAudioMailListeners() {
+  const audioFiles = [
+    "./assets/audio/audio1.mp3",
+    "./assets/audio/audio2.mp3",
+    "./assets/audio/audio3.mp3",
+    "./assets/audio/audio4.mp3",
+    "./assets/audio/audio5.mp3",
+  ];
+
+  audioFiles.forEach((filePath, index) => {
+    const sceneElement = document.querySelector(".scene");
+    const bruceElement = document.querySelector(".bruce");
+    const novaElement = document.querySelector(".nova");
+    const originalBackgroundImage =
+      getComputedStyle(sceneElement).backgroundImage;
+
+    document
+      .querySelector(`#audio${index + 1}mail`)
+      .addEventListener("click", function () {
+        var audio = new Audio(filePath);
+        audio.play();
+
+        // Change background image while playing audio
+        const newBackgroundImage = `url("../assets/images/tape${
+          index + 1
+        }_background.jpg")`;
+        sceneElement.style.backgroundImage = newBackgroundImage;
+
+        // Change opacity of .bruce and .nova to 0 while audio is playing
+        bruceElement.style.opacity = 0;
+        novaElement.style.opacity = 0;
+
+        // Fetch and display information
+        fetchAndDisplayInformation(index);
+
+        // Revert background image and opacity after audio finishes playing
+        audio.addEventListener("ended", function () {
+          sceneElement.style.backgroundImage = originalBackgroundImage;
+          bruceElement.style.opacity = 1;
+          novaElement.style.opacity = 1;
+        });
+      });
+  });
+}
 
 document.querySelector("#audio1mail").addEventListener("click", function () {
-  audio = new Audio("./assets/audio/audio1.mp3");
-  audio.play();
-  console.log("audio played ");
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
 });
 
 document.querySelector("#audio2mail").addEventListener("click", function () {
-  audio = new Audio("./assets/audio/audio2.mp3");
-  audio.play();
-  console.log("audio played ");
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
-  fetch("./json/information.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      datacounter = 1;
-      information = Object.values(data.tapes);
-      let title = information[0].name; // Access the title here
-      let zin1 = information[0].zin1.title;
-      let zin2 = information[0].zin2.title;
-      let zin3 = information[0].zin3.title;
-      let zin4 = information[0].zin4.title;
-      let zin5 = information[0].zin5.title;
-      console.log(information[0].name);
-      document.querySelector("#tapeName").textContent = title;
-      document.querySelector("#zin1").textContent = zin1;
-      document.querySelector("#zin2").textContent = zin2;
-      document.querySelector("#zin3").textContent = zin3;
-      document.querySelector("#zin4").textContent = zin4;
-      document.querySelector("#zin5").textContent = zin5;
-    })
-    .catch(function (error) {
-      return console.error("Error loading information data:", error);
-    });
+  let rood = document.querySelector("#rood");
+  rood.style.opacity = 1;
 });
 
 document.querySelector("#audio3mail").addEventListener("click", function () {
-  audio = new Audio("./assets/audio/audio3.mp3");
-  audio.play();
-  console.log("audio played ");
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
-
-  fetch("./json/information.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      datacounter = 2;
-      information = Object.values(data.tapes);
-      let title = information[1].name; // Access the title here
-      let zin1 = information[1].zin1.title;
-      let zin2 = information[1].zin2.title;
-      let zin3 = information[1].zin3.title;
-      let zin4 = information[1].zin4.title;
-      let zin5 = information[1].zin5.title;
-
-      document.querySelector("#tapeName").textContent = title;
-      document.querySelector("#zin1").textContent = zin1;
-      document.querySelector("#zin2").textContent = zin2;
-      document.querySelector("#zin3").textContent = zin3;
-      document.querySelector("#zin4").textContent = zin4;
-      document.querySelector("#zin5").textContent = zin5;
-    })
-    .catch(function (error) {
-      return console.error("Error loading information data:", error);
-    });
+  let blauw = document.querySelector("#blauw");
+  blauw.style.opacity = 1;
 });
 
 document.querySelector("#audio4mail").addEventListener("click", function () {
-  audio = new Audio("./assets/audio/audio4.mp3");
-  audio.play();
-  console.log("audio played ");
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
-  fetch("./json/information.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      datacounter = 3;
-      information = Object.values(data.tapes);
-      let title = information[2].name; // Access the title here
-      let zin1 = information[2].zin1.title;
-      let zin2 = information[2].zin2.title;
-      let zin3 = information[2].zin3.title;
-      let zin4 = information[2].zin4.title;
-      let zin5 = information[2].zin5.title;
-
-      document.querySelector("#tapeName").textContent = title;
-      document.querySelector("#zin1").textContent = zin1;
-      document.querySelector("#zin2").textContent = zin2;
-      document.querySelector("#zin3").textContent = zin3;
-      document.querySelector("#zin4").textContent = zin4;
-      document.querySelector("#zin5").textContent = zin5;
-    })
-    .catch(function (error) {
-      return console.error("Error loading information data:", error);
-    });
+  let groen = document.querySelector("#groen");
+  groen.style.opacity = 1;
 });
 
 document.querySelector("#audio5mail").addEventListener("click", function () {
-  audio = new Audio("./assets/audio/audio5.mp3");
-  audio.play();
-  console.log("audio played ");
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
-  fetch("./json/information.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      datacounter = 4;
-      information = Object.values(data.tapes);
-      let title = information[3].name; // Access the title here
-      let zin1 = information[3].zin1.title;
-      let zin2 = information[3].zin2.title;
-      let zin3 = information[3].zin3.title;
-      let zin4 = information[3].zin4.title;
-      let zin5 = information[3].zin5.title;
-
-      document.querySelector("#tapeName").textContent = title;
-      document.querySelector("#zin1").textContent = zin1;
-      document.querySelector("#zin2").textContent = zin2;
-      document.querySelector("#zin3").textContent = zin3;
-      document.querySelector("#zin4").textContent = zin4;
-      document.querySelector("#zin5").textContent = zin5;
-    })
-    .catch(function (error) {
-      return console.error("Error loading information data:", error);
-    });
+  let geel = document.querySelector("#geel");
+  geel.style.opacity = 1;
 });
 
-function fetchAndProcessInformation(zinType, tapeIndex) {
+function fetchAndDisplayInformation(tapeIndex) {
   fetch("./json/information.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const tapeKey = `tape${tapeIndex + 1}`; // Adjust tapeIndex to start from 1
-      const info = data.tapes[tapeKey][zinType];
-      if (!info) {
-        console.error(`No information found for ${tapeKey} and ${zinType}`);
-        return;
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load information data");
       }
-      const title = info.title;
-      const text1 = info.text1;
-      document.querySelector("#conclusies").textContent = title;
-      document.querySelector("#conUitleg").textContent = text1;
-
-      // Update the background image of .afbCon based on tape index
-      const afbConElement = document.querySelector(".afbCon");
-      afbConElement.style.backgroundImage = `url('./assets/images/tape${
-        tapeIndex + 1
-      }_background.jpg')`; // Assuming you have background images named accordingly
+      return response.json();
     })
-    .catch((error) => console.error("Error loading information data:", error));
-}
+    .then((data) => {
+      if (!data || !data.tapes) {
+        throw new Error("Invalid JSON format");
+      }
 
-// Attach click listeners for zin1 to zin5 elements
-function attachClickListenersForZins() {
-  ["zin1", "zin2", "zin3", "zin4", "zin5"].forEach((zinType) => {
-    document
-      .querySelector(`#${zinType}`)
-      .addEventListener("click", function () {
-        const tapeIndex = datacounter - 1; // Assuming datacounter ranges from 1 to the number of tapes
-        fetchAndProcessInformation(zinType, tapeIndex);
+      const tapeKey = `tape${tapeIndex + 1}`;
+      const tape = data.tapes[tapeKey];
+      if (!tape) {
+        console.error("No tape information found for tapeIndex: ", tapeIndex);
+        return; // Exit if no tape data is found for the current index
+      }
+
+      document.querySelector("#tapeName").textContent = tape.name || "";
+
+      // Dynamically update sentences
+      const sentences = ["zin1", "zin2", "zin3", "zin4", "zin5"];
+      sentences.forEach((zin) => {
+        const sentenceElement = document.querySelector(`#${zin}`);
+        if (tape[zin]) {
+          sentenceElement.textContent = tape[zin].title;
+          sentenceElement.onclick = () => {
+            document.querySelector("#conclusies").textContent =
+              tape[zin].text1 || "";
+            document.querySelector("#conUitleg").textContent =
+              tape[zin].text2 || "";
+          };
+        } else {
+          sentenceElement.textContent = ""; // Clear if no data
+        }
       });
-  });
+
+      document.querySelector(
+        ".afbCon"
+      ).style.backgroundImage = `url('./assets/images/${tapeKey}_info.jpg')`;
+    })
+    .catch((error) => {
+      console.error("Error loading information data:", error);
+    });
 }
 
-// Call this function to set up the event listeners
-attachClickListenersForZins();
-
-// document.querySelector("#zin1").addEventListener("click", function () {
-//   switch (datacounter) {
-//     case 1:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[0].zin1.title; // Access the title here
-//           let text1 = information[0].zin1.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         })
-//         .catch(function (error) {
-//           return console.error("Error loading information data:", error);
-//         });
-//       break;
-//     case 2:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[1].zin1.title; // Access the title here
-//           let text1 = information[1].zin1.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         })
-//         .catch(function (error) {
-//           return console.error("Error loading information data:", error);
-//         });
-//       break;
-//     case 3:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[2].zin1.title; // Access the title here
-//           let text1 = information[2].zin1.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//     case 4:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[3].zin1.title; // Access the title here
-//           let text1 = information[3].zin1.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//     case 5:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[4].zin1.title; // Access the title here
-//           let text1 = information[4].zin1.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//   }
-// });
-
-// document.querySelector("#zin2").addEventListener("click", function () {
-//   switch (datacounter) {
-//     case 1:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[0].zin2.title; // Access the title here
-//           let text1 = information[0].zin2.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         })
-//         .catch(function (error) {
-//           return console.error("Error loading information data:", error);
-//         });
-//       break;
-//     case 2:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[1].zin2.title; // Access the title here
-//           let text1 = information[1].zin2.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         })
-//         .catch(function (error) {
-//           return console.error("Error loading information data:", error);
-//         });
-//       break;
-//     case 3:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[2].zin2.title; // Access the title here
-//           let text1 = information[2].zin2.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//     case 4:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[3].zin2.title; // Access the title here
-//           let text1 = information[3].zin2.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//     case 5:
-//       fetch("./json/information.json")
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           let title = information[4].zin2.title; // Access the title here
-//           let text1 = information[4].zin2.text1;
-//           document.querySelector("#conclusies").textContent = title;
-//           document.querySelector("#conUitleg").textContent = text1;
-//         });
-//       break;
-//   }
-// });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //

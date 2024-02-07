@@ -556,6 +556,7 @@ video {
   left: 25px;
   opacity: 0.25;
   transition: 0.3s ease;
+  width: 50%;
 }
 
 .extra-apps {
@@ -595,6 +596,8 @@ video {
   z-index: 2;
   box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
+  --brightness: 1; /* Default brightness */
+  filter: brightness(var(--brightness));
 }
 
 #apps:hover {
@@ -641,7 +644,7 @@ video {
 
 .onderzoek-titlebox {
   position: absolute;
-  width: 30%;
+  width: 80%;
 }
 
 .systemenImg.expanding {
@@ -807,7 +810,7 @@ video {
 }
 
 .onderzoek .titel-zinnen p {
-  margin-top: 30%;
+  margin-top: 10%;
   color: #e6e6e6;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -821,7 +824,6 @@ video {
 
 .zinnen {
   position: absolute;
-  top: 60%;
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -840,10 +842,10 @@ video {
 
 .onderzoek .zin-tape {
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 1.5%;
   opacity: 0.5;
   left: 15%;
-  width: 20%;
+  width: 100%;
   cursor: pointer;
   z-index: 2;
 }
@@ -895,20 +897,20 @@ video {
 
 .onderzoek .conclusies .conUitleg {
   width: 100%;
-  left: 150%;
-  top: 70%;
+  left: 25px;
+  top: 40%;
   font-size: 14px;
   font-weight: 500;
 }
 
 .onderzoek .afbCon {
-  position: relative;
+  position: absolute;
   background-image: url("../assets/images/tape1_background.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   top: 30%;
-  left: 150%;
+  left: 70%;
   width: 20vw;
   height: 10vw;
   transition: 0.3s ease;
@@ -917,8 +919,10 @@ video {
 
 .onderzoek .exitCon {
   position: relative;
-  background-color: red;
-  top: 150%;
+  color: black;
+  background-color: white;
+  border: black 1px solid;
+  top: 60%;
   left: 10%;
   width: 2vw;
   height: 1vw;
@@ -929,7 +933,7 @@ video {
 }
 
 .onderzoek .exitCon.leave {
-  margin-top: 20%;
+  margin-top: 30%;
   cursor: pointer;
 }
 
@@ -1157,7 +1161,7 @@ video {
 
 .stofje {
   margin-left: 2.5%;
-  width: 30%;
+  width: 22%;
   height: 50%;
 }
 
@@ -1181,14 +1185,22 @@ video {
 
 #rood {
   background-color: #e11485;
+  opacity: 0;
 }
 
 #blauw {
   background-color: blue;
+  opacity: 0;
 }
 
 #groen {
   background-color: green;
+  opacity: 0;
+}
+
+#geel {
+  background-color: orange;
+  opacity: 0;
 }
 
 #date {
