@@ -3,6 +3,7 @@
 .item {
   flex: 1; /* This makes the remaining items take an equal portion of the height */
   width: 100%; /* This makes each item take 100% of the width relative to .sideWindow */
+  border-left: 2px solid black;
 }
 
 .item1 {

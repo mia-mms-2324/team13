@@ -342,7 +342,15 @@ function loadPreviousDialogue() {
   let previous = currentDialogueIndex - 1;
 
   if (previous >= 0 && previous < dialogues.length) {
-    let speakerName = dialogues[previous].Gender === "male" ? "BRUCE" : "NOVA";
+    let speakerName = "";
+    if (dialogues[previous].Gender == null) {
+      speakerName = "SYSTEEM";
+    } else if (dialogues[previous].Gender == "male") {
+      speakerName = "BRUCE";
+    } else if (dialogues[previous].Gender == "female") {
+      speakerName = "NOVA";
+    }
+
     document.querySelector(
       ".previousdialogue"
     ).innerHTML = `<span style="font-weight: 400;">${speakerName}</span><br> ${dialogues[previous].dialogue}`;
@@ -357,9 +365,11 @@ function trueaudio() {
   switch (audioUnlocked) {
     case 1:
       audio = new Audio("./assets/audio/audio1.mp3");
+      audio.playbackRate = 10;
       break;
     case 2:
       audio = new Audio("./assets/audio/audio2.mp3");
+      audio.playbackRate = 10;
       break;
     case 3:
       audio = new Audio("./assets/audio/audio3.mp3");
@@ -405,36 +415,32 @@ function inboxHint() {
   let count = 0;
   let interval;
 
-  // Define the function to adjust brightness
   function adjustBrightness() {
-    const inboxElements = document.querySelectorAll(".inbox"); // Select all .inbox elements
+    const inboxElements = document.querySelectorAll(".inbox");
     inboxElements.forEach(function (elem) {
       if (count % 2 === 0) {
-        // Decrease brightness
-        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+        elem.style.filter = "brightness(1)";
       } else {
-        // Increase brightness
-        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+        elem.style.filter = "brightness(2.5)";
       }
     });
     count++;
   }
 
-  // Call the function initially
   adjustBrightness();
-
-  // Set interval to repeat every second
   interval = setInterval(adjustBrightness, 1000);
 
-  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
+  // Stop the interval after 10 seconds
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 10000);
+
   document.addEventListener("click", function (event) {
-    let target = event.target; // Starting point
+    let target = event.target;
     if (target.matches(".inboxImg.expanding")) {
-      // Check if the clicked element has both .inboxImg and .expanding classes
       clearInterval(interval);
-      // Reset brightness of all .inbox elements to normal
       document.querySelectorAll(".inbox").forEach(function (elem) {
-        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+        elem.style.filter = "brightness(1)";
       });
     }
   });
@@ -444,36 +450,32 @@ function onderzoekHint() {
   let count = 0;
   let interval;
 
-  // Define the function to adjust brightness
   function adjustBrightness() {
-    const inboxElements = document.querySelectorAll(".onderzoek"); // Select all .inbox elements
+    const inboxElements = document.querySelectorAll(".onderzoek");
     inboxElements.forEach(function (elem) {
       if (count % 2 === 0) {
-        // Decrease brightness
-        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+        elem.style.filter = "brightness(1)";
       } else {
-        // Increase brightness
-        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+        elem.style.filter = "brightness(2.5)";
       }
     });
     count++;
   }
 
-  // Call the function initially
   adjustBrightness();
-
-  // Set interval to repeat every second
   interval = setInterval(adjustBrightness, 1000);
 
-  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
+  // Stop the interval after 10 seconds
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 10000);
+
   document.addEventListener("click", function (event) {
-    let target = event.target; // Starting point
+    let target = event.target;
     if (target.matches(".onderzoekImg.expanding")) {
-      // Check if the clicked element has both .inboxImg and .expanding classes
       clearInterval(interval);
-      // Reset brightness of all .inbox elements to normal
       document.querySelectorAll(".onderzoek").forEach(function (elem) {
-        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+        elem.style.filter = "brightness(1)";
       });
     }
   });
@@ -483,36 +485,32 @@ function systemenHint() {
   let count = 0;
   let interval;
 
-  // Define the function to adjust brightness
   function adjustBrightness() {
-    const inboxElements = document.querySelectorAll(".systemen"); // Select all .inbox elements
+    const inboxElements = document.querySelectorAll(".systemen");
     inboxElements.forEach(function (elem) {
       if (count % 2 === 0) {
-        // Decrease brightness
-        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+        elem.style.filter = "brightness(1)";
       } else {
-        // Increase brightness
-        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+        elem.style.filter = "brightness(2.5)";
       }
     });
     count++;
   }
 
-  // Call the function initially
   adjustBrightness();
-
-  // Set interval to repeat every second
   interval = setInterval(adjustBrightness, 1000);
 
-  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
+  // Stop the interval after 10 seconds
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 10000);
+
   document.addEventListener("click", function (event) {
-    let target = event.target; // Starting point
+    let target = event.target;
     if (target.matches(".systemenImg.expanding")) {
-      // Check if the clicked element has both .inboxImg and .expanding classes
       clearInterval(interval);
-      // Reset brightness of all .inbox elements to normal
       document.querySelectorAll(".systemen").forEach(function (elem) {
-        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+        elem.style.filter = "brightness(1)";
       });
     }
   });
@@ -621,6 +619,9 @@ function setupAudioMailListeners() {
     const sceneElement = document.querySelector(".scene");
     const bruceElement = document.querySelector(".bruce");
     const novaElement = document.querySelector(".nova");
+    const dialogueElement = document.querySelector(".dialogue");
+    const apps = document.querySelector("#apps");
+    const scene = document.querySelector(".scene");
     const originalBackgroundImage =
       getComputedStyle(sceneElement).backgroundImage;
 
@@ -639,15 +640,32 @@ function setupAudioMailListeners() {
         // Change opacity of .bruce and .nova to 0 while audio is playing
         bruceElement.style.opacity = 0;
         novaElement.style.opacity = 0;
+        scene.style.position = "absolute";
+        scene.style.height = "100vh";
+        scene.style.width = "87.5vw";
+        scene.style.top = "0";
+        scene.style.left = "0";
+        // Hide dialogue while audio is playing
+        dialogueElement.style.display = "none";
+        apps.style.opacity = 0;
 
         // Fetch and display information
         fetchAndDisplayInformation(index);
 
-        // Revert background image and opacity after audio finishes playing
+        // Revert background image, opacity, and show dialogue after audio finishes playing
         audio.addEventListener("ended", function () {
+          currentDialogueIndex++;
+          updateDialogue();
           sceneElement.style.backgroundImage = originalBackgroundImage;
           bruceElement.style.opacity = 1;
           novaElement.style.opacity = 1;
+          dialogueElement.style.display = "block"; // Revert to original display
+          apps.style.opacity = 1; // Revert to original display
+          scene.style.position = "relative";
+          scene.style.height = "100v%";
+          scene.style.width = "";
+          scene.style.top = "";
+          scene.style.left = "";
         });
       });
   });
@@ -715,7 +733,6 @@ function fetchAndDisplayInformation(tapeIndex) {
 
       document.querySelector("#tapeName").textContent = tape.name || "";
 
-      // Dynamically update sentences
       const sentences = ["zin1", "zin2", "zin3", "zin4", "zin5"];
       sentences.forEach((zin) => {
         const sentenceElement = document.querySelector(`#${zin}`);
@@ -880,6 +897,12 @@ function openOnderzoek() {
   document.querySelector(".onderzoek").classList.add("os1");
   document.querySelector(".zinnen").classList.add("os1");
   document.querySelector(".titel-zinnen").classList.add("os1");
+  document.querySelector(".exitCon").classList.add("os1");
+  if (tape) {
+    let infoImage = document.querySelector(".infoImage");
+    infoImage.style.backgroundImage = `url('./assets/images/${tapeKey}_info.jpg')`;
+    infoImage.style.display = "block";
+  }
 }
 
 function closeOnderzoek() {
@@ -889,8 +912,9 @@ function closeOnderzoek() {
   document.querySelector(".inbox").classList.remove("os1");
   document.querySelector(".onderzoek").classList.remove("os1");
   document.querySelector(".titel-zinnen").classList.remove("os1");
-
   document.querySelector(".zinnen").classList.remove("os1");
+  let infoImage = document.querySelector(".infoImage");
+  infoImage.style.display = "none";
 }
 function handleMail(mailId, exitId) {
   const mailElement = document.getElementById(mailId);

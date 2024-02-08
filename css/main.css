@@ -896,7 +896,7 @@ video {
 }
 
 .onderzoek .conclusies .conUitleg {
-  width: 100%;
+  width: 80%;
   left: 25px;
   top: 40%;
   font-size: 14px;
@@ -1205,7 +1205,7 @@ video {
 
 #date {
   font-style: italic;
-  margin-top: 12%;
+  margin-top: 18%;
 }
 
 @keyframes expandAnimation {
@@ -1225,6 +1225,21 @@ video {
   to {
     height: 30%;
   }
+}
+.infoImage {
+  position: absolute;
+  height: 59vh;
+  width: 87.5vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  top: 41vh;
+  left: 0;
+  display: none;
+  background-image: url("../assets/images/img-space.png");
+  z-index: 999;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */
