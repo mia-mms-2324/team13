@@ -71,8 +71,12 @@ function updateDialogue() {
     rightButton.style.display = "block";
   }, 5000);
   if (currentDialogue.Gender == "null") {
-    dialogueTitleElement.style.opacity = 0;
+    dialogueTitleElement.textContent = "SYSTEEM";
+    dialogue.style.backgroundImage =
+      "url('../assets/images/dialogueboxSystem.png')";
+    //add code here
   } else {
+    dialogue.style.backgroundImage = "url('../assets/images/dialoguebox.png')";
     dialogueTitleElement.style.opacity = 1;
     dialogueTitleElement.textContent = speakerName + "";
   }
@@ -225,6 +229,7 @@ function updateDialogue() {
       console.log("Executing code for eventID == 1");
       // Example: Open audio overlay, play audio, etc.
       document.querySelector("#mail1").style.display = "block";
+      document.querySelector("#mail1").style.filter = "brightness(1)";
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
@@ -238,6 +243,8 @@ function updateDialogue() {
       console.log("Executing code for eventID == 2");
       // Example: Trigger a specific animation, show a message, etc.
       document.querySelector("#mail2").style.display = "block";
+      document.querySelector("#mail1").style.filter = "brightness(0.75)";
+
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
@@ -250,6 +257,7 @@ function updateDialogue() {
       console.log("Executing code for eventID == 3");
       // Add more cases as needed
       document.querySelector("#mail3").style.display = "block";
+      document.querySelector("#mail2").style.filter = "brightness(0.75)";
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
@@ -262,6 +270,7 @@ function updateDialogue() {
       console.log("Executing code for eventID == 6");
       // This could be the end of a sequence or triggering the final action
       document.querySelector("#mail4").style.display = "block";
+      document.querySelector("#mail3").style.filter = "brightness(0.75)";
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
@@ -274,6 +283,7 @@ function updateDialogue() {
       console.log("Executing code for eventID == 6");
       // This could be the end of a sequence or triggering the final action
       document.querySelector("#mail5").style.display = "block";
+      document.querySelector("#mail4").style.filter = "brightness(0.75)";
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
@@ -644,9 +654,11 @@ function setupAudioMailListeners() {
 }
 
 document.querySelector("#audio1mail").addEventListener("click", function () {
+  // Adding event listener to the dialogue as per original snippet
   document
     .querySelector(".dialogue")
     .addEventListener("click", loadNextDialogue);
+  console.log("Audio 1 mail clicked");
 });
 
 document.querySelector("#audio2mail").addEventListener("click", function () {
@@ -859,7 +871,6 @@ function closeEnd() {
   document.querySelector(".inv").classList.remove("hide");
   document.querySelector(".end").classList.remove("open");
   document.querySelector(".end-button").classList.remove("open");
-
   document.getElementById("endExitCont").classList.remove("read");
 }
 
