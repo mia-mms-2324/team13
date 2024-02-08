@@ -5,7 +5,7 @@
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Hey Bruce, bijna klaar met de antenne?",
-      "eventID": null,
+      "eventID": 7,
       "audio": false
     },
     "dia2": {
@@ -13,7 +13,7 @@
       "Gender": "female",
       "SpriteID": "6",
       "dialogue": "Hoe kan ik anders een veilige plek vinden om te landen?",
-      "eventID": null,
+      "eventID": 8,
       "audio": false
     },
     "dia3": {
@@ -21,7 +21,7 @@
       "Gender": "male",
       "SpriteID": "3",
       "dialogue": "Ik wil net zo graag terug naar aarde als jou hoor.",
-      "eventID": null,
+      "eventID": 9,
       "audio": false
     },
     "dia4": {

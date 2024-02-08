@@ -228,7 +228,7 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
-      hint();
+      inboxHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
 
@@ -241,7 +241,7 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
-      hint();
+      inboxHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
@@ -253,7 +253,7 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
-      hint();
+      inboxHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
@@ -265,7 +265,7 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
-      hint();
+      inboxHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
@@ -277,7 +277,7 @@ function updateDialogue() {
       document
         .querySelector(".dialogue")
         .removeEventListener("click", loadNextDialogue);
-      hint();
+      inboxHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
@@ -290,12 +290,18 @@ function updateDialogue() {
         .addEventListener("click", function () {
           window.location.href = "outro.html";
         });
-      hint();
+      systemenHint();
       document.querySelector("#shipStatus").textContent =
         "Er is een nieuwe interactie beschikbaar in het apps paneel.";
       break;
     case 7:
-      hint();
+      inboxHint();
+      break;
+    case 8:
+      onderzoekHint();
+      break;
+    case 9:
+      systemenHint();
       break;
     default:
       // No specific eventID or code to execute
@@ -385,20 +391,22 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-function hint() {
+function inboxHint() {
   let count = 0;
   let interval;
 
   // Define the function to adjust brightness
   function adjustBrightness() {
-    const appsElement = document.getElementById("apps");
-    if (count % 2 === 0) {
-      // Decrease brightness
-      appsElement.style.filter = "brightness(0)"; // Decrease brightness to 50%
-    } else {
-      // Increase brightness
-      appsElement.style.filter = "brightness(2.5)"; // Reset brightness to normal (100%)
-    }
+    const inboxElements = document.querySelectorAll(".inbox"); // Select all .inbox elements
+    inboxElements.forEach(function (elem) {
+      if (count % 2 === 0) {
+        // Decrease brightness
+        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+      } else {
+        // Increase brightness
+        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+      }
+    });
     count++;
   }
 
@@ -408,15 +416,94 @@ function hint() {
   // Set interval to repeat every second
   interval = setInterval(adjustBrightness, 1000);
 
-  // Stop the interval and reset brightness when a click event occurs in the top 20% of the screen
+  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
   document.addEventListener("click", function (event) {
-    const clickY = event.clientY;
-    const screenHeight = window.innerHeight;
-    if (clickY <= screenHeight * 0.2) {
-      // If click occurs in the top 20% of the screen
+    let target = event.target; // Starting point
+    if (target.matches(".inboxImg.expanding")) {
+      // Check if the clicked element has both .inboxImg and .expanding classes
       clearInterval(interval);
-      const appsElement = document.getElementById("apps");
-      appsElement.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+      // Reset brightness of all .inbox elements to normal
+      document.querySelectorAll(".inbox").forEach(function (elem) {
+        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+      });
+    }
+  });
+}
+
+function onderzoekHint() {
+  let count = 0;
+  let interval;
+
+  // Define the function to adjust brightness
+  function adjustBrightness() {
+    const inboxElements = document.querySelectorAll(".onderzoek"); // Select all .inbox elements
+    inboxElements.forEach(function (elem) {
+      if (count % 2 === 0) {
+        // Decrease brightness
+        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+      } else {
+        // Increase brightness
+        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+      }
+    });
+    count++;
+  }
+
+  // Call the function initially
+  adjustBrightness();
+
+  // Set interval to repeat every second
+  interval = setInterval(adjustBrightness, 1000);
+
+  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
+  document.addEventListener("click", function (event) {
+    let target = event.target; // Starting point
+    if (target.matches(".onderzoekImg.expanding")) {
+      // Check if the clicked element has both .inboxImg and .expanding classes
+      clearInterval(interval);
+      // Reset brightness of all .inbox elements to normal
+      document.querySelectorAll(".onderzoek").forEach(function (elem) {
+        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+      });
+    }
+  });
+}
+
+function systemenHint() {
+  let count = 0;
+  let interval;
+
+  // Define the function to adjust brightness
+  function adjustBrightness() {
+    const inboxElements = document.querySelectorAll(".systemen"); // Select all .inbox elements
+    inboxElements.forEach(function (elem) {
+      if (count % 2 === 0) {
+        // Decrease brightness
+        elem.style.filter = "brightness(1)"; // Decrease brightness to 0%
+      } else {
+        // Increase brightness
+        elem.style.filter = "brightness(2.5)"; // Increase brightness to 250%
+      }
+    });
+    count++;
+  }
+
+  // Call the function initially
+  adjustBrightness();
+
+  // Set interval to repeat every second
+  interval = setInterval(adjustBrightness, 1000);
+
+  // Stop the interval and reset brightness when an element with .inboxImg and .expanding is pressed
+  document.addEventListener("click", function (event) {
+    let target = event.target; // Starting point
+    if (target.matches(".systemenImg.expanding")) {
+      // Check if the clicked element has both .inboxImg and .expanding classes
+      clearInterval(interval);
+      // Reset brightness of all .inbox elements to normal
+      document.querySelectorAll(".systemen").forEach(function (elem) {
+        elem.style.filter = "brightness(1)"; // Reset brightness to normal (100%)
+      });
     }
   });
 }
