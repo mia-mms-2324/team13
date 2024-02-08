@@ -199,7 +199,7 @@ body {
   font-size: 20px;
   color: #e6e6e6;
   opacity: 0;
-  animation: fade 2400ms ease-in-out 0ms forwards, show 2400ms ease-in-out 2400ms forwards, fadeOut 1200ms ease-in-out 4800ms forwards;
+  animation: fade 1800ms ease-in-out 0ms forwards, show 2400ms ease-in-out 2400ms forwards, fadeOut 1200ms ease-in-out 4800ms forwards;
 }
 
 #fade-in-out2 {

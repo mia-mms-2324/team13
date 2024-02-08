@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullscreen Autoplay Video</title>
+    <title>Autoplay YouTube Video in Fullscreen</title>
     <style>
       body,
       html {
@@ -12,47 +12,52 @@
         height: 100%;
         overflow: hidden;
       }
-
-      video {
+      .fullscreen {
         width: 100%;
         height: 100%;
-        object-fit: cover;
       }
     </style>
   </head>
   <body>
-    <video id="fullscreenVideo" autoplay loop controls>
-      <source src="assets/video/SWAG.mp4" type="video/mp4" />
-      <!-- Add additional source tags for other video formats if needed -->
-      Your browser does not support the video tag.
-    </video>
+    <div class="fullscreen" id="player"></div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const video = document.getElementById("fullscreenVideo");
+      // Load YouTube API script asynchronously
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // Trigger fullscreen mode
-        if (video.requestFullscreen) {
-          video.requestFullscreen().then(() => {
-            video.play(); // Start playing the video after entering fullscreen
-          });
-        } else if (video.mozRequestFullScreen) {
-          /* Firefox */
-          video.mozRequestFullScreen().then(() => {
-            video.play();
-          });
-        } else if (video.webkitRequestFullscreen) {
-          /* Chrome, Safari & Opera */
-          video.webkitRequestFullscreen().then(() => {
-            video.play();
-          });
-        } else if (video.msRequestFullscreen) {
-          /* IE/Edge */
-          video.msRequestFullscreen().then(() => {
-            video.play();
-          });
+      // This function creates an <iframe> (and YouTube player) after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          height: "100%",
+          width: "100%",
+          videoId: "P74BP1_610w",
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            rel: 0, // Disable related videos
+            modestbranding: 1, // Hide YouTube logo
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          // Video ended, do something here
+          // For example, hide the player or load a different video
         }
-      });
+      }
     </script>
   </body>
 </html>
