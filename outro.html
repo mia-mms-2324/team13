@@ -33,16 +33,24 @@
 
         // Trigger fullscreen mode
         if (video.requestFullscreen) {
-          video.requestFullscreen();
+          video.requestFullscreen().then(() => {
+            video.play(); // Start playing the video after entering fullscreen
+          });
         } else if (video.mozRequestFullScreen) {
           /* Firefox */
-          video.mozRequestFullScreen();
+          video.mozRequestFullScreen().then(() => {
+            video.play();
+          });
         } else if (video.webkitRequestFullscreen) {
           /* Chrome, Safari & Opera */
-          video.webkitRequestFullscreen();
+          video.webkitRequestFullscreen().then(() => {
+            video.play();
+          });
         } else if (video.msRequestFullscreen) {
           /* IE/Edge */
-          video.msRequestFullscreen();
+          video.msRequestFullscreen().then(() => {
+            video.play();
+          });
         }
       });
     </script>
