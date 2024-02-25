@@ -71,11 +71,13 @@ function updateDialogue() {
     rightButton.style.display = "block";
   }, 5000);
   if (currentDialogue.Gender == "null") {
+    console.log("system dialogue");
     dialogueTitleElement.textContent = "SYSTEEM";
     dialogue.style.backgroundImage =
       "url('../assets/images/dialogueboxSystem.png')";
     //add code here
   } else {
+    console.log("regular dialogue");
     dialogue.style.backgroundImage = "url('../assets/images/dialoguebox.png')";
     dialogueTitleElement.style.opacity = 1;
     dialogueTitleElement.textContent = speakerName + "";
