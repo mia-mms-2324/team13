@@ -74,11 +74,11 @@ function updateDialogue() {
     console.log("system dialogue");
     dialogueTitleElement.textContent = "SYSTEEM";
     dialogue.style.backgroundImage =
-      "url('../assets/images/dialogueboxSystem.png')";
+      "url('./assets/images/dialogueboxSystem.png')";
     //add code here
   } else {
     console.log("regular dialogue");
-    dialogue.style.backgroundImage = "url('../assets/images/dialoguebox.png')";
+    dialogue.style.backgroundImage = "url('./assets/images/dialoguebox.png')";
     dialogueTitleElement.style.opacity = 1;
     dialogueTitleElement.textContent = speakerName + "";
   }
