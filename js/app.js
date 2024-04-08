@@ -370,17 +370,17 @@ function trueaudio() {
       audio.playbackRate = 10;
       break;
     case 2:
-      audio = new Audio("./assets/audio/audio2.mp3");
+      audio = new Audio("./assets/audio/audio2.wav");
       audio.playbackRate = 10;
       break;
     case 3:
-      audio = new Audio("./assets/audio/audio3.mp3");
+      audio = new Audio("./assets/audio/audio3.wav");
       break;
     case 4:
-      audio = new Audio("./assets/audio/audio4.mp3");
+      audio = new Audio("./assets/audio/audio4.wav");
       break;
     case 5:
-      audio = new Audio("./assets/audio/audio5.mp3");
+      audio = new Audio("./assets/audio/audio5.wav");
       break;
   }
 }
@@ -522,10 +522,10 @@ function systemenHint() {
 //   // Array of audio file paths for simplicity, assuming the order matches your #audioXmail elements
 //   const audioFiles = [
 //     "./assets/audio/audio1.mp3",
-//     "./assets/audio/audio2.mp3",
-//     "./assets/audio/audio3.mp3",
-//     "./assets/audio/audio4.mp3",
-//     "./assets/audio/audio5.mp3",
+//     "./assets/audio/audio2.wav",
+//     "./assets/audio/audio3.wav",
+//     "./assets/audio/audio4.wav",
+//     "./assets/audio/audio5.wav",
 //   ];
 
 //   audioFiles.forEach((filePath, index) => {
@@ -611,10 +611,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function setupAudioMailListeners() {
   const audioFiles = [
     "./assets/audio/audio1.mp3",
-    "./assets/audio/audio2.mp3",
-    "./assets/audio/audio3.mp3",
-    "./assets/audio/audio4.mp3",
-    "./assets/audio/audio5.mp3",
+    "./assets/audio/audio2.wav",
+    "./assets/audio/audio3.wav",
+    "./assets/audio/audio4.wav",
+    "./assets/audio/audio5.wav",
   ];
 
   audioFiles.forEach((filePath, index) => {
