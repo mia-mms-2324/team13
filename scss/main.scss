@@ -745,6 +745,10 @@ video {
   transition: 0.3s ease;
   opacity: 1;
 }
+.onderzoek .afbCon:hover {
+  z-index: -99999;
+  opacity: 0.5;
+}
 
 .onderzoek .exitCon {
   position: relative;
